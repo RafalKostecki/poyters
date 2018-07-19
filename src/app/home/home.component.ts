@@ -13,12 +13,10 @@ import { Observable } from 'rxjs/Observable';
 export class HomeComponent implements OnInit {
 
   projects$: Object;
-  private xd: any = "xd"
 
   constructor(private http: HttpClient) {
     this.getJSON().subscribe(data => {
         this.projects$ = data;
-        console.log(this.projects$)
     });
   }
 
