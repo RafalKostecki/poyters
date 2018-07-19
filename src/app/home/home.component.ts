@@ -1,6 +1,7 @@
 import { Component, OnInit, Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http'; 
 import { Observable } from 'rxjs/Observable';
+import { DataService } from '../data.service';
 
 
 @Component({
@@ -12,16 +13,18 @@ import { Observable } from 'rxjs/Observable';
 @Injectable()
 export class HomeComponent implements OnInit {
 
-  projects$: Object;
+  public projects: Object;
+  private categoryName: string = "Home";
 
-  constructor(private http: HttpClient) {
+  constructor(private http: HttpClient, private data: DataService) {
     this.getJSON().subscribe(data => {
-        this.projects$ = data;
+        this.projects = data;
     });
   }
 
   ngOnInit() {
-
+    this.data.category.subscribe(category => category = this.categoryName)
+    this.data.changeCategory(this.categoryName)
   }
 
   public getJSON(): Observable<any> {
