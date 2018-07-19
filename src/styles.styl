@@ -1,1 +1,83 @@
-/* You can add global styles to this file, and also import other style files */
+
+//Variables
+darkColor = #161b20
+darkColor1 = #1f262d
+whiteColor = rgba(235,235,235,0.9);
+blueColor = #2c59bf
+blueColor1 = #27427c
+
+//Mixins
+vendor(prop, args)
+  -webkit-{prop} args
+  -moz-{prop} args
+  {prop} args
+border-radius()
+  vendor('border-radius', arguments)
+box-shadow()
+  vendor('box-shadow', arguments)
+filter()
+  vendor('filter', arguments)
+txt(size, spaceL, weight, transformT, colorT)
+  font-size size
+  letter-spacing spaceL
+  font-weight weight
+  text-transform transformT
+  color colorT
+@keyframes menuShow
+  0%
+    height 0
+    opacity 0
+  40%
+    height 180px
+    opacity 0
+  100%
+    height 180px
+    opacity 1
+menuFlex()
+  .menu
+    height auto
+    float left
+    width 84%
+    margin 30px 8% 30px 8%
+    &__btn
+      height 30px
+      visibility visible
+      & ul
+        margin 0 auto
+        padding 0
+        float left
+        height 0
+        opacity 0
+        font-size 1px
+        pointer-events none
+        &.media
+          float right
+          & li
+            border-radius 50%
+   	        margin 0px 15px 5px 15px
+            font-size 4px
+        & li
+          display block
+          clear both
+          margin 10px 15px 10px 15px
+//Styles for the all of page subpages
+html, body
+  font-family: 'Montserrat', sans-serif;
+  margin 0
+  padding 0
+  width 100%
+  height 100%
+  background darkColor
+  color #eee
+h1,h2,h3,h4,h5,h6
+  font-family serif
+  font-weight bold
+  margin 0
+for num in (1..6) //Here we will get h1-h6
+  h{num}
+    font-size (28 - num*2)px
+    line-height (28 - num*2)px
+a:link, a:visited
+  text-decoration inherit
+  color inherit
+  cursor pointer
