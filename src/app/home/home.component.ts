@@ -23,7 +23,6 @@ export class HomeComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.data.category.subscribe(category => category = this.categoryName)
     this.data.changeCategory(this.categoryName)
   }
 

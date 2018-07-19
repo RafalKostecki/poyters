@@ -11,6 +11,7 @@ import { CategoryComponent } from './category/category.component';
 import { ProjectComponent } from './project/project.component';
 import { HomeComponent } from './home/home.component';
 import { FooterComponent } from './footer/footer.component';
+import { DiaryComponent } from './diary/diary.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { FooterComponent } from './footer/footer.component';
     CategoryComponent,
     ProjectComponent,
     HomeComponent,
-    FooterComponent
+    FooterComponent,
+    DiaryComponent
   ],
   imports: [
     BrowserModule,
