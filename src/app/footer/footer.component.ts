@@ -7,6 +7,6 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FooterComponent {
 
-  private currentYear: number = new Date().getFullYear()
+  public currentYear: number = new Date().getFullYear()
   
 }

@@ -9,7 +9,7 @@ import { DataService } from '../data.service';
 })
 export class CategoryComponent implements OnInit {
 
-  private currentCategory: string;
+  public currentCategory: string;
 
   constructor(private data: DataService) { }
 
