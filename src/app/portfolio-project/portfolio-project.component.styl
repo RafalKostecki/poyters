@@ -1,5 +1,30 @@
 @import '../../styles.styl'
 
+.technology 
+    width 100%
+    float left
+    margin-top 40px
+    & span 
+        display block
+        height 20px
+        float left
+        padding 2px 0 2px 0
+        margin 2px 5px 2px 0px
+    &__box 
+        width auto
+        height 20px
+        float left
+        padding 2px 4px 2px 4px
+        margin 2px 5px 2px 5px
+    &--style 
+        border 2px solid blueColor1
+        border-radius(4px)
+.date
+    width 100%
+    float left
+    margin-top 10px
+    &--style 
+        txt(10px, 0px, 300, none, inherit)
 .project
     width 80%
     margin 50px 10% 50px 10%
@@ -11,7 +36,7 @@
         background red
     &__description
         width calc(100% - 320px)
-        padding 0px 50px 40px 50px
+        padding 0px 50px 20px 50px
         margin-left 20px
         float left
     &__txtBox
@@ -30,12 +55,11 @@
         txt(12px, 1px, 700, uppercase, blueColor1)
     &--titleTxt
         txt(32px, 2px, 700, none, inherit)
+        padding-bottom 10px
     &--descTxt
         txt(18px, 0px, 400, none, inherit)
         line-height 24px
         text-indent 50px
-    &--released
-        txt(10px, 0px, 300, none, inherit)
 @media (max-width: 1000px) and (min-width: 700px)
     .project
         width 90%

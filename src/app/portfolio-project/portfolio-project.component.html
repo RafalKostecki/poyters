@@ -14,5 +14,20 @@
     <main class="project--descTxt">
       {{content}} 
     </main>
+    <footer class="technology">
+      <span>
+        Used technologies: 
+      </span>
+      
+      <div *ngFor="let technology of technologies">
+        <div class="technology__box technology--style">
+          {{technology}}
+        </div>
+      </div>
+
+      <div class="date">
+        <span class="date--style">Released date: {{date}}</span>
+      </div>
+    </footer>
   </section>
 </article>

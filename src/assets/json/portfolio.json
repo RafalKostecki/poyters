@@ -3,7 +3,8 @@
 		"type": "SPA",
 		"title": "Poyters",
 		"image": "",
-		"content": "Yeah, exactly that page. I re-writed old Poyters page to Angular 6 framework to get a more possibilities to improve this page like: CMS, blog etc.",
+		"link": "http://poyters.pl",
+		"content": "Yeah, exactly that page. I re-writed old Poyters page to Angular 6 framework to get more possibilities to improve this page like: CMS, blog etc.",
 		"technology": [
 			"Angular 6", "HTML5", "CSS3", "Stylus", "TypeScript"
 		],
@@ -13,6 +14,7 @@
 		"type": "Game",
 		"title": "HIPER JUMPER 2000",
 		"image": "",
+		"link": "http://poyters.pl/hj2000",
 		"content": "HIPER JUMPER 2000 is game but not only! This is primarily engine which I constantly develop. In this project, most I wanted to learn more and more about complex JavaScript Object Oriented Programming and about another more complex entities. I could see in pratcice how works different things like interfaces, multi inheritance, SOLID in vanilla.js. Overall, I wanted to do something big and difficult, also this built base for another, enormous project!",
 		"technology": [
 			"JavaScript", "HTML5", "CSS3", "Pug", "Stylus", "vanilla.js", "BEM"
@@ -23,6 +25,7 @@
 		"type": "Game",
 		"title": "Space newcomers",
 		"image": "",
+		"link": "http://poyters.pl/spacenewcomers",
 		"content": "Space newcomers is Poyters version of famous game - Space Invaders created by Taito Corporation in 1978. I wanted to check whether I deal with write this game in JavaScript for different screens sizes and for tablets. I wanted improve my OOP skills and I had to summarize my knowledge in any project. I made decision that famous Space Invaders will be good to do this. Thanks for this project I could see how work specifics things in JS like inheritance, polimorphism and so on.",
 		"technology": [
 			"JavaScript", "HTML5", "CSS3", "Sass", "vanilla.js", "BEM"
@@ -33,6 +36,7 @@
 		"type": "Website",
 		"title": "Renome",
 		"image": "",
+		"link": "http://poyters.pl/projects/renome",
 		"content": "In this project I wanted to learn Stylus and Pug preprocessors and SMACSS methodology. Also I had occasion to learn more about Data object in JavaScript thanks to doing a calendar. I have done this page based on this template: click.",
 		"technology": [
 			"JavaScript", "HTML5", "CSS3", "Pug", "Stylus", "vanilla.js", "SMACSS"
@@ -43,6 +47,7 @@
 		"type": "Game",
 		"title": "Bread Hunter 3",
 		"image": "",
+		"link": "http://poyters.pl/breadhunter3",
 		"content": "Bread Hunter 3 it is a tiny web game created in JavaScript, library jQuery, HTML5 and CSS3 with BEM methodology. In this project I wanted to do any lerger project in JavaScript and learn more about object oriented programming in JS and improve the last version of this game - Bread Hunter 2.",
 		"technology": [
 			"JavaScript", "HTML5", "CSS3", "BEM", "jQuery"
@@ -53,6 +58,7 @@
 		"type": "Website",
 		"title": "Bratbud",
 		"image": "",
+		"link": "http://bratbud.com",
 		"content": "In April 2017, I created simple but somhisticated web page for construction company Bratbud from Lublin in Poland.",
 		"technology": [
 			"JavaScript", "HTML5", "CSS3", "Sass", "jQuery"
@@ -63,6 +69,7 @@
 		"type": "Game",
 		"title": "Kostek 'Birthday'",
 		"image": "",
+		"link": "https://drive.google.com/file/d/0B8b65vR_MleyekNmN0tzalc1aFk/view",
 		"content": "Kostek 'Birthday' is a comedy game created in RPG Maker VX Ace engine in language Ruby. In this project I wanted to do something huge what let`s me see how look like very hard and long work on the one project. I wanted learn more about Ruby and other tools like RGSS. The major thing which I wanted to do in this project was seeing whether I give up and not finish such enormous project. I wanted see that I really like IT. Now, I`m sure that it`s my passion.",
 		"technology": [
 			"RPGMVXAce", "Ruby", "Pixel-art", "RGSS"

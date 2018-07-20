@@ -1,3 +1,13 @@
-<p>
-  portfolio works!
-</p>
+<main *ngFor="let project of portfolioProjects">
+    <app-portfolio-project
+        [type]="project.type"
+        [image]="project.image"
+        [link]="project.link"
+        [title]="project.title"
+        [content]="project.content"
+        [technologies]="project.technology"
+        [date]="project.released"
+    >
+
+    </app-portfolio-project>
+</main>
