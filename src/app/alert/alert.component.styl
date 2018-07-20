@@ -1,0 +1,41 @@
+@import '../../styles.styl'
+
+.alert 
+    width auto
+    max-width 300px
+    height auto
+    position absolute
+    top -30px
+    left 5px
+    &:before
+            content ''
+            position relative
+            display block
+            top 90px
+            left 0px
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 12.5px 30px 12.5px 0;
+            border-color: transparent warningColor transparent transparent;
+    &__box
+        margin 30px
+        padding 7px 15px 15px 15px
+        &:before 
+            content ''
+            position relative
+            display block
+            top 26px
+            left -43px
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 11.5px 29px 11.5px 0;
+            border-color: transparent darkColor transparent transparent;
+    &--style
+        border 3px solid warningColor
+        background darkColor
+        txt(11px, 1px, normal, none, inherit)
+        border-radius(10px)
+    &--warning
+        txt(14px, 2px, 700, uppercase, warningColor)
