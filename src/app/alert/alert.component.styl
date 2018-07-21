@@ -2,30 +2,44 @@
 
 .alert 
     width auto
-    max-width 300px
+    max-width 280px
     height auto
-    position absolute
+    position fixed
     top -30px
-    left 5px
+    left 10px
     &:before
-            content ''
-            position relative
-            display block
-            top 90px
-            left 0px
-            width: 0;
-            height: 0;
-            border-style: solid;
-            border-width: 12.5px 30px 12.5px 0;
-            border-color: transparent warningColor transparent transparent;
+        content ''
+        position relative
+        display block
+        top 68px
+        left 0px
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 12.5px 30px 12.5px 0;
+        border-color: transparent warningColor transparent transparent;
+    &__exit
+        position absolute
+        display block
+        top 65px
+        left calc(100% - 60px)
+        width 14px
+        height 14px
+        z-index 4
+        transition 0.2s
+        &:hover
+            cursor pointer
+            color #999
     &__box
-        margin 30px
-        padding 7px 15px 15px 15px
+        margin 20px 30px 30px 30px
+        padding 0px 15px 15px 15px
+        & p
+            margin 0 0 10px 0
         &:before 
             content ''
             position relative
             display block
-            top 26px
+            top 21px
             left -43px
             width: 0;
             height: 0;
@@ -37,5 +51,6 @@
         background darkColor
         txt(11px, 1px, normal, none, inherit)
         border-radius(10px)
+        box-shadow: 2px 3px 5px rgba(15, 15, 15, 0.8);
     &--warning
         txt(14px, 2px, 700, uppercase, warningColor)

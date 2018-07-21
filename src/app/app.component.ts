@@ -5,6 +5,13 @@ import { Component } from '@angular/core';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.styl']
 })
+
+
 export class AppComponent {
-  title = 'app';
+
+  public warning: string = "Now are maintain works. Can occur unexpected errors.";
+  
+  constructor() {
+  }
+
 }
