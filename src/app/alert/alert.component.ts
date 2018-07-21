@@ -9,6 +9,12 @@ export class AlertComponent {
 
   @Input() message: string;
 
+  public hidden: Boolean = false;
+
   constructor() { }
+
+  hiddenAlert() {
+    this.hidden = true;
+  }
 
 }

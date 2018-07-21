@@ -1,5 +1,5 @@
-<aside class="alert">
-  <nav id="alertExit" class="alert__exit">X</nav>
+<aside class="alert" [class.alert--hidden]="hidden">
+  <nav id="alertExit" class="alert__exit" (click)="hiddenAlert()">X</nav>
   <div class="alert__box alert--style">
     <p class="alert--warning"> Warning! </p>
     <span>{{message}}</span>
