@@ -19,7 +19,6 @@ export class PortfolioComponent implements OnInit {
   constructor(private http: HttpClient, private data: DataService) {
     this.getJSON().subscribe(data => {
         this.portfolioProjects = data;
-        console.log(this.portfolioProjects[0].technology)
     });
   }
 
