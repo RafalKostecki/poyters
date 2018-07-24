@@ -1,2 +1,45 @@
-.portfolio
-    opacity 0
+@import '../../styles'
+
+.about
+    width 70%
+    margin 50px 15% 70px 15%
+    float left
+    &__textBox
+        width calc(100% - 70px)
+        height auto
+        float left
+        margin 0 35px 0 35px
+    &--styles
+        border-right 5px solid blueColor1
+        font-size 15px
+        & a
+            transition 0.3s ease-in
+        & a:hover
+            color blueColor1
+    &--github
+        margin-top 25px
+        color #bbb
+        font-size 14px
+@media (max-width: 1200px) and (min-width: 800px)
+    .about
+        width 85%
+        margin 50px 7.5% 70px 7.5%
+@media (max-width: 800px) and (min-width: 600px)
+    .about
+        width 90%
+        margin 50px 5% 70px 5%
+        &__textBox
+            margin 0 35px 15px 35px
+        &--styles
+            border-right none
+            border-bottom 2px solid blueColor1
+@media (max-width: 600px)
+    .about
+        width 96%
+        margin 50px 2% 70px 2%
+        &__textBox
+            width calc(100% - 40px)
+            margin 0 20px 15px 20px
+        &--styles
+            border-right none
+            border-bottom 2px solid blueColor1
