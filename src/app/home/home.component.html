@@ -1,11 +1,10 @@
-<main *ngFor="let project of projects">
-    <app-project
-        [type]="project.type"
-        [image]="project.image"
-        [link]="project.link"
-        [title]="project.title"
-        [content]="project.content"
+<app-project
+    [type]="project.type"
+    [image]="project.image"
+    [link]="project.link"
+    [title]="project.title"
+    [content]="project.content"
+    *ngFor="let project of projects"
     >
 
-    </app-project>
-</main>
+</app-project>

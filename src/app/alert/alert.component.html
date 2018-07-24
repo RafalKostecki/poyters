@@ -1,7 +1,7 @@
-<aside class="alert" [@close]="state">
-  <nav id="alertExit" class="alert__exit" (click)="hiddenAlert()">X</nav>
+<div role="alert" aria-live="assertive" class="alert" [@close]="state">
+  <div role="button" id="alertExit" class="alert__exit" (click)="hiddenAlert()">X</div>
   <div class="alert__box alert--style">
     <p class="alert--warning"> Warning! </p>
     <span>{{message}}</span>
   </div>
-</aside>
+</div>
