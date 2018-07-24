@@ -1,10 +1,8 @@
 
 //Variables
-darkColor = #161b20
-darkColor1 = #1f262d
-whiteColor = rgba(235,235,235,0.9);
-blueColor = #2c59bf
-blueColor1 = #27427c
+backgroundColor = #161b20
+backgroundColor1 = #1f262d
+colorOfDecorations = #27427c
 warningColor = #770808
 
 //Mixins
@@ -68,18 +66,18 @@ html, body
   padding 0
   width 100%
   height 100%
-  background darkColor
+  background backgroundColor
   color #eee
 html
   overflow-y scroll
 h1,h2,h3,h4,h5,h6
-  font-family serif
+  font-family inherit
   font-weight bold
-  margin 0
+  margin 0 0 10px 0
 for num in (1..6) //Here we will get h1-h6
   h{num}
-    font-size (28 - num*2)px
-    line-height (28 - num*2)px
+    font-size (36 - num*4)px
+    line-height (36 - num*4)px
 a:link, a:visited
   text-decoration inherit
   color inherit
@@ -106,7 +104,7 @@ a:link, a:visited
     & p
       padding 15px 0 15px 0
   &--border
-    border-bottom 2px solid blueColor1
+    border-bottom 2px solid colorOfDecorations
 @media (max-width: 1000px) and (min-width: 860px)
   .smallBoxImg
     width 70%

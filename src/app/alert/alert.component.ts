@@ -33,7 +33,7 @@ export class AlertComponent {
 
   constructor() { }
 
-  hiddenAlert() {
+  hideAlert() {
     this.state = 'close';
   }
 
