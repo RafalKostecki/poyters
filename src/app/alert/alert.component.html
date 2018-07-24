@@ -1,7 +1,7 @@
 <div role="alert" aria-live="assertive" class="alert" [@close]="state">
-  <div role="button" id="alertExit" class="alert__exit" (click)="hiddenAlert()">X</div>
+  <div role="button" id="alertExit" class="alert__exit" (click)="hideAlert()">X</div>
   <div class="alert__box alert--style">
-    <p class="alert--warning"> Warning! </p>
+    <h5 class="alert--warning"> Warning! </h5>
     <span>{{message}}</span>
   </div>
 </div>

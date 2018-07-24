@@ -17,9 +17,9 @@ export class HomeComponent implements OnInit {
   private categoryName: string = "Home";
 
   constructor(private http: HttpClient, private data: DataService) {
-    this.getJSON().subscribe(data => {
-        this.projects = data;
-    });
+    this.getJSON().subscribe(
+      data => this.projects = data
+    );
   }
 
   ngOnInit() {
