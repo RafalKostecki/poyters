@@ -1,6 +1,7 @@
 import { Component, Input } from '@angular/core';
 import {trigger, state, style, transition, animate, keyframes } from '@angular/animations';
 
+
 @Component({
   selector: 'app-alert',
   templateUrl: './alert.component.html',
@@ -28,13 +29,11 @@ export class AlertComponent {
 
   @Input() message: string;
 
-  state: string = 'open';
-  public hidden: Boolean = false;
+  public state: string = 'open';
 
   constructor() { }
 
   hiddenAlert() {
-    this.hidden = true;
     this.state = 'close';
   }
 

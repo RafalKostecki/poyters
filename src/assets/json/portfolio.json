@@ -2,7 +2,7 @@
 	{
 		"type": "SPA",
 		"title": "Poyters",
-		"image": "",
+		"image": "./assets/img/poyters.png",
 		"link": "http://poyters.pl",
 		"content": "Yeah, exactly that page. I re-writed old Poyters page to Angular 6 framework to get more possibilities to improve this page like: CMS, blog etc.",
 		"technology": [
@@ -59,7 +59,7 @@
 		"title": "Bratbud",
 		"image": "./assets/img/bratbud.png",
 		"link": "http://bratbud.com",
-		"content": "In April 2017, I created simple but somhisticated web page for construction company Bratbud from Lublin in Poland.",
+		"content": "In April 2017, I created simple but sophisticated web page for construction company Bratbud from Lublin in Poland.",
 		"technology": [
 			"JavaScript", "HTML5", "CSS3", "Sass", "jQuery"
 		],
