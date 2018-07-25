@@ -16,6 +16,7 @@ import { PortfolioComponent } from './portfolio/portfolio.component';
 import { ContactComponent } from './contact/contact.component';
 import { PortfolioProjectComponent } from './portfolio-project/portfolio-project.component';
 import { AlertComponent } from './alert/alert.component';
+import { NotFoundComponent } from './not-found/not-found.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { AlertComponent } from './alert/alert.component';
     PortfolioComponent,
     ContactComponent,
     PortfolioProjectComponent,
-    AlertComponent
+    AlertComponent,
+    NotFoundComponent
   ],
   imports: [
     BrowserModule,

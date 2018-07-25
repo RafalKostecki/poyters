@@ -4,6 +4,8 @@ import { HomeComponent } from './home/home.component';
 import { DiaryComponent } from './diary/diary.component';
 import { PortfolioComponent } from './portfolio/portfolio.component';
 import { ContactComponent } from './contact/contact.component';
+import { NotFoundComponent} from './not-found/not-found.component';
+
 
 const routes: Routes = [
   {
@@ -21,11 +23,15 @@ const routes: Routes = [
   {
     path: 'contact',
     component: ContactComponent
+  },
+  { 
+    path: '**',  
+    component: NotFoundComponent 
   }
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports:[RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
