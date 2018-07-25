@@ -6,7 +6,7 @@ import { BehaviorSubject } from 'rxjs/BehaviorSubject';
 })
 export class DataService {
 
-  private categorySource = new BehaviorSubject<string>("Defalut");
+  private categorySource = new BehaviorSubject<string>("Unknown");
   public category = this.categorySource.asObservable();
 
   constructor() { }
