@@ -11,16 +11,14 @@ import {trigger, state, style, transition, animate, keyframes } from '@angular/a
 
       state('close', style({
         opacity: '0',
-        width: '0',
-        height: '0',
-        visibility: 'hidden'
+        display:'none'
       })),
 
       transition('open => close', animate('350ms', keyframes([
         style({opacity: 1, offset: 0}),
         style({opacity: 0.5, offset: 0.5}),
         style({opacity: 0, offset: 0.7}),
-        style({opacity: 0, width: 0, height: 0, visibility: 'visible', offset: 1}),
+        style({opacity: 0, display: 'none', offset: 1}),
       ])))
     ])
   ]
@@ -28,6 +26,7 @@ import {trigger, state, style, transition, animate, keyframes } from '@angular/a
 export class AlertComponent {
 
   @Input() message: string;
+  @Input() alertType: string;
 
   public state: string = 'open';
 

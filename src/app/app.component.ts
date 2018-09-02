@@ -10,7 +10,12 @@ import { Component } from '@angular/core';
 
 export class AppComponent {
 
-  public warning: string = "Now are maintain works. Can occur unexpected errors.";
+  //Alert types
+  public notice: string = "notice";
+  public warning: string = "warning";
+  //Alert messages
+  public warningMess1: string = "Now are maintain works. Can occur unexpected errors.";
+  public noticeMess1: string = "I wanna invite u to see my Facebook page!";
   
   constructor() {
   }
