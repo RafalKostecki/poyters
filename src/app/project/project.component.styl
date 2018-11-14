@@ -9,6 +9,22 @@
         width 400px
         height auto
         float left
+        position relative
+        &:before, &:after
+            position absolute
+            content ''
+            top -14px
+            left -8px
+            width 0
+            height 0
+            border-style solid
+        &:before
+            border-width 145px 195px 0 0
+            border-color colorOfDecorations transparent transparent transparent
+        &:after
+            cursor default
+            border-width 125px 155px 0 0
+            border-color backgroundColor transparent transparent transparent
     &__description
         width calc(100% - 460px)
         padding 0px 20px 40px 20px
@@ -26,7 +42,7 @@
         &:hover
             cursor pointer
     &--descBox
-        border-bottom 2px solid colorOfDecorations
+        border-bottom 5px solid colorOfDecorations
     &--projType
         font-weight 700
         color colorOfDecorations 
@@ -40,11 +56,11 @@
         txt(18px, 0px, 400, none, inherit)
         line-height 24px
         text-indent 50px
-@media (max-width: 1300px) and (min-width: 930px)
+@media (max-width 1300px) and (min-width 930px)
     .project
         width 90%
         margin 50px 5% 50px 5%
-@media (max-width: 930px) and (min-width: 780px)
+@media (max-width 930px) and (min-width 780px)
     .project
         width 95%
         margin 50px 2.5% 50px 2.5%
@@ -52,7 +68,7 @@
             width 340px
         &__description
             width calc(100% - 400px)
-@media (max-width: 780px) and (min-width: 710px)
+@media (max-width 780px) and (min-width 710px)
     .project
         width 95%
         margin 50px 2.5% 50px 2.5%
@@ -62,24 +78,23 @@
             width calc(100% - 340px)
         &--descTxt
             txt(13px, 0px, 400, none, inherit)
-@media (max-width: 710px) and (min-width: 610px)
+@media (max-width 710px) and (min-width 610px)
     .project
         width 80%
         margin 50px 10% 50px 10%
         float left
-        opacity 0
         &__img
             width 100%
             height auto
             max-height 55vh
-            overflow hidden
+            // overflow hidden
         &__description
             width calc(100% - 50px)
             padding 50px 25px 40px 25px
             margin 0
         &--descTxt
             txt(14px, 0px, 400, none, inherit)
-@media (max-width: 610px)
+@media (max-width 610px)
     .project
         width 92%
         margin 50px 4% 50px 4%
@@ -88,7 +103,7 @@
             width 100%
             height auto
             max-height 60vh
-            overflow hidden
+            // overflow hidden
         &__description
             width calc(100% - 50px)
             padding 50px 25px 40px 25px
