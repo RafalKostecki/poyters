@@ -4,6 +4,21 @@
     width 80%
     margin 50px 10% 50px 10%
     float left
+    position relative
+    &:before, &:after
+        position absolute
+        content ''
+        bottom 0
+        left -10px
+        width 0
+        height 0
+        border-style solid
+    &:before
+        border-width 65px 0 0 470px
+        border-color transparent transparent transparent colorOfDecorations
+    &:after
+        border-width 60px 0 0 430px
+        border-color transparent transparent transparent backgroundColor
     &__img
         margin-top 10px
         width 400px
@@ -19,7 +34,7 @@
             height 0
             border-style solid
         &:before
-            border-width 145px 195px 0 0
+            border-width 140px 195px 0 0
             border-color colorOfDecorations transparent transparent transparent
         &:after
             cursor default
@@ -83,6 +98,10 @@
         width 80%
         margin 50px 10% 50px 10%
         float left
+        &:before
+            border-width 20px 0 0 370px
+        &:after
+            border-width 15px 0 0 270px
         &__img
             width 100%
             height auto
@@ -99,6 +118,10 @@
         width 92%
         margin 50px 4% 50px 4%
         float left
+        &:before
+            border-width 20px 0 0 85px
+        &:after
+            border-width 15px 0 0 60px
         &__img
             width 100%
             height auto
