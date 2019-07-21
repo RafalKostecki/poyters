@@ -15,8 +15,8 @@ export class AppComponent {
   public warning: string = "warning";
   //Alert messages
   public warningMess1: string = "Now are maintain works. Can occur unexpected errors.";
-  public noticeMess1: string = "I wanna invite u to see my Facebook page!";
-  
+  public noticeMess1: string = 'I wanna invite u to see my <a href="https://www.facebook.com/poyterskostecki">Facebook</a> page!';
+
   constructor() {
   }
 
