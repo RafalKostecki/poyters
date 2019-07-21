@@ -2,6 +2,6 @@
   <div role="button" id="alertExit" class="alert__exit" (click)="hideAlert()">X</div>
   <div class="alert__box alert--style">
     <h5 class="alert--{{alertType}}Title"> {{alertType}}! </h5>
-    <span>{{message}}</span>
+    <span [innerHTML]="message"></span>
   </div>
 </div>
