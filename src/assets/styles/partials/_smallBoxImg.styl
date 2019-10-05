@@ -1,0 +1,51 @@
+.g-smallBoxImg {
+  width 60%
+  margin 50px 20% 80px 20%
+  float left
+  @media (max-width: 1000px) and (min-width: 860px) {
+    width 70%
+    margin 50px 15% 80px 15%
+  }
+  @media (max-width: 860px) and (min-width: 750px) {
+    width 80%
+    margin 50px 10% 80px 10%
+  }
+  @media (max-width: 750px) and (min-width: 500px) {
+    width 90%
+    margin 50px 5% 80px 5%
+  }
+  @media (max-width: 500px) and (min-width: 20px) {
+    width 93%
+    margin 50px 3.5% 80px 3.5%
+  }
+  &__data {
+    width calc(100% - 30px)
+    padding 30px 15px 30px 15px
+  }
+  &__img {
+    width 100%
+    height 50vh
+    float left
+  }
+  &__data {
+    width calc(100% - 60px)
+    padding 30px
+    float left
+  }
+  &--picture {
+    background-position center
+    background-size cover
+  }
+  &--dataTxt {
+    txt(12px, 1px, 400, uppercase, inherit)
+    line-height 22px
+    text-indent 50px
+
+    & p {
+      padding 15px 0 15px 0
+    }
+  }
+  &--border {
+    border-bottom 2px solid colorOfDecorations
+  }
+}
