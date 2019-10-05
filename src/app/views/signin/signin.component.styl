@@ -1,0 +1,85 @@
+@import '../../../styles.styl';
+
+.form {
+  display grid
+  justify-items center
+  margin-bottom 50px
+
+  &__box {
+    display grid
+    padding 20px 15px
+    min-width 500px
+    max-width 700px
+
+    &--signInUp {
+      color decColor
+    }
+
+  }
+
+}
+
+
+.formSubmit {
+  margin 30px 0 10px 0
+  padding 7px 10px
+
+  color fontColorLight
+  background transparent
+  border 1px solid bgColor
+  letter-spacing 1px
+  transition 200ms ease-in-out
+
+  &:focus {
+    outline none
+    border 1px solid decColor
+  }
+
+  &:hover {
+    cursor pointer
+  }
+}
+
+.formInput {
+  position relative
+  display grid
+
+  &__validation {
+    position absolute
+    height auto
+    width 100px
+    top 10px
+    left -135px
+    padding 6px 9px
+
+    background-color rgba(0, 0, 0, 0.7)
+    box-shadow 0 0px 20px rgba(0, 0, 0, 0.9)
+  }
+
+  &__label {
+    margin 10px 0 2px 0
+
+    color bgColor
+  }
+
+  &__inputField {
+    height 30px
+    padding 3px 9px
+
+    background bgColor
+    border 2px solid transparent
+    transition 200ms ease-in-out
+    color fontColorLight
+    letter-spacing 2px
+    font-size 16px
+
+    &:active {
+      border 2px solid transparent
+    }
+
+    &:focus {
+      outline none
+      border 2px solid decColor
+    }
+  }
+}

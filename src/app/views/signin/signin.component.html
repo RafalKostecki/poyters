@@ -1,3 +1,22 @@
-<p>
-  signin works!
-</p>
+<form class="form" [formGroup]="signInForm" (ngSubmit)="onSubmit()">
+  <div class="form__box form__box--signInUp">
+    <div class="formInput">
+      <div *ngIf="submitted && formControls.login.errors" class="formInput__validation t-paragraph4Light" role="alert" aria-live="assertive">
+          <div *ngIf="formControls.login.errors.required">Login is required</div>
+      </div>
+      <label class="t-paragraphLight formInput__label"> login </label>
+      <input formControlName="login" class="formInput__inputField" type="text"/>
+    </div>
+
+    <div class="formInput">
+      <div *ngIf="submitted && formControls.password.errors" class="formInput__validation t-paragraph4Light" role="alert" aria-live="assertive">
+          <span *ngIf="formControls.password.errors.required">Password is required</span>
+          <span *ngIf="formControls.password.errors.minlength">Password must be at least 6 characters</span>
+      </div>
+      <label class="t-paragraphLight formInput__label"> password </label>
+      <input formControlName="password" class="formInput__inputField" type="password"/>
+    </div>
+
+    <button type="submit" class="formSubmit t-paragraph3Normal"> sign in </button>
+  </div>
+</form>
