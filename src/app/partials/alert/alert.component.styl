@@ -1,0 +1,74 @@
+@import '../../../styles.styl'
+
+.alert
+    width auto
+    max-width 280px
+    height auto
+    position fixed
+    top -30px
+    left 10px
+    z-index 5
+    &:before
+        content ''
+        position relative
+        display block
+        top 63px
+        left 0px
+        width 0
+        height 0
+        border-style solid
+        border-width 12.5px 30px 12.5px 0
+    &__exit
+        position absolute
+        display block
+        top 60px
+        left calc(100% - 60px)
+        width 14px
+        height 14px
+        z-index 4
+        transition 200ms ease-in-out
+        &:hover
+            cursor pointer
+            color #999
+    &__box
+        margin 15px 30px 30px 30px
+        padding 0px 15px 15px 15px
+        & p
+            margin 0 0 10px 0
+        &:before
+            content ''
+            position relative
+            display block
+            top 21px
+            left -43px
+            width 0
+            height 0
+            border-style solid
+            border-width 11.5px 29px 11.5px 0
+            border-color transparent backgroundColor transparent transparent
+    &--style
+        background backgroundColor
+        txt(11px, 1px, normal, none, inherit)
+        border-radius(10px)
+        box-shadow(2px 3px 5px rgba(15, 15, 15, 0.8))
+        transition 200ms ease-in-out
+
+        & > h5 {
+            letter-spacing 2px
+            text-transform uppercase
+        }
+
+    &--warning
+        &:before
+          border-color transparent warningColor transparent transparent;
+        & > .alert__box
+          border 3px solid warningColor
+    &--notice
+        &:before
+          border-color transparent colorOfDecorations transparent transparent;
+        & > .alert__box
+          border 3px solid colorOfDecorations
+    &--warningTitle
+        color warningColor
+    &--noticeTitle
+        color colorOfDecorations

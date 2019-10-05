@@ -1,10 +1,12 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { HomeComponent } from './home/home.component';
-import { DiaryComponent } from './diary/diary.component';
-import { PortfolioComponent } from './portfolio/portfolio.component';
-import { ContactComponent } from './contact/contact.component';
-import { NotFoundComponent} from './not-found/not-found.component';
+import { HomeComponent } from './views/home/home.component';
+import { DiaryComponent } from './views/diary/diary.component';
+import { PortfolioComponent } from './views/portfolio/portfolio.component';
+import { ContactComponent } from './views/contact/contact.component';
+import { SignupComponent } from './views/signup/signup.component';
+import { SigninComponent } from './views/signin/signin.component';
+import { NotFoundComponent} from './views/not-found/not-found.component';
 
 
 const routes: Routes = [
@@ -23,6 +25,14 @@ const routes: Routes = [
   {
     path: 'contact',
     component: ContactComponent
+  },
+  {
+    path: 'signup',
+    component: SignupComponent
+  },
+  {
+    path: 'signin',
+    component: SigninComponent
   },
   { 
     path: '**',  

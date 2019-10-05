@@ -1,0 +1,33 @@
+@import '../../../styles.styl'
+@import '../project/project.component.styl'
+
+.technology
+    width 100%
+    float left
+    margin-top 40px
+    & span
+        display block
+        height 16px
+        float left
+        padding 2px 0 2px 0
+        margin 2px 5px 2px 0px
+    &__box
+        width auto
+        height 16px
+        float left
+        padding 2px 4px 2px 4px
+        margin 2px 5px 2px 5px
+    &--style
+        border 1px solid colorOfDecorations
+        border-radius(4px)
+        font-size 13px
+.date
+    width 100%
+    float left
+    margin-top 10px
+    &--style
+        txt(10px, 0px, 300, none, inherit)
+
+@media (max-width: 610px)
+    .technology
+        font-size 14px

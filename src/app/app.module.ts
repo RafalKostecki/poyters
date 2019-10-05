@@ -5,18 +5,20 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { LogoComponent } from './logo/logo.component';
-import { MenuComponent } from './menu/menu.component';
-import { CategoryComponent } from './category/category.component';
-import { ProjectComponent } from './project/project.component';
-import { HomeComponent } from './home/home.component';
-import { FooterComponent } from './footer/footer.component';
-import { DiaryComponent } from './diary/diary.component';
-import { PortfolioComponent } from './portfolio/portfolio.component';
-import { ContactComponent } from './contact/contact.component';
-import { PortfolioProjectComponent } from './portfolio-project/portfolio-project.component';
-import { AlertComponent } from './alert/alert.component';
-import { NotFoundComponent } from './not-found/not-found.component';
+import { LogoComponent } from './partials/logo/logo.component';
+import { MenuComponent } from './partials/menu/menu.component';
+import { CategoryComponent } from './partials/category/category.component';
+import { ProjectComponent } from './partials/project/project.component';
+import { HomeComponent } from './views/home/home.component';
+import { FooterComponent } from './partials/footer/footer.component';
+import { DiaryComponent } from './views/diary/diary.component';
+import { PortfolioComponent } from './views/portfolio/portfolio.component';
+import { ContactComponent } from './views/contact/contact.component';
+import { PortfolioProjectComponent } from './partials/portfolio-project/portfolio-project.component';
+import { AlertComponent } from './partials/alert/alert.component';
+import { NotFoundComponent } from './views/not-found/not-found.component';
+import { SignupComponent } from './views/signup/signup.component';
+import { SigninComponent } from './views/signin/signin.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +34,9 @@ import { NotFoundComponent } from './not-found/not-found.component';
     ContactComponent,
     PortfolioProjectComponent,
     AlertComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    SignupComponent,
+    SigninComponent
   ],
   imports: [
     BrowserModule,
