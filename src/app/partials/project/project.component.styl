@@ -1,0 +1,98 @@
+@import '../../../styles.styl'
+
+.project
+    width 80%
+    margin 50px 10%
+    float left
+    position relative
+    &__img
+        width 400px
+        height auto
+        float left
+        position relative
+    &__description
+        width calc(100% - 440px)
+        padding 30px 20px 40px 20px
+        float left
+
+        border-top 1px solid colorOfDecorations
+    &__txtBox
+        width 100%
+        float left
+        text-align center
+    &--imgBox
+        background-position center
+        background-size cover
+        & img
+            width 100%
+        &:hover
+            cursor pointer
+    &--descBox
+        border-top 1px solid transparent
+    &--projType
+        font-weight 700
+        color colorOfDecorations
+        letter-spacing 1px
+        text-transform uppercase
+    &--titleTxt
+        letter-spacing 2px
+        text-transform none
+        padding-bottom 10px
+    &--descTxt
+        txt(12px, 1px, 400, uppercase, inherit)
+        line-height 22px
+        text-indent 50px
+@media (max-width 1300px) and (min-width 930px)
+    .project
+        width 90%
+        margin 50px 5%
+@media (max-width 930px) and (min-width 780px)
+    .project
+        width 95%
+        margin 50px 2.5%
+        &__img
+            width 340px
+        &__description
+            width calc(100% - 400px)
+@media (max-width 780px) and (min-width 710px)
+    .project
+        width 95%
+        margin 40px 2.5%
+        &__img
+            width 280px
+        &__description
+            width calc(100% - 340px)
+        &--descTxt
+            txt(13px, 1px, 400, uppercase, inherit)
+@media (max-width 710px) and (min-width 610px)
+    .project
+        width 80%
+        margin 10px 10%
+        float left
+        &__img
+            width 100%
+            height auto
+            max-height 55vh
+            margin 10px 0 5px 0
+        &__description
+            width calc(100% - 50px)
+            padding 50px 25px 40px 25px
+            margin 0
+        &--descTxt
+            txt(13px, 1px, 400, uppercase, inherit)
+@media (max-width 610px)
+    .project
+        width 92%
+        margin 15px 4% 30px 4%
+        float left
+        &__img
+            width 100%
+            height auto
+            max-height 60vh
+            margin 10px 0 5px 0
+        &__description
+            width calc(100% - 50px)
+            padding 50px 25px 40px 25px
+            margin 0
+        &--descTxt
+            txt(13px, 1px, 400, uppercase, inherit)

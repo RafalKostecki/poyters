@@ -1,0 +1,115 @@
+@import '../../../styles.styl'
+
+menuFlex()
+    .menu
+        height auto
+        float left
+        width 84%
+        margin 30px 8% 30px 8%
+        &__btn
+            height 30px
+            visibility visible
+        & ul
+            margin 0 auto
+            padding 0
+            float left
+            height 0
+            opacity 0
+            font-size 1px
+            pointer-events none
+            &.media
+                float right
+                & li
+                    border-radius 50%
+                    margin 0px 15px 5px 15px
+                    font-size 4px
+            & li
+                display block
+                clear both
+                margin 10px 15px 10px 15px
+.menu
+    width 50%
+    height 40px
+    margin 30px 25% 30px 25%
+    float left
+    &__btn
+        width 100%
+        height 0px
+        margin 0 auto
+        float left
+        visibility hidden
+        & span
+            width 60px
+            display block
+            float left
+            margin-left calc(50% - 32.5px)
+    &__arrow
+        margin-top 8px
+        width 0
+        height 0
+        float left
+    & ul
+        height 100%
+        margin 0 auto
+        padding 0
+        float left
+        transition 0.7s
+        &.media
+            float right
+            & li
+                border-radius 50%
+                margin 0px 15px 5px 15px
+                font-size 4px
+                outline none
+                &:hover
+                    background colorOfDecorations
+        & li
+            display inline
+            float left
+            margin 10px 30px 10px 30px
+            transition-duration 0.3s
+            &:first-child
+                margin-left 15px
+            &:hover
+                color colorOfDecorations
+    &--visible
+        & ul
+            height 180px !important
+            opacity 1 !important
+            font-size 18px !important
+            pointer-events auto !important
+            animation-duration 1.6s
+            animation-name menuShow
+    &--style
+        txt(18px, 2px, 400, uppercase, inherit)
+    &--btnTxt
+        cursor pointer
+        text-align center
+        txt(16px, 1px, 400, uppercase, inherit)
+    &--arrowBorder
+        border-style solid
+        border-width 5px 5px 0 5px
+        border-color colorOfDecorations transparent transparent transparent
+@media (max-width: 1700px) and (min-width: 1300px)
+    .menu
+        width 60%
+        margin 30px 20% 30px 20%
+@media (max-width: 1300px) and (min-width: 1030px)
+    .menu
+        width 70%
+        margin 30px 15% 30px 15%
+@media (max-width: 1030px) and (min-width: 910px)
+    .menu
+        width 80%
+        margin 30px 10% 30px 10%
+@media (max-width: 910px) and (min-width: 785px) //On smaller width size menu ought to be hidden
+    .menu
+        width 92%
+        margin 30px 4% 30px 4%
+@media (max-width: 785px) and (min-width: 500px)
+    menuFlex()
+@media (max-width: 500px) and (min-width: 20px)
+    menuFlex()
+    .menu
+        width 92%
+        margin 30px 4% 30px 4%
