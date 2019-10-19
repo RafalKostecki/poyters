@@ -1,11 +1,11 @@
 <nav class="menu menu--style">
-  <div class="menu__btn menu--btnTxt" id="menuNav">
+  <div class="menu__btn menu--btnTxt" (click)="toggleMenu()">
     <span>menu</span>
     <div class="menu__arrow menu--arrowBorder">
 
     </div>
   </div>
-  <ul>
+  <ul (click)="toggleMenu()">
     <li> 
       <a routerLink="/">
         home
