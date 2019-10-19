@@ -1,4 +1,15 @@
 [
+  {
+		"type": "Game",
+		"title": "Bread Hunter 4",
+		"image": "./assets/img/breadhunter4.png",
+		"link": "http://poyters.pl/breadhunter4",
+		"content": "Bread Hunter 4 it is a tiny web game created in JavaScript, library React.js, HTML5 and CSS3 with BEM methodology. At this project I wanted to sum my knowledge about new version of React.js, 16.8+ (hooks) and Redux. Create clean and simple project architecture",
+		"technology": [
+			"JavaScript", "React 16.8+", "Redux", "SCSS", "BEM", "HTML5"
+		],
+		"released": "22.04.2019"
+	},
 	{
 		"type": "SPA",
 		"title": "Poyters",
@@ -42,17 +53,6 @@
 			"JavaScript", "HTML5", "CSS3", "Pug", "Stylus", "vanilla.js", "SMACSS"
 		],
 		"released": "25.11.2017"
-	},
-	{
-		"type": "Game",
-		"title": "Bread Hunter 3",
-		"image": "./assets/img/breadHunter3.png",
-		"link": "http://poyters.pl/breadhunter3",
-		"content": "Bread Hunter 3 it is a tiny web game created in JavaScript, library jQuery, HTML5 and CSS3 with BEM methodology. In this project I wanted to do any lerger project in JavaScript and learn more about object oriented programming in JS and improve the last version of this game - Bread Hunter 2.",
-		"technology": [
-			"JavaScript", "HTML5", "CSS3", "BEM", "jQuery"
-		],
-		"released": "01.07.2017"
 	},
 	{
 		"type": "Website",
