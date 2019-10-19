@@ -1,4 +1,11 @@
 [
+  {
+		"type": "Game",
+		"image": "./assets/img/breadhunter4.png",
+		"link": "http://poyters.pl/breadhunter4",
+		"title": "Bread Hunter 4",
+		"content": "Bread Hunter 4 it is unusual dynamic arcade game. Your task is to pick up required amount of loaf of breads in the shortest time. But! It`s not all. To finish your score are included your time, lives and buffs usage! Also, you have to be careful and it all well fight off. As in the first version of this game, Katl Cashier will try break your plans. Be careful! Always, you can throw bottle of banana juice, it ought to stop her for a while."
+	},
 	{
 		"type": "Game",
 		"image": "./assets/img/hj2000.png",
@@ -12,13 +19,6 @@
 		"link": "http://poyters.pl/spacenewcomers",
 		"title": "Space Newcomers",
 		"content": "Space newcomers it is Poyters version of famous game - Space Invaders created by Taito Corporation in 1978. This producition introduced a huge confused in the game world. Now is available in Poyters version! Your mission is to destroy enemy invaders. You will use earlier prepared the ship. The aim is to carefully get not small bonus for destroying the mother ship. The game is responsive! Right now, you can play on a small, large screen,tablet or enormosu TV!"
-	},
-	{
-		"type": "Game",
-		"image": "./assets/img/breadHunter3.png",
-		"link": "http://poyters.pl/breadhunter3",
-		"title": "Bread Hunter 3",
-		"content": "Bread Hunter 3 it is unusual dynamic arcade game. Your task is to pick up required amount of loaf of breads in the shortest time as possible. But! It is not all. To finish your score are included your average speed, lives and accuracy! Completly all what is possible! Also, you have to be careful and it all well fight off. As in the first version of this game, Katl Cashier will try break your plans. Be careful! Always, you can throw bottle of banana juice, it ought to stop her."
 	},
 	{
 		"type": "Game",
