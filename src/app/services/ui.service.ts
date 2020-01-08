@@ -4,7 +4,7 @@ import { BehaviorSubject } from 'rxjs/BehaviorSubject';
 @Injectable({
   providedIn: 'root'
 })
-export class DataService {
+export class UiService {
 
   private categorySource = new BehaviorSubject<string>("Unknown");
   public category = this.categorySource.asObservable();

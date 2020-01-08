@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { DataService } from '../../data.service';
+import { UiService } from '../../services/ui.service';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { MustMatch } from '../../../assets/scripts/must-match.validadator';
 
@@ -14,7 +14,7 @@ export class SignupComponent implements OnInit {
   registerForm: FormGroup;
   submitted: boolean = false;
 
-  constructor(private formBuilder: FormBuilder, private data: DataService) { }
+  constructor(private formBuilder: FormBuilder, private data: UiService) { }
 
   ngOnInit() {
     this.data.changeCategory(this.categoryName);

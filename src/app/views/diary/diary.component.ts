@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { DataService } from '../../data.service';
+import { UiService } from '../../services/ui.service';
 
 @Component({
   selector: 'app-diary',
@@ -10,7 +10,7 @@ export class DiaryComponent implements OnInit {
 
   private categoryName: string = "Diary";
 
-  constructor(private data: DataService) { }
+  constructor(private data: UiService) { }
 
   ngOnInit() {
     this.data.changeCategory(this.categoryName)

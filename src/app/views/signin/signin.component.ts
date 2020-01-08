@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { DataService } from '../../data.service';
+import { UiService } from '../../services/ui.service';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
@@ -13,7 +13,7 @@ export class SigninComponent implements OnInit {
   signInForm: FormGroup;
   submitted: boolean = false;
 
-  constructor(private formBuilder: FormBuilder, private data: DataService) { }
+  constructor(private formBuilder: FormBuilder, private data: UiService) { }
 
   ngOnInit() {
     this.data.changeCategory(this.categoryName);
