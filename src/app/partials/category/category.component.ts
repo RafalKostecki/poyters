@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { DataService } from '../../data.service';
+import { UiService } from '../../services/ui.service';
 
 
 @Component({
@@ -11,7 +11,7 @@ export class CategoryComponent implements OnInit {
 
   public currentCategory: string;
 
-  constructor(private data: DataService) { }
+  constructor(private data: UiService) { }
 
   ngOnInit() {
     this.data.category.subscribe(cat => this.currentCategory = cat)

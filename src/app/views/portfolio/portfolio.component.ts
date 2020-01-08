@@ -1,7 +1,7 @@
 import { Component, OnInit, Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http'; 
 import { Observable } from 'rxjs/Observable';
-import { DataService } from '../../data.service';
+import { UiService } from '../../services/ui.service';
 
 
 @Component({
@@ -16,7 +16,7 @@ export class PortfolioComponent implements OnInit {
   public portfolioProjects: Object;
   private categoryName: string = "Portfolio";
 
-  constructor(private http: HttpClient, private data: DataService) {
+  constructor(private http: HttpClient, private data: UiService) {
     this.getJSON().subscribe(data => {
         this.portfolioProjects = data;
     });
