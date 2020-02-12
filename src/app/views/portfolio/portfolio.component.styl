@@ -1,55 +1,20 @@
 @import '../../../assets/styles/index.styl'
 
-.about
-    width 70%
-    margin 50px 15% 70px 15%
-    float left
-    &__textBox
-        position relative
-        width calc(100% - 35px)
-        height auto
-        float left
-        margin-right 35px
-        &:after
-          position absolute
-          content ''
-          top calc(50% - 15px)
-          right -67px
-          width 30px
-          height 30px
-          background url('../../../assets/img/icon1.png')
-    &--styles
-        border-right 35px outset colorOfDecorations
-        font-size 15px
-        & a
-            transition 0.3s ease-in
-        & a:hover
-            color colorOfDecorations
-    &--github
-        margin-top 25px
-        color #fontColor1
-        font-size 14px
-@media (max-width: 1200px) and (min-width: 800px)
-    .about
-        width 85%
-        margin 50px 7.5% 70px 7.5%
-@media (max-width: 800px) and (min-width: 600px)
-    .about
-        width 90%
-        margin 30px 5% 45px 5%
-        &__textBox
-            width calc(100% - 70px)
-            margin 0 35px 15px 35px
-        &--styles
-            border-right none
-            border-bottom 15px outset colorOfDecorations
-@media (max-width: 600px)
-    .about
-        width 96%
-        margin 15px 2% 40px 2%
-        &__textBox
-            width calc(100% - 40px)
-            margin 0 20px 15px 20px
-        &--styles
-            border-right none
-            border-bottom 15px outset colorOfDecorations
+.projectsWrapper {
+    display: flex
+    flex-flow: row wrap
+    justify-content: space-between
+    margin-bottom: 30px;
+
+    & > * {
+        flex-basis: 50%
+        max-width: calc(50% - 20px)
+        box-sizing: border-box
+        margin-bottom: 20px
+
+        @media (max-width: 750px) {
+            flex-basis: 100%
+            max-width: none
+        }
+    }
+}

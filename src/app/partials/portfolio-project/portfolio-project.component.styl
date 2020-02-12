@@ -1,33 +1,113 @@
 @import '../../../assets/styles/index.styl'
 @import '../project/project.component.styl'
 
-.technology
-    width 100%
-    float left
-    margin-top 40px
-    & span
-        display block
-        height 16px
-        float left
-        padding 2px 0 2px 0
-        margin 2px 5px 2px 0px
-    &__box
-        width auto
-        height 16px
-        float left
-        padding 2px 4px 2px 4px
-        margin 2px 5px 2px 5px
-    &--style
-        border 1px solid colorOfDecorations
-        border-radius(4px)
-        font-size 13px
-.date
-    width 100%
-    float left
-    margin-top 10px
-    &--style
-        txt(10px, 0px, 300, none, inherit)
+.portfolioProject {
+    display: flex
+    flex-direction: row
+    flex-wrap: nowrap
+    box-sizing: border-box
+    margin: 35px 0
+    height: 100%
 
-@media (max-width: 610px)
-    .technology
-        font-size 14px
+    border: 1px solid colorOfDecorations
+    border-radius: 5px
+    transition: 200ms ease-in-out
+    cursor: pointer
+
+    &:hover {
+        box-shadow: 1px 0px 15px 1px shadow1;
+    }
+
+    @media (max-width: 750px) {
+        flex-wrap wrap
+    }
+
+    &__pic {
+        flex: 1
+        min-width: 100%
+
+        @media (max-width: 1300px) and (min-width: 750px) {
+            max-width: 300px
+        }
+
+        @media (max-width: 750px) {
+            max-width: none
+            min-width: 100%
+        }
+
+        & img {
+            width: 100%
+            max-width: 100%    
+        }
+    }
+
+    &__description {
+        position: relative
+        flex: 1
+        padding: 30px 20px 0 20px
+    }
+}
+
+.projectHead {
+    display: flex
+    flex-direction: column
+    flex-wrap: nowrap
+    align-items: center
+
+    &__type {
+        flex: 1   
+
+        txt(15px, 1px, 700, uppercase, colorOfDecorations)
+    }    
+
+    &__title {
+        flex: 1    
+        padding-bottom 10px
+
+        letter-spacing: 2px
+        text-align: center
+    }
+}
+
+.content {
+    /* autoprefixer: ignore next */
+    display: -webkit-box
+    overflow: hidden
+
+    txt(15px, 1px, 400, none, inherit)
+    line-height 22px
+    text-indent 50px
+    text-overflow: ellipsis
+    /* autoprefixer: ignore next */
+    -webkit-box-orient: vertical
+    -webkit-line-clamp: 3 /* number of lines to show */
+}
+
+.technology {
+    display: flex
+    flex-direction: row
+    flex-wrap: wrap
+    margin-top: 20px
+
+    &__box {
+        flex: 1
+        height: 16px
+        padding: 2px 4px 2px 4px
+        margin: 0 3px
+
+        &--style {
+            border: 1px solid colorOfDecorations
+            border-radius(4px)
+            font-size: 13px
+        }
+    }
+}
+
+.date {
+    position: absolute
+    display: block
+    bottom: 20px
+    left: 20px
+    margin-top 10px
+    txt(10px, 0px, 300, none, inherit)
+}
