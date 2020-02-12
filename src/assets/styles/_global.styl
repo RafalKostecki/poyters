@@ -29,3 +29,19 @@ a:link, a:visited {
   color inherit
   cursor pointer
 }
+
+.g-pageWrapper {
+  display: flex
+  flex-direction: column
+  margin: 0 15%
+  box-sizing: border-box
+  clear: both
+
+  @media (max-width: 610px) {
+    margin: 0 2%
+  }
+
+  @media (max-width: 1300px) and (min-width: 610px) {
+    margin: 0 7%
+  }
+}
