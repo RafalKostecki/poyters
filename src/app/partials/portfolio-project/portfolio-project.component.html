@@ -21,5 +21,12 @@
     <aside class="date">
       Release date: {{date}}
     </aside>
+    <a
+      *ngIf="githubLink !== ''" 
+      class="github" 
+      target="blank" 
+      href="{{githubLink}}">
+      <img src="../assets/img/githubIcon.png" alt="GH" />
+    </a>
   </section>
 </a>
