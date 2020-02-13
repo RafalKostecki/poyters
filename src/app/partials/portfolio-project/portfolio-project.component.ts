@@ -15,6 +15,7 @@ export class PortfolioProjectComponent {
   @Input() content: string;
   @Input() technologies: Array<string>;
   @Input() date: string;
+  @Input() githubLink: string;
 
   constructor() { }
 
