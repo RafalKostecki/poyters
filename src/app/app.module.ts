@@ -20,6 +20,7 @@ import { AlertComponent } from './partials/alert/alert.component';
 import { NotFoundComponent } from './views/not-found/not-found.component';
 import { SignupComponent } from './views/signup/signup.component';
 import { SigninComponent } from './views/signin/signin.component';
+import { AboutComponent } from './partials/about/about.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,8 @@ import { SigninComponent } from './views/signin/signin.component';
     AlertComponent,
     NotFoundComponent,
     SignupComponent,
-    SigninComponent
+    SigninComponent,
+    AboutComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,62 @@
+@import '../../../assets/styles/index.styl'
+
+.about {
+  display: flex
+  flex-direction: column
+  flex-wrap: nowrap
+  margin: 30px 0 70px 0
+
+  &__contentWrapper {
+    display: flex
+    flex-direction: row
+    flex-wrap: nowrap
+    margin-top: 10px
+  }  
+}
+
+.person {
+  display: flex
+  flex-direction: column
+  flex-wrap: nowrap
+
+  &__name {
+    text-transform: uppercase
+    letter-spacing: 2px  
+  }
+
+  &__profession {
+    color: fontColor3
+  }
+}
+
+.menu {
+  flex: 1
+  max-width: 300px
+
+  & ul {
+    margin: 0
+    padding: 0
+
+    text-align: right
+    list-style-type: none
+
+    & li {
+      margin: 3px 0
+
+      text-transform: uppercase
+      color: colorOfDecorations
+      font-weight: 700
+      transition: 200ms ease-in-out
+
+      &:hover {
+        color: fontColor3  
+      }
+    }
+  }
+}
+
+.content {
+  flex: 1
+
+  text-indent: 50px
+}
