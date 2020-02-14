@@ -1,85 +1,90 @@
 .g-insertForm {
-  display grid
-  justify-items center
-  margin-bottom 50px
+  display: flex
+  justify-content: center
+  margin-bottom: 50px
 
   &__box {
-    display grid
-    padding 20px 15px
-    min-width 500px
-    max-width 700px
+    display: flex
+    flex-direction: column
+    padding: 20px 15px
+    min-width: 500px
+    max-width: 700px
 
-    &--signInUp {
-      color fontColor
+    @media (max-width: 650px) {
+      min-width: 0  
     }
 
+    &--signInUp {
+      color: fontColor
+    }
   }
-
 }
 
 
 .g-insertFormSubmit {
-  margin 45px 0 10px 0
-  padding 7px 10px
+  margin: 45px 0 10px 0
+  padding: 7px 10px
 
-  color fontColor
-  background transparent
-  border 2px solid backgroundColor1
-  letter-spacing 2px
+  color: fontColor
+  background-color: transparent
+  border: 2px solid backgroundColor1
+  letter-spacing: 2px
   transition: 200ms ease-in-out
 
   &:focus {
-    outline none
-    border 2px solid colorOfDecorations
+    outline: none
+    border: 2px solid colorOfDecorations
   }
 
   &:hover {
-    cursor pointer
-    border 2px solid colorOfDecorations
+    cursor: pointer
+    border: 2px solid colorOfDecorations
   }
 }
 
 .g-insertFormInput {
-  position relative
-  display grid
+  position: relative
+  display: flex
+  flex-direction: column
 
   &__validation {
-    position absolute
-    height auto
-    width 100px
-    top 10px
-    left -135px
-    padding 6px 9px
+    position: absolute
+    height: auto
+    width: 100px
+    top: 10px
+    left: -135px
+    padding: 6px 9px
 
-    background-color rgba(0, 0, 0, 0.7)
-    box-shadow 0 0px 20px rgba(0, 0, 0, 0.9)
-    color warningColor
+    background-color: shadow2
+    box-shadow: 0 0px 20px shadow3
+    color: warningColor
   }
 
   &__label {
-    margin 15px 0 2px 0
+    margin: 15px 0 2px 0
 
-    color colorOfDecorations
+    color: colorOfDecorations
+    font-size: 20px
   }
 
   &__inputField {
-    height 30px
-    padding 3px 9px
+    height: 30px
+    padding: 3px 9px
 
-    background backgroundColor1
-    border 2px solid transparent
-    transition 200ms ease-in-out
-    color fontColor
-    letter-spacing 2px
-    font-size 16px
+    background-color: backgroundColor1
+    border: 2px solid transparent
+    transition: 200ms ease-in-out
+    color: fontColor
+    letter-spacing: 2px
+    font-size: 16px
 
     &:active {
-      border 2px solid transparent
+      border: 2px solid transparent
     }
 
     &:focus {
-      outline none
-      border 2px solid colorOfDecorations
+      outline: none
+      border: 2px solid colorOfDecorations
     }
   }
 }
