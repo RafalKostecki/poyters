@@ -15,20 +15,64 @@
     height: 32px
 
     border-radius: 50%
-    border: 1px solid colorOfDecorations  
+    border: 1px solid colorOfDecorations
+    cursor: pointer  
   }
 
   &__list {
     position: absolute
-    top: 40px
+    top: 44px
     right: 0
-    padding: 3px 9px
 
     background-color: shadow2
 
+    &:before, &:after {
+      position: absolute
+      content: ''
+      top: -3px  
+      width: 10px
+      height: 2px 
+      
+      background-color: colorOfDecorations
+    }
+
+    &:before {
+      right: 8px  
+
+      transform: rotate(40deg)
+    }
+
+    &:after {
+      right: 16px
+
+      transform: rotate(-40deg)
+    }
+
     & ul {
+      position: relative
       margin: 0
-      padding: 0  
+      padding: 6px 18px
+
+      white-space: nowrap
+
+      &:before, &:after {
+        position: absolute
+        content: ''
+        top: 0 
+        right: 0 
+        
+        background-color: colorOfDecorations
+      }
+
+      &:before {
+        width: 10px
+        height: 2px  
+      }
+
+      &:after {
+        height: 100%
+        width: 2px  
+      }
 
       & li {
         list-style-type: none  
@@ -47,7 +91,5 @@
 
       border-top: 1px solid backgroundColor1 
     }
-
-    border: 1px solid colorOfDecorations  
   }
 }
