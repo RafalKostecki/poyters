@@ -11,6 +11,10 @@
     flex-direction: row
     flex-wrap: nowrap
     margin-top: 10px
+
+    @media (max-width: 650px) {
+      flex-direction: column
+    }
   }  
 }
 
@@ -22,16 +26,29 @@
   &__name {
     text-transform: uppercase
     letter-spacing: 2px  
+
+    @media (max-width: 650px) {
+      text-align: center
+    }
   }
 
   &__profession {
     color: fontColor3
+
+    @media (max-width: 650px) {
+      text-align: center
+    }
   }
 }
 
 .menu {
   flex: 1
-  max-width: 300px
+  max-width: 200px
+
+  @media (max-width: 650px) {
+    max-width: 100%
+    margin-top: 10px
+  }
 
   & ul {
     margin: 0
@@ -47,6 +64,15 @@
       color: colorOfDecorations
       font-weight: 700
       transition: 200ms ease-in-out
+
+      @media (max-width: 650px) {
+        display: inline-block
+        margin: 3px 7px
+
+        &:last-child {
+          margin-right: 0  
+        }
+      }
 
       &:hover {
         color: fontColor3  
