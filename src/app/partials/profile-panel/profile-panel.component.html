@@ -1,15 +1,18 @@
 <aside class="profilePanel"> 
-  <div class="profilePanel__icon"></div>
-  <div class="profilePanel__list">
+  <div class="profilePanel__icon" (click)="toggleProfileList()"></div>
+  <div *ngIf="profileListIsOpen" class="profilePanel__list">
     <ul>
       <li>
         profile
       </li>
       <li>
+        help
+      </li>
+      <li>
         settings
       </li>
       <li class="profilePanel__list--separator">
-        log out
+        sign out
       </li>
     </ul>
   </div>

@@ -9,7 +9,13 @@ export class ProfilPanelComponent implements OnInit {
 
   constructor() { }
 
+  private profileListIsOpen: boolean = false;
+
   ngOnInit() {
+  }
+
+  toggleProfileList() {
+    this.profileListIsOpen = !this.profileListIsOpen;
   }
 
 }
