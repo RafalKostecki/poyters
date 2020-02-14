@@ -11,7 +11,7 @@ import { MenuComponent } from './partials/menu/menu.component';
 import { CategoryComponent } from './partials/category/category.component';
 import { ProjectComponent } from './partials/project/project.component';
 import { HomeComponent } from './views/home/home.component';
-import { FooterComponent } from './partials/footer/footer.component';
+import { FooterComponent } from './partials/credits-footer/credits-footer.component';
 import { DiaryComponent } from './views/diary/diary.component';
 import { PortfolioComponent } from './views/portfolio/portfolio.component';
 import { ContactComponent } from './views/contact/contact.component';
