@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-profil-panel',
-  templateUrl: './profil-panel.component.html',
-  styleUrls: ['./profil-panel.component.styl']
+  selector: 'app-profile-panel',
+  templateUrl: './profile-panel.component.html',
+  styleUrls: ['./profile-panel.component.styl']
 })
 export class ProfilPanelComponent implements OnInit {
 
