@@ -21,7 +21,7 @@ import { NotFoundComponent } from './views/not-found/not-found.component';
 import { SignupComponent } from './views/signup/signup.component';
 import { SigninComponent } from './views/signin/signin.component';
 import { AboutComponent } from './partials/about/about.component';
-import { ProfilPanelComponent } from './partials/profil-panel/profil-panel.component';
+import { ProfilPanelComponent } from './partials/profile-panel/profile-panel.component';
 import { LoginPanelComponent } from './partials/login-panel/login-panel.component';
 
 @NgModule({
