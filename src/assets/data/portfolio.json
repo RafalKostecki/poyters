@@ -28,7 +28,7 @@
 		"githubLink": "https://github.com/RafalKostecki/Poyters",
 		"content": "Single page application created in Angular with possibility to create Poyters Account - gives acces to private Poyters products",
 		"technology": [
-			"Angular 6", "HTML5", "BEM", "Stylus", "TypeScript", "Nest.js", "MongoDB"
+			"Angular 9", "HTML5", "BEM", "Stylus", "TypeScript", "Nest.js", "MongoDB"
 		],
 		"released": "23.07.2018"
 	},
