@@ -21,6 +21,8 @@ import { NotFoundComponent } from './views/not-found/not-found.component';
 import { SignupComponent } from './views/signup/signup.component';
 import { SigninComponent } from './views/signin/signin.component';
 import { AboutComponent } from './partials/about/about.component';
+import { ProfilPanelComponent } from './partials/profil-panel/profil-panel.component';
+import { LoginPanelComponent } from './partials/login-panel/login-panel.component';
 
 @NgModule({
   declarations: [
@@ -39,7 +41,9 @@ import { AboutComponent } from './partials/about/about.component';
     NotFoundComponent,
     SignupComponent,
     SigninComponent,
-    AboutComponent
+    AboutComponent,
+    ProfilPanelComponent,
+    LoginPanelComponent
   ],
   imports: [
     BrowserModule,
