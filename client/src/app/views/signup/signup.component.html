@@ -1,0 +1,63 @@
+<article class="g-componentWrapper">
+  <form class="g-insertForm" [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+    <div class="g-insertForm__box g-insertForm__box--signInUp">
+      <div class="g-insertFormInput">
+        <div 
+          *ngIf="submitted && formControls.login.errors" 
+          class="g-insertFormInput__validation t-paragraph4Light" 
+          role="alert" 
+          aria-live="assertive"
+        >
+          <div *ngIf="formControls.login.errors.required">
+            Login is required
+          </div>
+        </div>
+        <label class="t-paragraphLight g-insertFormInput__label">
+          login 
+        </label>
+        <input formControlName="login" class="g-insertFormInput__inputField" type="text"/>
+      </div>
+  
+      <div class="g-insertFormInput">
+        <div *ngIf="submitted && formControls.password.errors" class="g-insertFormInput__validation t-paragraph4Light" role="alert" aria-live="assertive">
+          <span *ngIf="formControls.password.errors.required">
+            Password is required
+          </span>
+          <span *ngIf="formControls.password.errors.minlength">
+            Password must be at least 6 characters
+          </span>
+        </div>
+        <label class="t-paragraphLight g-insertFormInput__label"> password </label>
+        <input formControlName="password" class="g-insertFormInput__inputField" type="password"/>
+      </div>
+  
+      <div class="g-insertFormInput">
+        <div *ngIf="submitted && formControls.confirmPassword.errors" class="g-insertFormInput__validation t-paragraph4Light" role="alert" aria-live="assertive">
+          <span *ngIf="formControls.confirmPassword.errors.required">
+            Confirm Password is required
+          </span>
+          <span *ngIf="formControls.confirmPassword.errors.mustMatch">
+            Passwords must match
+          </span>
+        </div>
+        <label class="t-paragraphLight g-insertFormInput__label"> password </label>
+        <input type="password" formControlName="confirmPassword" class="g-insertFormInput__inputField" />
+      </div>
+  
+      <div class="g-insertFormInput">
+        <div *ngIf="submitted && formControls.email.errors" class="g-insertFormInput__validation t-paragraph4Light" role="alert" aria-live="assertive">
+          <span *ngIf="formControls.email.errors.required">
+            Email is required
+          </span>
+          <span *ngIf="formControls.email.errors.email">
+            Email must be a valid email address
+          </span>
+        </div>
+        <label for="mail" class="t-paragraphLight g-insertFormInput__label"> mail </label>
+        <input formControlName="email" class="g-insertFormInput__inputField" type="email"/>
+      </div>
+  
+      <button type="submit" class="g-insertFormSubmit t-paragraph3Normal"> register </button>
+    </div>
+  </form>  
+</article>
