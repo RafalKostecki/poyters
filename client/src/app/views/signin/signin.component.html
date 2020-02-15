@@ -1,0 +1,24 @@
+<article class="g-componentWrapper">
+  <form class="g-insertForm" [formGroup]="signInForm" (ngSubmit)="onSubmit()">
+    <div class="g-insertForm__box insertForm__box--signInUp">
+      <div class="g-insertFormInput">
+        <div *ngIf="submitted && formControls.login.errors" class="g-insertFormInput__validation t-paragraph4Light" role="alert" aria-live="assertive">
+            <div *ngIf="formControls.login.errors.required">Login is required</div>
+        </div>
+        <label class="t-paragraphLight g-insertFormInput__label"> login </label>
+        <input formControlName="login" class="g-insertFormInput__inputField" type="text"/>
+      </div>
+  
+      <div class="g-insertFormInput">
+        <div *ngIf="submitted && formControls.password.errors" class="g-insertFormInput__validation t-paragraph4Light" role="alert" aria-live="assertive">
+            <span *ngIf="formControls.password.errors.required">Password is required</span>
+            <span *ngIf="formControls.password.errors.minlength">Password must be at least 6 characters</span>
+        </div>
+        <label class="t-paragraphLight g-insertFormInput__label"> password </label>
+        <input formControlName="password" class="g-insertFormInput__inputField" type="password"/>
+      </div>
+  
+      <button type="submit" class="g-insertFormSubmit t-paragraph3Normal"> sign in </button>
+    </div>
+  </form>
+</article>
