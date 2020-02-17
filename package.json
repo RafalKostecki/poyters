@@ -29,6 +29,7 @@
     "bcrypt": "^3.0.8",
     "bcryptjs": "^2.4.3",
     "helmet": "^3.21.2",
+    "jsonwebtoken": "^8.5.1",
     "mongoose": "^5.9.1",
     "passport": "^0.4.1",
     "passport-jwt": "^4.0.0",
