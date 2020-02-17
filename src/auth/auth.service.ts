@@ -14,61 +14,28 @@ export class AuthService {
   constructor(
     private readonly usersService: UsersService,
     private readonly jwtService: JwtService,
-    // @InjectModel('User') private readonly userModel: Model<IUser>
+    @InjectModel('User') private readonly userModel: Model<IUser>
   ) {}
 
   async validateUser(username: string, pass: string): Promise<any> {
     return this.usersService.findOne(username).then(users => {
       if (users.length < 1) {
-        console.log(users)
         throw new UnauthorizedException();
       } else {
-        bcrypt.compare(pass, users[0].password, (err, res) => {
-          if (err) {
-            console.log('nie zgadza sie')
-            return null;
-          }
-          if (res) {
-            console.log('haslo sie zgadz')
-            const { password, ...result } = users[0];
-            return result;
-          } else {
-            console.log('nie zgadza sie haslo')
-            return null;
-          }
-        });
+        if (bcrypt.compareSync(pass, users[0].password)) {
+          console.log('haslo sie zgadz')
+          const { password, ...result } = users[0];
+          return result;
+        } else {
+          return null;
+        }
       }
     }).catch(err => {
-      console.log(err)
-      return err
+      return null;
     })
   }
 
-  // async validateUser(username: string, pass: string): Promise<any> {
-  //   const users = await this.userModel.find({username: username}).exec();
-
-  //   console.log('existingUser', users)
-    
-  //   if (users.length > 0) {
-  //     throw new UnauthorizedException();
-  //   } else {
-  //     bcrypt.compare(pass, users[0].password, (err, res) => {
-  //       if (err) {
-  //         console.log('nie zgadza sie')
-  //         return null;
-  //       }
-  //       if (res) {
-  //         console.log('haslo sie zgadz')
-  //         const { password, ...result } = users[0];
-  //         return result;
-  //       } else {
-  //         console.log('nie zgadza sie haslo')
-  //         return null;
-  //       }
-  //     });
-  //   }
-  // }
-
+  
   async login(user: any) {
     const payload = { username: user.username, sub: user.userId };
     return {
