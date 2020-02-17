@@ -9,7 +9,11 @@ export interface IUser extends mongoose.Documen {
 };
 
 export const UserSchema = new mongoose.Schema({
-  username: { type: String, required: true },
+  username: { type: String, required: true, unique: true },
   password: { type: String, required: true },
-  mail: { type: String, required: true }
+  mail: { 
+    type: String, 
+    required: true,
+    match: /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i
+  }
 })
