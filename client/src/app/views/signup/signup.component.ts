@@ -10,9 +10,9 @@ import { MustMatch } from '../../../assets/scripts/must-match.validadator';
 })
 export class SignupComponent implements OnInit {
 
-  private categoryName: string = "Sign up";
+  private categoryName = "Sign up";
   registerForm: FormGroup;
-  submitted: boolean = false;
+  submitted = false;
 
   constructor(private formBuilder: FormBuilder, private data: UiService) { }
 
@@ -34,11 +34,38 @@ export class SignupComponent implements OnInit {
   }
 
   onSubmit() {
-      this.submitted = true;
+    this.submitted = true;
 
-      if (this.registerForm.invalid) return;
+    if (this.registerForm.invalid) return;
 
-      console.log('SUCCESS!! :-)\n\n' + JSON.stringify(this.registerForm.value))
+    const data = {
+      username: this.registerForm.value.login,
+      password: this.registerForm.value.password,
+      mail: this.registerForm.value.email,
+    };
+
+    console.log('data', data);
+
+    fetch('http://localhost:3000/users',
+      {
+        method: 'POST',
+        headers: {
+          "Content-Type": "application/json",
+          Origin: "http://localhost:3000",
+          Accept: "application/json",
+        },
+        body: JSON.stringify(data)
+      }
+    )
+    .then((response) => response.json())
+    .then((responseJSON) =>  {
+      if (responseJSON.status === 409) {
+        console.log('User already exists')
+      } else {
+        console.log('Account created: ', responseJSON)
+      }
+    })
+    .catch(err => console.log(err));
   }
 
 }
