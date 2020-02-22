@@ -11,8 +11,9 @@ import { MustMatch } from '../../../assets/scripts/must-match.validadator';
 export class SignupComponent implements OnInit {
 
   private categoryName = "Sign up";
-  registerForm: FormGroup;
-  submitted = false;
+  private registerForm: FormGroup;
+  private submitted = false;
+  private signupMessage: string;
 
   constructor(private formBuilder: FormBuilder, private data: UiService) { }
 
@@ -46,7 +47,7 @@ export class SignupComponent implements OnInit {
 
     console.log('data', data);
 
-    fetch('http://localhost:3000/users',
+    fetch('http://localhost:3000/users/create',
       {
         method: 'POST',
         headers: {
@@ -60,9 +61,9 @@ export class SignupComponent implements OnInit {
     .then((response) => response.json())
     .then((responseJSON) =>  {
       if (responseJSON.status === 409) {
-        console.log('User already exists')
+        this.signupMessage = "User already exists!";
       } else {
-        console.log('Account created: ', responseJSON)
+        this.signupMessage = "Account sucessfully created. Now, you can sign in";
       }
     })
     .catch(err => console.log(err));

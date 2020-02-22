@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { UiService } from '../../services/ui.service';
+import { AuthService } from '../../services/auth.service';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { HttpHeaders } from '@angular/common/http';
-import { HttpClient } from '@angular/common/http';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-signin',
@@ -17,12 +17,13 @@ export class SigninComponent implements OnInit {
 
   constructor(
     private formBuilder: FormBuilder, 
-    private data: UiService,
-    private http: HttpClient
+    private uiService: UiService,
+    private authService: AuthService,
+    private router: Router
   ) { }
 
   ngOnInit() {
-    this.data.changeCategory(this.categoryName);
+    this.uiService.changeCategory(this.categoryName);
 
     this.signInForm = this.formBuilder.group({
       login: ['', Validators.required],
@@ -37,14 +38,7 @@ export class SigninComponent implements OnInit {
   onSubmit() {
     this.submitted = true;
 
-    // stop here if form is invalid
     if (this.signInForm.invalid) return;
-
-    // const httpOptions = {
-    //   headers: new HttpHeaders({ 'Content-Type': 'application/json' }), body: {"username": "john", "password": "changeme"}
-    // };
-  
-    // this.http.post('http://localhost:3000/auth/login', httpOptions).toPromise();
 
     const data = {
       username: this.signInForm.value.login,
@@ -67,7 +61,8 @@ export class SigninComponent implements OnInit {
       if (responseJSON.statusCode === 401 && responseJSON.error === 'Unauthorized') {
         console.log('NIEPRAWIDŁOWY LOGIN LUB HASŁO')
       } else {
-        console.log('zalogowano na jwt: ', responseJSON.access_token)
+        this.authService.changeToken(responseJSON.access_token);
+        this.router.navigate(['']);
       }
     })
     .catch(err => console.log(err));
