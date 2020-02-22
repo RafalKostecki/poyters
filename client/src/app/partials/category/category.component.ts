@@ -9,12 +9,12 @@ import { UiService } from '../../services/ui.service';
 })
 export class CategoryComponent implements OnInit {
 
-  public currentCategory: string;
+  private currentCategory: string;
 
-  constructor(private data: UiService) { }
+  constructor(private uiService: UiService) { }
 
   ngOnInit() {
-    this.data.category.subscribe(cat => this.currentCategory = cat)
+    this.uiService.category.subscribe(cat => this.currentCategory = cat)
   }
 
 }

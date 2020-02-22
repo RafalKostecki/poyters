@@ -6,12 +6,9 @@ import { BehaviorSubject } from 'rxjs';
 })
 export class UiService {
 
-  private categorySource = new BehaviorSubject<string>("Unknown");
-  public category = this.categorySource.asObservable();
-
-  constructor() { }
+  public category = new BehaviorSubject<string>("Unknown");
 
   public changeCategory(categoryName: string):void {
-    this.categorySource.next(categoryName);
+    this.category.next(categoryName);
   }
 }

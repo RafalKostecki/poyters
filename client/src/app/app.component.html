@@ -1,8 +1,8 @@
-<div>
+<main>
   <!-- If not logged -->
-  <app-login-panel></app-login-panel>
+  <app-login-panel *ngIf="!token"></app-login-panel>
   <!-- If logged -->
-  <!-- <app-profile-panel></app-profile-panel> -->
+  <app-profile-panel *ngIf="token"></app-profile-panel>
 	<app-logo></app-logo>
 	<app-menu></app-menu>
   <app-category></app-category> 
@@ -11,4 +11,4 @@
     <router-outlet></router-outlet>
   </main>
   <app-credits-footer></app-credits-footer>
-</div>
+</main>
