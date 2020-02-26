@@ -1,5 +1,5 @@
 
-import { Injectable, UnauthorizedException } from '@nestjs/common';
+import { Injectable, UnauthorizedException, Response } from '@nestjs/common';
 import { UsersService } from '../users/users.service';
 import { JwtService } from '@nestjs/jwt';
 // eslint-disable-next-line @typescript-eslint/no-var-requires
@@ -27,11 +27,14 @@ export class AuthService {
   }
 
   
-  async login(user: any) {
+  async login(user: any, @Response() response: any) {
     const payload = { username: user.username, sub: user.userId };
-    return {
-      // eslint-disable-next-line @typescript-eslint/camelcase
-      access_token: this.jwtService.sign(payload),
-    };
+    response.cookie('token', this.jwtService.sign(payload), {expires: new Date(Date.now() + 9999999), httpOnly: true, domain: 'http://localhost:4200'})
+    // response.cookie('access_token', `${this.jwtService.sign(payload)}`, 'HttpOnly') // Using express res object.
+    return response.send({
+      status: 200,
+      message: 'Authorization succesfull',
+      username: user.username
+    })
   }
 }
