@@ -13,10 +13,10 @@ import { UserSchema } from '../users/user.model';
 @Module({
   imports: [
     UsersModule,
-    PassportModule,
+    PassportModule.register({ session: true }),
     JwtModule.register({
       secret: jwtConstants.secret,
-      signOptions: { expiresIn: '60s' },
+      signOptions: { expiresIn: '1h' },
     }),
     MongooseModule.forFeature([{name: 'User', schema: UserSchema}])
   ],

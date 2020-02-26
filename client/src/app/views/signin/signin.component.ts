@@ -61,8 +61,25 @@ export class SigninComponent implements OnInit {
       if (responseJSON.statusCode === 401 && responseJSON.error === 'Unauthorized') {
         console.log('NIEPRAWIDŁOWY LOGIN LUB HASŁO')
       } else {
-        this.authService.changeToken(responseJSON.access_token);
-        this.router.navigate(['']);
+        console.log(responseJSON)
+        // this.authService.changeToken(responseJSON.access_token);
+        // this.router.navigate(['']);
+
+        fetch(`http://localhost:3000/users/profile/${responseJSON.username}`,
+          {
+            method: 'GET',
+            headers: {
+              "Content-Type": "application/json",
+              Origin: "http://localhost:3000",
+              Accept: "application/json",
+              credentials: 'include'
+            }
+          }
+        )
+        .then((res) => res.json())
+        .then((resJSON) => {
+          console.log('resJSON', resJSON)
+        });
       }
     })
     .catch(err => console.log(err));

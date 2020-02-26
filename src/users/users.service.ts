@@ -13,8 +13,6 @@ export class UsersService {
 
   async insertUser(username: string, password: string, mail: string) {
     const existingUsers = await this.userModel.find({username: username}).exec();
-
-    console.log('existingUser', existingUsers)
     
     if (existingUsers.length > 0) {
       throw new HttpException({
@@ -34,8 +32,7 @@ export class UsersService {
             password: hash,
             mail
           });
-  
-          console.log(newUser)
+          
           newUser.save();
         }
       });
