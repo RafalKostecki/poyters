@@ -28,13 +28,14 @@ export class AuthService {
 
   
   async login(user: any, @Response() response: any) {
+    console.log('user', user);
+    console.log('username', user.username)
+    console.log('userId', user.userId)
     const payload = { username: user.username, sub: user.userId };
-    response.cookie('token', this.jwtService.sign(payload), {expires: new Date(Date.now() + 9999999), httpOnly: true, domain: 'http://localhost:4200'})
-    // response.cookie('access_token', `${this.jwtService.sign(payload)}`, 'HttpOnly') // Using express res object.
-    return response.send({
-      status: 200,
-      message: 'Authorization succesfull',
-      username: user.username
-    })
+    const token = this.jwtService.sign(payload);
+    response.cookie('jwt', token, {
+      expires: new Date(Date.now() + 9999999)
+    });
+    response.status(200).end();
   }
 }
