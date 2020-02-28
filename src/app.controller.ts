@@ -14,10 +14,11 @@ export class AppController {
   @UseGuards(AuthGuard('local'))
   @Post('auth/login')
   async login(@Request() req, @Response() res) {
+    console.log('login req', req);
     const result = await this.authService.login(req.user);
-
     res.cookie('jwt', result.token, {
-      expires: new Date(Date.now() + 9999999)
+      expires: new Date(Date.now() + 9999999),
+      httpOnly: true
     });
     res.status(200).end();
   }
@@ -34,8 +35,9 @@ export class AppController {
   }
 
   @UseGuards(AuthGuard('jwt'))
-  @Get('users/profile/')
+  @Get('users/profile')
   async userProfile(@Request() req) {
+    console.log('req', req)
     return req.user
   }
 }

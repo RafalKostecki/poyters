@@ -63,9 +63,10 @@ export class SigninComponent implements OnInit {
           method: 'GET',
           headers: {
             "Content-Type": "application/json",
-            Origin: "http://localhost:3000",
-            Accept: "application/json"
-          }
+            "Access-Control-Allow-Origin": "http://localhost:4200",
+            "Access-Control-Allow-Credentials": "true"
+          },
+          credentials: 'include'
         })
       .then((res) => res.json())
       .then((resJSON) => {
