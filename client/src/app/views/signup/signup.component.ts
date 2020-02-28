@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { UiService } from '../../services/ui.service';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { MustMatch } from '../../../assets/scripts/must-match.validadator';
+import { corsHeaders } from '../../../assets/scripts/auth/connectOptions';
 
 @Component({
   selector: 'app-signup',
@@ -45,16 +46,10 @@ export class SignupComponent implements OnInit {
       mail: this.registerForm.value.email,
     };
 
-    console.log('data', data);
-
     fetch('http://localhost:3000/users/create',
       {
         method: 'POST',
-        headers: {
-          "Content-Type": "application/json",
-          Origin: "http://localhost:3000",
-          Accept: "application/json",
-        },
+        headers: corsHeaders,
         body: JSON.stringify(data)
       }
     )
