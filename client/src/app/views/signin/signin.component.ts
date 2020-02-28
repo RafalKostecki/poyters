@@ -46,18 +46,6 @@ export class SigninComponent implements OnInit {
       password: this.signInForm.value.password
     }
 
-  // axios({
-  //   method: 'post',
-  //   url: 'http://localhost:3000/auth/login',
-  //   headers: {
-  //     "Content-Type": "application/json",
-  //     "Access-Control-Allow-Origin": "http://localhost:4200",
-  //     "Access-Control-Allow-Credentials": true
-  //   },
-  //   data: JSON.stringify(data),
-  //   withCredentials: true
-  // });
-
     fetch('http://localhost:3000/auth/login',
       {
         method: 'POST',
@@ -84,32 +72,5 @@ export class SigninComponent implements OnInit {
         console.log('resJSON', resJSON)
       });
     })
-    // .then((response) => console.log(response))
-    // .then((responseJSON) =>  {
-    //   if (responseJSON.statusCode === 401 && responseJSON.error === 'Unauthorized') {
-    //     console.log('NIEPRAWIDŁOWY LOGIN LUB HASŁO')
-    //   } else {
-    //     console.log(responseJSON)
-    // this.authService.changeToken(responseJSON.access_token);
-    // this.router.navigate(['']);
-
-    // fetch(`http://localhost:3000/users/profile/`,
-    //   {
-    //     method: 'GET',
-    //     headers: {
-    //       "Content-Type": "application/json",
-    //       Origin: "http://localhost:3000",
-    //       Accept: "application/json",
-    //       credentials: 'include'
-    //     }
-    //   }
-    // )
-    // .then((res) => res.json())
-    // .then((resJSON) => {
-    //   console.log('resJSON', resJSON)
-    // });
-    //   }
-    // })
-    // .catch(err => {throw new Error(err)});
   }
 }
