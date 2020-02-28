@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { UserService } from './services/user.service';
+import { corsHeaders } from '../assets/scripts/auth/connectOptions';
 
 
 @Component({
@@ -29,11 +30,7 @@ export class AppComponent {
     fetch(`http://localhost:3000/users/profile/`,
       {
         method: 'GET',
-        headers: {
-          "Content-Type": "application/json",
-          "Access-Control-Allow-Origin": "http://localhost:4200",
-          "Access-Control-Allow-Credentials": "true"
-        },
+        headers: corsHeaders,
         credentials: 'include'
       })
     .then((res) => res.json())
