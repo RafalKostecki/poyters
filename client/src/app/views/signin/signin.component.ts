@@ -3,6 +3,7 @@ import { UiService } from '../../services/ui.service';
 import { UserService } from '../../services/user.service';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { connectOptions } from '../../../assets/scripts/auth/connectOptions';
 
 
 @Component({
