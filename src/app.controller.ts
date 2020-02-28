@@ -14,7 +14,12 @@ export class AppController {
   @UseGuards(AuthGuard('local'))
   @Post('auth/login')
   async login(@Request() req, @Response() res) {
-    return this.authService.login(req.user, res);
+    const result = await this.authService.login(req.user);
+
+    res.cookie('jwt', result.token, {
+      expires: new Date(Date.now() + 9999999)
+    });
+    res.status(200).end();
   }
 
   @Post('users/create')
