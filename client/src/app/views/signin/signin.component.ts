@@ -15,6 +15,7 @@ export class SigninComponent implements OnInit {
   private categoryName = "Sign in";
   signInForm: FormGroup;
   submitted = false;
+  private signupMessage: string;
 
   constructor(
     private formBuilder: FormBuilder, 
@@ -70,7 +71,12 @@ export class SigninComponent implements OnInit {
         })
       .then((res) => res.json())
       .then((resJSON) => {
-        console.log('resJSON', resJSON)
+        if (resJSON.statusCode === 401) {
+          this.signupMessage = "Wrong username or password";
+        } else {
+          console.log('zalogowano')
+          console.log(resJSON)
+        }
       });
     })
   }
