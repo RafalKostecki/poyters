@@ -3,6 +3,7 @@ import { UiService } from '../../services/ui.service';
 import { AuthService } from '../../services/auth.service';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import axios from 'axios';
 
 @Component({
   selector: 'app-signin',
@@ -45,17 +46,30 @@ export class SigninComponent implements OnInit {
       password: this.signInForm.value.password
     }
 
+  // axios({
+  //   method: 'post',
+  //   url: 'http://localhost:3000/auth/login',
+  //   headers: {
+  //     "Content-Type": "application/json",
+  //     "Access-Control-Allow-Origin": "http://localhost:4200",
+  //     "Access-Control-Allow-Credentials": true
+  //   },
+  //   data: JSON.stringify(data),
+  //   withCredentials: true
+  // });
+
     fetch('http://localhost:3000/auth/login',
       {
         method: 'POST',
         headers: {
           "Content-Type": "application/json",
-          "Access-Control-Allow-Origin": "http://localhost:4200"
+          "Access-Control-Allow-Origin": "http://localhost:4200",
+          "Access-Control-Allow-Credentials": "true"
         },
         credentials: 'include',
         body: JSON.stringify(data)
-      }
-    ).then(() => {
+      })
+    .then(() => {
       fetch(`http://localhost:3000/users/profile/`,
         {
           method: 'GET',
