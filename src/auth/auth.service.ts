@@ -27,15 +27,14 @@ export class AuthService {
   }
 
   
-  async login(user: any, @Response() response: any) {
+  async login(user: any) {
     console.log('user', user);
     console.log('username', user.username)
     console.log('userId', user.userId)
     const payload = { username: user.username, sub: user.userId };
     const token = this.jwtService.sign(payload);
-    response.cookie('jwt', token, {
-      expires: new Date(Date.now() + 9999999)
-    });
-    response.status(200).end();
+    return {
+      token
+    }
   }
 }
