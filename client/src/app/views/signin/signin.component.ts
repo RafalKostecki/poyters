@@ -49,8 +49,10 @@ export class SigninComponent implements OnInit {
       {
         method: 'POST',
         headers: {
-          "Content-Type": "application/json"
+          "Content-Type": "application/json",
+          "Access-Control-Allow-Origin": "http://localhost:4200"
         },
+        credentials: 'include',
         body: JSON.stringify(data)
       }
     ).then(() => {
