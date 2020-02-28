@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { UiService } from '../../services/ui.service';
-import { AuthService } from '../../services/auth.service';
+import { UserService } from '../../services/user.service';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import axios from 'axios';
+
 
 @Component({
   selector: 'app-signin',
@@ -20,7 +20,7 @@ export class SigninComponent implements OnInit {
   constructor(
     private formBuilder: FormBuilder, 
     private uiService: UiService,
-    private authService: AuthService,
+    private userService: UserService,
     private router: Router
   ) { }
 
@@ -74,8 +74,8 @@ export class SigninComponent implements OnInit {
         if (resJSON.statusCode === 401) {
           this.signupMessage = "Wrong username or password";
         } else {
-          console.log('zalogowano')
-          console.log(resJSON)
+          this.userService.setUserId(resJSON.userId);
+          this.router.navigate(['']);
         }
       });
     })

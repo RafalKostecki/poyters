@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { AuthService } from './services/auth.service';
+import { UserService } from './services/user.service';
 
 
 @Component({
@@ -17,14 +17,31 @@ export class AppComponent {
   //Alert messages
   public warningMess1 = "Now are maintain works. Can occur unexpected errors.";
   public noticeMess1 = 'I wanna invite u to see my <a href="https://www.facebook.com/poyterskostecki">Facebook</a> page!';
-  public token: string;
+  public userId: string;
 
   constructor(
-    private authService: AuthService
+    private userService: UserService
   ) { }
 
   ngOnInit() {
-    this.authService.token.subscribe(incomingToken => this.token = incomingToken)
+    this.userService.userId.subscribe(newId => this.userId = newId)
+
+    fetch(`http://localhost:3000/users/profile/`,
+      {
+        method: 'GET',
+        headers: {
+          "Content-Type": "application/json",
+          "Access-Control-Allow-Origin": "http://localhost:4200",
+          "Access-Control-Allow-Credentials": "true"
+        },
+        credentials: 'include'
+      })
+    .then((res) => res.json())
+    .then((resJSON) => {
+      if (resJSON.userId) {
+        this.userService.setUserId(resJSON.userId);
+      }
+    });
   }
 
 }
