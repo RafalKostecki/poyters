@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { UserService } from '../../services/user.service';
 import { Router } from '@angular/router';
+import { corsHeaders } from '../../../assets/scripts/auth/connectOptions';
 
 @Component({
   selector: 'app-profile-panel',
@@ -21,15 +22,10 @@ export class ProfilPanelComponent {
   }
 
   logout() {
-    console.log('here')
     fetch(`http://localhost:3000/auth/logout`,
       {
         method: 'GET',
-        headers: {
-          "Content-Type": "application/json",
-          "Access-Control-Allow-Origin": "http://localhost:4200",
-          "Access-Control-Allow-Credentials": "true"
-        },
+        headers: corsHeaders,
         credentials: 'include'
       })
     .then(res => {
