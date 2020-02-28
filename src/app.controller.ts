@@ -28,10 +28,9 @@ export class AppController {
     return {id: generatedId};
   }
 
-  @Get('users/profile/:username')
-  async userProfile(@Param('username') username: string) {
-    return {
-      name: username
-    }
+  @UseGuards(AuthGuard('jwt'))
+  @Get('users/profile/')
+  async userProfile(@Request() req) {
+    return req.user
   }
 }

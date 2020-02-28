@@ -49,39 +49,51 @@ export class SigninComponent implements OnInit {
       {
         method: 'POST',
         headers: {
-          "Content-Type": "application/json",
-          Origin: "http://localhost:3000",
-          Accept: "application/json",
+          "Content-Type": "application/json"
         },
         body: JSON.stringify(data)
       }
-    )
-    .then((response) => response.json())
-    .then((responseJSON) =>  {
-      if (responseJSON.statusCode === 401 && responseJSON.error === 'Unauthorized') {
-        console.log('NIEPRAWIDŁOWY LOGIN LUB HASŁO')
-      } else {
-        console.log(responseJSON)
-        // this.authService.changeToken(responseJSON.access_token);
-        // this.router.navigate(['']);
-
-        fetch(`http://localhost:3000/users/profile/${responseJSON.username}`,
-          {
-            method: 'GET',
-            headers: {
-              "Content-Type": "application/json",
-              Origin: "http://localhost:3000",
-              Accept: "application/json",
-              credentials: 'include'
-            }
+    ).then(() => {
+      fetch(`http://localhost:3000/users/profile/`,
+        {
+          method: 'GET',
+          headers: {
+            "Content-Type": "application/json",
+            Origin: "http://localhost:3000",
+            Accept: "application/json"
           }
-        )
-        .then((res) => res.json())
-        .then((resJSON) => {
-          console.log('resJSON', resJSON)
-        });
-      }
+        })
+      .then((res) => res.json())
+      .then((resJSON) => {
+        console.log('resJSON', resJSON)
+      });
     })
-    .catch(err => console.log(err));
+    // .then((response) => console.log(response))
+    // .then((responseJSON) =>  {
+    //   if (responseJSON.statusCode === 401 && responseJSON.error === 'Unauthorized') {
+    //     console.log('NIEPRAWIDŁOWY LOGIN LUB HASŁO')
+    //   } else {
+    //     console.log(responseJSON)
+    // this.authService.changeToken(responseJSON.access_token);
+    // this.router.navigate(['']);
+
+    // fetch(`http://localhost:3000/users/profile/`,
+    //   {
+    //     method: 'GET',
+    //     headers: {
+    //       "Content-Type": "application/json",
+    //       Origin: "http://localhost:3000",
+    //       Accept: "application/json",
+    //       credentials: 'include'
+    //     }
+    //   }
+    // )
+    // .then((res) => res.json())
+    // .then((resJSON) => {
+    //   console.log('resJSON', resJSON)
+    // });
+    //   }
+    // })
+    // .catch(err => {throw new Error(err)});
   }
 }
