@@ -3,7 +3,7 @@ import { UiService } from '../../services/ui.service';
 import { UserService } from '../../services/user.service';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { connectOptions } from '../../../assets/scripts/auth/connectOptions';
+import { corsHeaders } from '../../../assets/scripts/auth/connectOptions';
 
 
 @Component({
@@ -51,11 +51,7 @@ export class SigninComponent implements OnInit {
     fetch('http://localhost:3000/auth/login',
       {
         method: 'POST',
-        headers: {
-          "Content-Type": "application/json",
-          "Access-Control-Allow-Origin": "http://localhost:4200",
-          "Access-Control-Allow-Credentials": "true"
-        },
+        headers: corsHeaders,
         credentials: 'include',
         body: JSON.stringify(data)
       })
@@ -63,11 +59,7 @@ export class SigninComponent implements OnInit {
       fetch(`http://localhost:3000/users/profile/`,
         {
           method: 'GET',
-          headers: {
-            "Content-Type": "application/json",
-            "Access-Control-Allow-Origin": "http://localhost:4200",
-            "Access-Control-Allow-Credentials": "true"
-          },
+          headers: corsHeaders,
           credentials: 'include'
         })
       .then((res) => res.json())
