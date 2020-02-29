@@ -23,6 +23,7 @@ import { SigninComponent } from './views/signin/signin.component';
 import { AboutComponent } from './partials/about/about.component';
 import { ProfilPanelComponent } from './partials/profile-panel/profile-panel.component';
 import { LoginPanelComponent } from './partials/login-panel/login-panel.component';
+import { ProfileComponent } from './views/profile/profile.component';
 
 @NgModule({
   declarations: [
@@ -43,7 +44,8 @@ import { LoginPanelComponent } from './partials/login-panel/login-panel.componen
     SigninComponent,
     AboutComponent,
     ProfilPanelComponent,
-    LoginPanelComponent
+    LoginPanelComponent,
+    ProfileComponent
   ],
   imports: [
     BrowserModule,
