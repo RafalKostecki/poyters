@@ -1,8 +1,6 @@
 import { Component } from '@angular/core';
 import { UserService } from './services/user.service';
 import { corsHeaders } from '../assets/scripts/auth/connectOptions';
-import { HttpClient } from '@angular/common/http';
-import { map, catchError } from 'rxjs/operators';
 
 
 @Component({
@@ -23,18 +21,10 @@ export class AppComponent {
   public userId: string;
 
   constructor(
-    private userService: UserService,
-    private http: HttpClient
+    private userService: UserService
   ) { }
 
-  private httpOptions = {
-    headers: corsHeaders,
-    withCredentials: true
-  }
-
   ngOnInit() {
-    // this.http.get('http://localhost:3000/users/profile/', this.httpOptions)
-    // .subscribe(res => console.log(res));
     this.userService.userId.subscribe(newId => this.userId = newId)
 
     fetch(`http://localhost:3000/users/profile/`,
