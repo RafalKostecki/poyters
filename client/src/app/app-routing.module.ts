@@ -6,7 +6,9 @@ import { PortfolioComponent } from './views/portfolio/portfolio.component';
 import { ContactComponent } from './views/contact/contact.component';
 import { SignupComponent } from './views/signup/signup.component';
 import { SigninComponent } from './views/signin/signin.component';
+import { ProfileComponent } from './views/profile/profile.component';
 import { NotFoundComponent} from './views/not-found/not-found.component';
+import { AuthGuard } from './guards/auth.guard';
 
 
 const routes: Routes = [
@@ -34,6 +36,11 @@ const routes: Routes = [
     path: 'signin',
     component: SigninComponent
   },
+  {
+    path: 'profile',
+    component: ProfileComponent,
+    canActivate: [AuthGuard]
+  },
   { 
     path: '**',  
     component: NotFoundComponent 
@@ -42,6 +49,7 @@ const routes: Routes = [
 
 @NgModule({
   imports:[RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
+  providers: [AuthGuard, Permissions]
 })
 export class AppRoutingModule { }
