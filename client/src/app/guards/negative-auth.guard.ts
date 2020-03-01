@@ -6,7 +6,7 @@ import { map, catchError} from 'rxjs/operators';
 
 
 @Injectable()
-export class AuthGuard implements CanActivate {
+export class NegativeAuthGuard implements CanActivate {
   constructor(
     private userService: UserService, 
     private router: Router
@@ -14,19 +14,23 @@ export class AuthGuard implements CanActivate {
 
   canActivate(route: ActivatedRouteSnapshot): Observable<boolean>  {
     const authRedirect: string = route.data.authRedirect;
+    console.log(authRedirect)
 
     return this.userService.isLoggedIn().pipe(
       map(res => {
         if (res) {
-          return true;
+          console.log('here1')
+          this.router.navigate([authRedirect]);
+          return false;
         } else {
+          console.log('here2')
           this.router.navigate([authRedirect]);
           return false;
         }
       }),
       catchError(() => {
-        this.router.navigate([authRedirect]);
-        return of(false);
+        console.log('here')
+        return of(true);
       })
     );
   }

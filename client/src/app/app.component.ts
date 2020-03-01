@@ -33,8 +33,8 @@ export class AppComponent {
         headers: corsHeaders,
         credentials: 'include'
       })
-    .then((res) => res.json())
-    .then((resJSON) => {
+    .then(res => res.json())
+    .then(resJSON => {
       if (resJSON.userId) {
         this.userService.setUserId(resJSON.userId);
       }
