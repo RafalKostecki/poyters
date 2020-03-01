@@ -14,22 +14,15 @@ export class NegativeAuthGuard implements CanActivate {
 
   canActivate(route: ActivatedRouteSnapshot): Observable<boolean>  {
     const authRedirect: string = route.data.authRedirect;
-    console.log(authRedirect)
 
     return this.userService.isLoggedIn().pipe(
       map(res => {
         if (res) {
-          console.log('here1')
           this.router.navigate([authRedirect]);
           return false;
-        } else {
-          console.log('here2')
-          this.router.navigate([authRedirect]);
-          return false;
-        }
+        } else return true;
       }),
       catchError(() => {
-        console.log('here')
         return of(true);
       })
     );

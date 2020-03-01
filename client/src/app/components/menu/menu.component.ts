@@ -8,8 +8,6 @@ import { Component } from '@angular/core';
 export class MenuComponent {
 
   private menu: any = document.querySelector('.menu')
-  
-  constructor() { }
 
   toggleMenu(){
     this.menu = document.querySelector('.menu')
