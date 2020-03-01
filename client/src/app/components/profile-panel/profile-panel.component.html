@@ -1,8 +1,8 @@
 <aside class="profilePanel"> 
   <div class="profilePanel__icon" (click)="toggleProfileList()"></div>
   <div *ngIf="profileListIsOpen" class="profilePanel__list">
-    <ul>
-      <li>
+    <ul (click)="toggleProfileList()">
+      <li routerLink='/profile'>
         profile
       </li>
       <li>

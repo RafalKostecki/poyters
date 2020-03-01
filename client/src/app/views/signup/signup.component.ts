@@ -61,7 +61,9 @@ export class SignupComponent implements OnInit {
         this.signupMessage = "Account sucessfully created. Now, you can sign in";
       }
     })
-    .catch(err => console.log(err));
+    .catch(() => {
+      this.signupMessage = "Something went wrong :c";
+    })
   }
 
 }

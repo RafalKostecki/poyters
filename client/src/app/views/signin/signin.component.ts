@@ -70,7 +70,13 @@ export class SigninComponent implements OnInit {
           this.userService.setUserId(resJSON.userId);
           this.router.navigate(['']);
         }
+      })
+      .catch(() => {
+        this.signupMessage = "Something went wrong :c";
       });
+    })
+    .catch(() => {
+      this.signupMessage = "Something went wrong :c";
     })
   }
 }
