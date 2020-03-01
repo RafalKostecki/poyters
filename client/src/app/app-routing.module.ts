@@ -9,6 +9,7 @@ import { SigninComponent } from './views/signin/signin.component';
 import { ProfileComponent } from './views/profile/profile.component';
 import { NotFoundComponent} from './views/not-found/not-found.component';
 import { AuthGuard } from './guards/auth.guard';
+import { NegativeAuthGuard } from './guards/negative-auth.guard';
 
 
 const routes: Routes = [
@@ -30,16 +31,21 @@ const routes: Routes = [
   },
   {
     path: 'signup',
-    component: SignupComponent
+    component: SignupComponent,
+    canActivate: [NegativeAuthGuard],
+    data: {authRedirect: ''}
   },
   {
     path: 'signin',
-    component: SigninComponent
+    component: SigninComponent,
+    canActivate: [NegativeAuthGuard],
+    data: {authRedirect: ''}
   },
   {
     path: 'profile',
     component: ProfileComponent,
-    canActivate: [AuthGuard]
+    canActivate: [AuthGuard],
+    data: {authRedirect: '/signin'}
   },
   { 
     path: '**',  
@@ -50,6 +56,6 @@ const routes: Routes = [
 @NgModule({
   imports:[RouterModule.forRoot(routes)],
   exports: [RouterModule],
-  providers: [AuthGuard, Permissions]
+  providers: [AuthGuard, NegativeAuthGuard, Permissions]
 })
 export class AppRoutingModule { }
