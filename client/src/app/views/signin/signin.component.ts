@@ -16,7 +16,7 @@ export class SigninComponent implements OnInit {
   private categoryName = "Sign in";
   signInForm: FormGroup;
   submitted = false;
-  private signupMessage: string;
+  signupMessage: string;
 
   constructor(
     private formBuilder: FormBuilder, 

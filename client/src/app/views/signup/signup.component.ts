@@ -12,9 +12,9 @@ import { corsHeaders } from '../../../assets/scripts/auth/connectOptions';
 export class SignupComponent implements OnInit {
 
   private categoryName = "Sign up";
-  private registerForm: FormGroup;
-  private submitted = false;
-  private signupMessage: string;
+  public registerForm: FormGroup;
+  public submitted = false;
+  public signupMessage: string;
 
   constructor(private formBuilder: FormBuilder, private data: UiService) { }
 

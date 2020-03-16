@@ -10,7 +10,7 @@ import { corsHeaders } from '../../../assets/scripts/auth/connectOptions';
 })
 export class ProfilPanelComponent {
 
-  private profileListIsOpen = false;
+  public profileListIsOpen = false;
 
   constructor(
     private userService: UserService,
