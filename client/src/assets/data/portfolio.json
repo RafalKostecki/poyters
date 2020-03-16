@@ -1,6 +1,17 @@
 [
 	{
 		"type": "Tool",
+		"title": "Angotia Catalogs",
+		"link": "",
+		"githubLink": "",
+		"content": "Tool for game developers and users that helps find such informations as NPC, MOC, items, quests, maps.",
+		"technology": [
+			"TypeScript", "React", "Redux", "SCSS", "BEM", "HTML5", "Elixir", "Phoenix", "GraphQL", "Absinthe"
+		],
+		"released": "17.05.2020"
+	},
+	{
+		"type": "Tool",
 		"title": "Angotia Map Creator",
 		"link": "",
 		"githubLink": "",
