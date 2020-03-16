@@ -6,9 +6,9 @@
 		"githubLink": "",
 		"content": "Tool for game developers or Map Creators to creating fully functionally 2D game maps and characters.",
 		"technology": [
-			"JavaScript", "React", "Redux", "SCSS", "BEM", "HTML5"
+			"TypeScript", "React", "Redux", "SCSS", "BEM", "HTML5"
 		],
-		"released": "29.04.2020"
+		"released": "10.03.2020"
 	},
   {
 		"type": "Game",

@@ -9,7 +9,7 @@ import { UiService } from '../../services/ui.service';
 })
 export class CategoryComponent implements OnInit {
 
-  private currentCategory: string;
+  public currentCategory: string;
 
   constructor(private uiService: UiService) { }
 
