@@ -1,24 +1,28 @@
 @import '../../../assets/styles/index.styl'
 
-.category
-    width 80%
-    padding 50px 10% 50px 10%
-    margin-bottom 40px
-    float left
-    &__cat, &__name
-        width 100%
-        float left
-    &__name
-        margin-top 10px
-    &--title
-        font-weight 400
-        text-transform uppercase
-        letter-spacing 2px
-        font-size 10px
-    &--catName
-        letter-spacing 3px
-        font-weight 300
-        margin-top 15px
-    &--style
-        background backgroundColor1
-        text-align center
+.category {
+    display: flex
+    flex-direction: column
+    padding: 50px 10% 50px 10%
+    margin-bottom: 40px
+    box-sizing: border-box
+
+    background-color: shadow4
+    text-align: center
+    border-top: 1px solid colorOfDecorations
+    border-bottom: 1px solid colorOfDecorations
+
+    &__title {
+        font-weight: 400
+        text-transform: uppercase
+        letter-spacing: 2px
+        font-size: 10px
+    }
+
+    &__catName {
+        margin-top: 15px
+
+        letter-spacing: 3px
+        font-weight: 300  
+    }
+}
