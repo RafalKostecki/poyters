@@ -4,7 +4,7 @@
 		"title": "Angotia Catalogs",
 		"link": "",
 		"githubLink": "",
-		"content": "Tool for game developers and users that helps find such informations as NPC, MOC, items, quests, maps.",
+		"content": "Tool for game developers and users that help them find such informations as NPC, MOC, items, quests, maps.",
 		"technology": [
 			"TypeScript", "React", "Redux", "SCSS", "BEM", "HTML5", "Elixir", "Phoenix", "GraphQL", "Absinthe"
 		],
@@ -37,7 +37,7 @@
 		"title": "Poyters",
 		"link": "http://poyters.pl",
 		"githubLink": "https://github.com/RafalKostecki/Poyters",
-		"content": "Single page application created in Angular with possibility to create Poyters Account - gives acces to private Poyters products",
+		"content": "Single page application created in Angular with possibility to create Poyters Account - gives access to private Poyters products.",
 		"technology": [
 			"Angular 9", "HTML5", "BEM", "Stylus", "TypeScript", "Nest.js", "MongoDB", "JWT", "Passport.js"
 		],
