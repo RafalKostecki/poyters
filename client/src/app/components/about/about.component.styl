@@ -10,6 +10,10 @@
 
   background-color: shadow4
 
+  @media (max-width: 650px) {
+    padding: 20px
+  }
+
   &__contentWrapper {
     display: flex
     flex-direction: row
@@ -19,7 +23,7 @@
     @media (max-width: 650px) {
       flex-direction: column
     }
-  }  
+  }
 }
 
 .person {
@@ -29,7 +33,7 @@
 
   &__name {
     text-transform: uppercase
-    letter-spacing: 2px  
+    letter-spacing: 2px
 
     @media (max-width: 650px) {
       text-align: center
@@ -45,7 +49,7 @@
   }
 }
 
-.menu {
+.mediaMenu {
   flex: 1
   max-width: 200px
 
@@ -69,17 +73,21 @@
       font-weight: 700
       transition: 200ms ease-in-out
 
+      &:first-child {
+        margin-top: 0
+      }
+
       @media (max-width: 650px) {
         display: inline-block
         margin: 3px 7px
 
         &:last-child {
-          margin-right: 0  
+          margin-right: 0
         }
       }
 
       &:hover {
-        color: fontColor3  
+        color: fontColor3
       }
     }
   }
@@ -87,6 +95,4 @@
 
 .content {
   flex: 1
-
-  text-indent: 50px
 }
