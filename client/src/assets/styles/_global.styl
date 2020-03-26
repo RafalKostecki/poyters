@@ -3,30 +3,33 @@
   @import './partials/_smallBoxImg'
 
 html, body {
-  width 100%
-  max-width 100vw
-  height 100%
-  margin 0
-  padding 0
-  overflow-x hidden
+  position: relative
+  width: 100%
+  max-width: 100vw
+  height: 100%
+  margin: 0
+  padding: 0
+  overflow-x: hidden
 
   font-family: 'Montserrat', sans-serif;
-  background backgroundColor
-  color fontColor4
+  background-color: backgroundColor
+  color: fontColor4
 }
+
 for num in (1..6) {
   h{num} {
-    font-size (36 - num*4)px
-    line-height (36 - num*4)px
-    font-family inherit
-    font-weight bold
-    margin 0 0 10px 0
+    margin: 0 0 10px 0
+
+    font-size: (36 - num*4)px
+    line-height: (36 - num*4)px
+    font-family: inherit
+    font-weight: bold
   }
 }
 a:link, a:visited {
-  text-decoration inherit
-  color inherit
-  cursor pointer
+  text-decoration: inherit
+  color: inherit
+  cursor: pointer
 }
 
 .g-pageWrapper {
@@ -56,8 +59,8 @@ a:link, a:visited {
   justify-content: center
   align-items: center
   margin-bottom: 30px
-  padding: 0 30px 
-  
+  padding: 0 30px
+
   font-size: 22px
   color: colorOfDecorations
   text-transform: uppercase
