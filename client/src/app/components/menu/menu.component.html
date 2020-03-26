@@ -1,35 +1,33 @@
 <nav class="menu menu--style">
   <div class="menu__btn menu--btnTxt" (click)="toggleMenu()">
     <span>menu</span>
-    <div class="menu__arrow menu--arrowBorder">
-
-    </div>
+    <div class="menu__arrow"> </div>
   </div>
   <ul (click)="toggleMenu()">
-    <li> 
+    <li>
       <a routerLink="/">
         home
       </a>
     </li>
-    <li> 
+    <li>
       <a routerLink="diary">
         diary
       </a>
     </li>
-    <li> 
+    <li>
       <a routerLink="portfolio">
         portfolio
       </a>
     </li>
-    <li> 
+    <li>
       <a routerLink="contact">
         contact
       </a>
     </li>
   </ul>
-  <ul class="media">
+  <ul class="menu__media">
     <li>
-      <a target="_blank" href="https://www.facebook.com/poyterskostecki"> 
+      <a target="_blank" href="https://www.facebook.com/poyterskostecki">
         <img src="../assets/img/facebookIcon.png" alt="FB" />
       </a>
     </li>
