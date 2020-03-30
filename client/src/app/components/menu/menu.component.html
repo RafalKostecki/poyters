@@ -1,9 +1,9 @@
-<nav class="menu menu--style">
-  <div class="menu__btn menu--btnTxt" (click)="toggleMenu()">
-    <span>menu</span>
-    <div class="menu__arrow"> </div>
+<nav class="menu">
+  <div class="menu__btn" (click)="toggleMenu()">
+    <span> menu </span>
+    <div class="menuArrow"> </div>
   </div>
-  <ul (click)="toggleMenu()">
+  <ul class="menu__routes" (click)="toggleMenu()">
     <li>
       <a routerLink="/">
         home
