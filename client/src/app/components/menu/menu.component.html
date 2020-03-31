@@ -1,7 +1,8 @@
 <nav class="menu">
   <div class="menu__btn" (click)="toggleMenu()">
     <span> menu </span>
-    <div class="menuArrow"> </div>
+    <div *ngIf="!isOpen" class="menuArrow"> </div>
+    <div *ngIf="isOpen" class="g-exitBtn g-exitBtn--menu"> </div>
   </div>
   <ul class="menu__routes" (click)="toggleMenu()">
     <li>
