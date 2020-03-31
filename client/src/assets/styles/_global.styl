@@ -66,3 +66,41 @@ a:link, a:visited {
   letter-spacing: 2px
   font-weight: 700
 }
+
+.g-exitBtn {
+	display: flex;
+	position: relative;
+	width: 14px;
+	height: 14px;
+
+  &--menu {
+    margin-top: 1px
+  }
+
+	&:hover {
+		&:before, &:after {
+			background-color: colorOfDecorations1;
+		}
+	}
+
+	&:before, &:after {
+		position: absolute;
+		content: '';
+		top: 50%;
+		left: 0;
+		width: calc(100% + 2px);
+		height: 2px;
+
+		transition: 200ms ease-in-out;
+		background-color: colorOfDecorations;
+	}
+
+	&:before {
+		transform: rotate(-45deg);
+	}
+
+	&:after {
+		transform: rotate(45deg);
+	}
+}
+

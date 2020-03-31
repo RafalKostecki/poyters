@@ -9,7 +9,6 @@
   box-sizing: border-box
 
   txt(18px, 2px, 400, uppercase, inherit)
-  // transition: 500ms all ease-in-out
 
   @media (max-width: 1300px) and (min-width: 610px) {
     margin: 0 7% 20px
@@ -26,6 +25,7 @@
   &__btn {
     display: none
     width: 100%
+    justify-content: center
 
     cursor: pointer
     text-align: center
@@ -39,8 +39,6 @@
     & span {
       width 60px
       display block
-      float left
-      margin-left calc(50% - 32.5px)
     }
   }
 
@@ -50,7 +48,6 @@
     flex-direction: row
     margin: 0
     padding: 0
-    // transition: 700ms ease-in-out
 
     @media (max-width: 785px) {
       visibility: hidden
@@ -60,21 +57,28 @@
 
     & li {
       display inline
-      float left
       margin 10px 30px 10px 30px
 
       &:first-child {
         margin-left: 0
       }
 
-      & a:hover {
-        color: colorOfDecorations
+      & a {
+        transition: 200ms ease-in-out
+
+        &:hover {
+          color: colorOfDecorations
+        }
       }
 
       @media (max-width: 785px) {
         height: 0
         visibility: hidden
         margin-left: 0
+
+        & a {
+          transition: none
+        }
       }
     }
   }
@@ -105,6 +109,7 @@
 
       border-radius: 50%
       outline: none
+      transition: 200ms ease-in-out
 
       &:hover {
         background-color: colorOfDecorations
@@ -116,6 +121,8 @@
 
       @media (max-width: 785px) {
         margin: 5px 0
+
+        transition: none
       }
     }
   }
