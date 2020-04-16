@@ -8,7 +8,7 @@ import { Component } from '@angular/core';
 export class MenuComponent {
 
   private menu: any = document.querySelector('.menu');
-  private isOpen = false;
+  public isOpen = false;
 
   toggleMenu(){
     if (document.body.clientWidth > 750) return;
