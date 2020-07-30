@@ -1,30 +1,38 @@
-<nav class="menu menu--style">
-  <div class="menu__btn menu--btnTxt" (click)="toggleMenu()">
-    <span>menu</span>
-    <div class="menu__arrow menu--arrowBorder">
-
-    </div>
+<nav class="menu">
+  <div class="menu__btn" (click)="toggleMenu()">
+    <span> menu </span>
+    <div *ngIf="!isOpen" class="menuArrow"> </div>
+    <div *ngIf="isOpen" class="g-exitBtn g-exitBtn--menu"> </div>
   </div>
-  <ul (click)="toggleMenu()">
-    <li> 
+  <ul class="menu__routes" (click)="toggleMenu()">
+    <li>
       <a routerLink="/">
         home
       </a>
     </li>
+<<<<<<< HEAD
     <li> 
+=======
+    <li>
+      <a routerLink="diary">
+        diary
+      </a>
+    </li>
+    <li>
+>>>>>>> 9ddd1115425ad26353c0c2f649f94dc6d7ac2052
       <a routerLink="portfolio">
         portfolio
       </a>
     </li>
-    <li> 
+    <li>
       <a routerLink="contact">
         contact
       </a>
     </li>
   </ul>
-  <ul class="media">
+  <ul class="menu__media">
     <li>
-      <a target="_blank" href="https://www.facebook.com/poyterskostecki"> 
+      <a target="_blank" href="https://www.facebook.com/poyterskostecki">
         <img src="../assets/img/facebookIcon.png" alt="FB" />
       </a>
     </li>
