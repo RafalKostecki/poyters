@@ -4,9 +4,9 @@
 		"title": "Angotia Catalogs",
 		"link": "",
 		"githubLink": "",
-		"content": "Tool for game developers and users that help them find such informations as NPC, MOC, items, quests, maps.",
+		"content": "Tool for game developers and users that help them find such informations as NPCs, MOBs, items, quests, maps.",
 		"technology": [
-			"TypeScript", "React", "Redux", "SCSS", "BEM", "HTML5", "Elixir", "Phoenix", "GraphQL", "Absinthe"
+			"TypeScript", "React", "Redux", "SCSS", "BEM", "HTML5", "Elixir", "Phoenix", "GraphQL", "Absinthe", "Apollo"
 		],
 		"released": "17.05.2020"
 	},
@@ -17,7 +17,7 @@
 		"githubLink": "",
 		"content": "Tool for game developers or Map Creators to creating fully functionally 2D game maps and characters.",
 		"technology": [
-			"TypeScript", "React", "Redux", "SCSS", "BEM", "HTML5"
+			"TypeScript", "React", "Redux", "SCSS", "BEM", "HTML5", "Apollo"
 		],
 		"released": "10.03.2020"
 	},
@@ -61,7 +61,7 @@
 		"githubLink": "https://github.com/RafalKostecki/Spaceinvaders",
 		"content": "Space newcomers is Poyters version of famous game - Space Invaders created by Taito Corporation in 1978.",
 		"technology": [
-			"JavaScript", "HTML5", "CSS3", "Sass", "", "BEM"
+			"JavaScript", "HTML5", "CSS3", "Sass", "BEM"
 		],
 		"released": "31.08.2017"
 	},
