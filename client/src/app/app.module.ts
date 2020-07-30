@@ -12,7 +12,6 @@ import { CategoryComponent } from './components/category/category.component';
 import { ProjectComponent } from './components/project/project.component';
 import { HomeComponent } from './views/home/home.component';
 import { FooterComponent } from './components/credits-footer/credits-footer.component';
-import { DiaryComponent } from './views/diary/diary.component';
 import { PortfolioComponent } from './views/portfolio/portfolio.component';
 import { ContactComponent } from './views/contact/contact.component';
 import { PortfolioProjectComponent } from './components/portfolio-project/portfolio-project.component';
@@ -34,7 +33,6 @@ import { ProfileComponent } from './views/profile/profile.component';
     ProjectComponent,
     HomeComponent,
     FooterComponent,
-    DiaryComponent,
     PortfolioComponent,
     ContactComponent,
     PortfolioProjectComponent,
