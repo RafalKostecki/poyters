@@ -8,7 +8,7 @@ export class UiService {
 
   public category = new BehaviorSubject<string>("Unknown");
 
-  public changeCategory(categoryName: string):void {
+  public changeCategory(categoryName: string): void {
     this.category.next(categoryName);
   }
 }

@@ -8,12 +8,10 @@ import { UiService } from '../../services/ui.service';
 })
 export class ContactComponent implements OnInit {
 
-  private categoryName: string = "Contact";
-
   constructor(private data: UiService) { }
 
   ngOnInit() {
-    this.data.changeCategory(this.categoryName)
+    this.data.changeCategory('Contact');
   }
 
 }
