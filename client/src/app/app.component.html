@@ -1,14 +1,12 @@
-<main>
-  <!-- If not logged -->
-  <app-login-panel *ngIf="!userId"></app-login-panel>
-  <!-- If logged -->
-  <app-profile-panel *ngIf="userId"></app-profile-panel>
-	<app-logo></app-logo>
-	<app-menu></app-menu>
-  <app-category></app-category> 
+<!-- If not logged -->
+<app-login-panel *ngIf="!userId"></app-login-panel>
+<!-- If logged -->
+<app-profile-panel *ngIf="userId"></app-profile-panel>
+<app-logo></app-logo>
+<app-menu></app-menu>
+<app-category></app-category>
 
-  <main id="content" class="pageContainer">
-    <router-outlet></router-outlet>
-  </main>
-  <app-credits-footer></app-credits-footer>
+<main id="content" class="pageContainer">
+  <router-outlet></router-outlet>
 </main>
+<app-credits-footer></app-credits-footer>

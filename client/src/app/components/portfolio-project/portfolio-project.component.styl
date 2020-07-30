@@ -1,5 +1,5 @@
 @import '../../../assets/styles/index.styl'
-    
+
 
 .portfolioProject {
     display: flex
@@ -36,16 +36,20 @@
 
         & img {
             width: 100%
-            max-width: 100%    
+            max-width: 100%
         }
     }
 
     &__description {
         position: relative
         flex: 1
-        padding: 30px 20px 0 20px
+        padding: 30px 40px 0 40px
 
         background-color: shadow4
+
+        @media (max-width: 650px) {
+          padding: 30px 20px 0 20px
+        }
     }
 }
 
@@ -56,13 +60,13 @@
     align-items: center
 
     &__type {
-        flex: 1   
+        flex: 1
 
         txt(15px, 1px, 700, uppercase, colorOfDecorations)
-    }    
+    }
 
     &__title {
-        flex: 1    
+        flex: 1
         padding-bottom 10px
 
         letter-spacing: 2px
@@ -114,7 +118,7 @@
 
 .github {
     position: absolute
-    display: block    
+    display: block
     bottom: 25px
     right: 20px
     width: 32px

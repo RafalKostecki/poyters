@@ -50,7 +50,7 @@
 		"githubLink": "https://github.com/RafalKostecki/hj2000",
 		"content": "HIPER JUMPER 2000 arcade game withhand-coded physic engine and map creator.",
 		"technology": [
-			"JavaScript", "HTML5", "CSS3", "Pug", "Stylus", "BEM"
+			"JavaScript", "HTML5", "Pug", "Stylus", "BEM"
 		],
 		"released": "21.04.2018"
 	},
@@ -61,7 +61,7 @@
 		"githubLink": "https://github.com/RafalKostecki/Spaceinvaders",
 		"content": "Space newcomers is Poyters version of famous game - Space Invaders created by Taito Corporation in 1978.",
 		"technology": [
-			"JavaScript", "HTML5", "CSS3", "Sass", "BEM"
+			"JavaScript", "HTML5", "Sass", "BEM"
 		],
 		"released": "31.08.2017"
 	},

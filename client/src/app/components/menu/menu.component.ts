@@ -7,11 +7,15 @@ import { Component } from '@angular/core';
 })
 export class MenuComponent {
 
-  private menu: any = document.querySelector('.menu')
+  private menu: any = document.querySelector('.menu');
+  public isOpen = false;
 
   toggleMenu(){
+    if (document.body.clientWidth > 750) return;
     this.menu = document.querySelector('.menu')
     this.menu.classList.toggle('menu--visible');
+
+    this.isOpen = !this.isOpen;
   }
 
 }
