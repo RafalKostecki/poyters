@@ -23,6 +23,7 @@ import { AboutComponent } from './components/about/about.component';
 import { ProfilPanelComponent } from './components/profile-panel/profile-panel.component';
 import { LoginPanelComponent } from './components/login-panel/login-panel.component';
 import { ProfileComponent } from './views/profile/profile.component';
+import { ContactFormComponent } from './components/contact-form/contact-form.component';
 
 @NgModule({
   declarations: [
@@ -43,7 +44,8 @@ import { ProfileComponent } from './views/profile/profile.component';
     AboutComponent,
     ProfilPanelComponent,
     LoginPanelComponent,
-    ProfileComponent
+    ProfileComponent,
+    ContactFormComponent
   ],
   imports: [
     BrowserModule,
