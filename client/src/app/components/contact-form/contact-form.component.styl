@@ -4,17 +4,49 @@
   display: flex
   flex-direction: column
 
-  &__subInput, &__horizontalInput, &__content {
-    margin: 8px 0
+  &__horizontalInput, &__content {
+    margin: 12px 0
     padding: 12px 10px
 
     background-color: shadow4
     color: fontColor4
     border: none  
     border-radius: 2px
+    border: 2px solid transparent
+    transition: 250ms ease-in-out
+
+    &:focus {
+      border: 2px solid colorOfDecorations
+    }
+  }
+
+  &__subInputs {
+    display: flex
+    flex-direction: row  
+    justify-content: space-between
   }
 
   &__content {
-    display: flex;
+    display: flex
+    resize: vertical
+  }
+}
+
+.contactSubInput {
+  flex: 1
+  margin: 12px 0
+  padding: 12px 10px
+  max-width: calc(50% - 12px)
+  box-sizing: border-box
+
+  background-color: shadow4
+  color: fontColor4
+  border: none  
+  border-radius: 2px
+  border: 2px solid transparent
+  transition: 250ms ease-in-out
+
+  &:focus {
+    border: 2px solid colorOfDecorations
   }
 }
