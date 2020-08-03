@@ -4,7 +4,7 @@
   display: flex
   flex-direction: column
 
-  &__horizontalInput, &__content {
+  &__horizontalInput, &__content, &__submit {
     margin: 12px 0
     padding: 12px 10px
 
@@ -29,6 +29,17 @@
   &__content {
     display: flex
     resize: vertical
+  }
+
+  &__submit {
+    max-width: 200px
+
+    cursor: pointer
+    transition: 250ms ease-in-out
+
+    &:hover {
+      color: colorOfDecorations
+    }
   }
 }
 
