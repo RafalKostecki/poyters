@@ -5,11 +5,20 @@
   flex-direction: row
   margin-top: 18px
 
+  @media (max-width: 785px) {
+    flex-direction: column-reverse
+  }
+
   &__menu {
     display: flex
     flex: 1
     max-width: 30%
     margin-top: 12px
+
+    @media (max-width: 785px) {
+      max-width: none
+    }
+
 
     & ul {
       margin: 0
@@ -18,9 +27,27 @@
       list-style-type: none
       txt(20px, 2px, normal, none, inherit)
 
+      @media (max-width: 785px) {
+        display: flex
+        margin-top: 10px
+      }
+
       & li {
         margin: 0 0 5px 0
         padding: 0  
+
+        @media (max-width: 785px) {
+          margin: 0 8px
+          flex: 1
+
+          &:first-child {
+            margin-left: 0
+          }
+
+          &:last-child {
+            margin-right: 0
+          }
+        }
       }
     }
   }
