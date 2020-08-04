@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { UserService } from '../../services/user.service';
 import { Router } from '@angular/router';
-import { corsHeaders } from '../../../assets/scripts/auth/connectOptions';
+import { corsHeaders } from '../../scripts/auth/connectOptions';
 
 @Component({
   selector: 'app-profile-panel',

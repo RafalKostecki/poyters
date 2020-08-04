@@ -1,0 +1,21 @@
+{
+  "contact": {
+    "name": {
+      "min": 3
+    },
+    "topic": {
+      "min": 10,
+      "max": 100
+    },
+    "content": {
+      "min": 100,
+      "max": 1000
+    }
+  },
+  "signup": {
+
+  },
+  "signin": {
+
+  }
+}

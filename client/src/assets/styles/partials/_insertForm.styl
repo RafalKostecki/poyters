@@ -22,23 +22,23 @@
 }
 
 .g-insertFormSubmit {
-  margin: 45px 0 10px 0
-  padding: 7px 10px
+  margin: 22px 0 0 0 
+  padding: 12px 10px
 
-  color: fontColor
-  background-color: transparent
-  border: 2px solid backgroundColor1
-  letter-spacing: 2px
+  background-color: shadow4
+  color: fontColor4
+  border: none  
+  border-radius: 2px
+  border: none
   transition: 200ms ease-in-out
+  cursor: pointer
 
   &:focus {
     outline: none
-    border: 2px solid colorOfDecorations
   }
 
   &:hover {
-    cursor: pointer
-    border: 2px solid colorOfDecorations
+    color: colorOfDecorations  
   }
 }
 
@@ -48,20 +48,14 @@
   flex-direction: column
 
   &__validation {
-    position: absolute
-    height: auto
-    width: 100px
-    top: 10px
-    left: -135px
-    padding: 6px 9px
+    display: flex
 
-    background-color: shadow2
-    box-shadow: 0 0px 20px shadow3
     color: warningColor
+    text-transform: lowercase
   }
 
   &__label {
-    margin: 15px 0 2px 0
+    margin: 13px 0 2px 0
 
     color: colorOfDecorations
     font-size: 20px
@@ -69,15 +63,15 @@
   }
 
   &__inputField {
-    height: 30px
-    padding: 3px 9px
+    margin: 0
+    padding: 12px 10px
 
-    background-color: backgroundColor1
+    background-color: shadow4
+    color: fontColor4
+    border: none  
+    border-radius: 2px
     border: 2px solid transparent
     transition: 200ms ease-in-out
-    color: fontColor
-    letter-spacing: 2px
-    font-size: 16px
 
     &:active {
       border: 2px solid transparent

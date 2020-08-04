@@ -3,7 +3,7 @@ import { UiService } from '../../services/ui.service';
 import { UserService } from '../../services/user.service';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { corsHeaders } from '../../../assets/scripts/auth/connectOptions';
+import { corsHeaders } from '../../scripts/auth/connectOptions';
 
 
 @Component({

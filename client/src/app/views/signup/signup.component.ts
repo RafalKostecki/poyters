@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { UiService } from '../../services/ui.service';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { MustMatch } from '../../../assets/scripts/must-match.validadator';
-import { corsHeaders } from '../../../assets/scripts/auth/connectOptions';
+import { MustMatch } from '../../scripts/must-match.validadator';
+import { corsHeaders } from '../../scripts/auth/connectOptions';
 
 @Component({
   selector: 'app-signup',
