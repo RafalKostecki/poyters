@@ -2,9 +2,13 @@
   <form class="g-insertForm" [formGroup]="registerForm" (ngSubmit)="onSubmit()">
     <div class="g-insertForm__box g-insertForm__box--signInUp">
       <div class="g-insertFormInput">
+        <label class="g-insertFormInput__label">
+          login 
+        </label>
+        <input formControlName="login" class="g-insertFormInput__inputField" type="text"/>
         <div 
           *ngIf="submitted && formControls.login.errors" 
-          class="g-insertFormInput__validation t-paragraph4Light" 
+          class="g-insertFormInput__validation" 
           role="alert" 
           aria-live="assertive"
         >
@@ -12,14 +16,19 @@
             Login is required
           </div>
         </div>
-        <label class="t-paragraphLight g-insertFormInput__label">
-          login 
-        </label>
-        <input formControlName="login" class="g-insertFormInput__inputField" type="text"/>
       </div>
   
       <div class="g-insertFormInput">
-        <div *ngIf="submitted && formControls.password.errors" class="g-insertFormInput__validation t-paragraph4Light" role="alert" aria-live="assertive">
+        <label class="g-insertFormInput__label">
+          password
+        </label>
+        <input formControlName="password" class="g-insertFormInput__inputField" type="password"/>
+        <div 
+          *ngIf="submitted && formControls.password.errors"
+          class="g-insertFormInput__validation"
+          role="alert"
+          aria-live="assertive"
+        >
           <span *ngIf="formControls.password.errors.required">
             Password is required
           </span>
@@ -27,12 +36,19 @@
             Password must be at least 6 characters
           </span>
         </div>
-        <label class="t-paragraphLight g-insertFormInput__label"> password </label>
-        <input formControlName="password" class="g-insertFormInput__inputField" type="password"/>
       </div>
   
       <div class="g-insertFormInput">
-        <div *ngIf="submitted && formControls.confirmPassword.errors" class="g-insertFormInput__validation t-paragraph4Light" role="alert" aria-live="assertive">
+        <label class="g-insertFormInput__label">
+          repeat password
+        </label>
+        <input type="password" formControlName="confirmPassword" class="g-insertFormInput__inputField" />
+        <div
+          *ngIf="submitted && formControls.confirmPassword.errors"
+          class="g-insertFormInput__validation"
+          role="alert"
+          aria-live="assertive"
+        >
           <span *ngIf="formControls.confirmPassword.errors.required">
             Confirm Password is required
           </span>
@@ -40,12 +56,19 @@
             Passwords must match
           </span>
         </div>
-        <label class="t-paragraphLight g-insertFormInput__label"> repeat password </label>
-        <input type="password" formControlName="confirmPassword" class="g-insertFormInput__inputField" />
       </div>
   
       <div class="g-insertFormInput">
-        <div *ngIf="submitted && formControls.email.errors" class="g-insertFormInput__validation t-paragraph4Light" role="alert" aria-live="assertive">
+        <label for="mail" class="g-insertFormInput__label">
+          mail
+        </label>
+        <input formControlName="email" class="g-insertFormInput__inputField" type="email"/>
+        <div
+          *ngIf="submitted && formControls.email.errors"
+          class="g-insertFormInput__validation"
+          role="alert"
+          aria-live="assertive"
+        >
           <span *ngIf="formControls.email.errors.required">
             Email is required
           </span>
@@ -53,11 +76,11 @@
             Email must be a valid email address
           </span>
         </div>
-        <label for="mail" class="t-paragraphLight g-insertFormInput__label"> mail </label>
-        <input formControlName="email" class="g-insertFormInput__inputField" type="email"/>
       </div>
   
-      <button type="submit" class="g-insertFormSubmit t-paragraph3Normal"> register </button>
+      <button type="submit" class="g-insertFormSubmit">
+        Register
+      </button>
     </div>
   </form> 
   <div aria="banner" class="g-authMessage">
