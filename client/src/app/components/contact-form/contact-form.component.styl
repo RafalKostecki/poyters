@@ -22,8 +22,13 @@
 
   &__subInputs {
     display: flex
-    flex-direction: row  
+    flex-direction: row
+    flex-wrap: wrap
     justify-content: space-between
+
+    & > * {
+      max-width: calc(50% - 12px)
+    }
   }
 
   &__content {
@@ -44,10 +49,9 @@
 }
 
 .contactSubInput {
-  flex: 1
+  flex: 1 0 21%
   margin: 12px 0
   padding: 12px 10px
-  max-width: calc(50% - 12px)
   box-sizing: border-box
 
   background-color: shadow4
@@ -60,4 +64,12 @@
   &:focus {
     border: 2px solid colorOfDecorations
   }
+}
+
+.contactInputValidation {
+  flex: 1 0 21%  
+  margin-top: -10px
+
+  color: warningColor
+  line-height: 15px
 }

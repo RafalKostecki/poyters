@@ -1,9 +1,94 @@
-<form class="contactForm">
+<form class="contactForm" [formGroup]="contactForm" (ngSubmit)="onSubmit()">
   <div class="contactForm__subInputs">
-    <input class="contactSubInput" type="text" placeholder="name">
-    <input class="contactSubInput" type="text" placeholder="email">
+    <input 
+      class="contactSubInput"
+      formControlName="name"
+      type="text"
+      placeholder="name"
+    >
+
+    <input
+      class="contactSubInput"
+      formControlName="email"
+      type="text"
+      placeholder="email"
+    >
+
+    <aside
+      *ngIf="submitted && formControls.name.errors"
+      class="contactInputValidation"
+      role="alert"
+      aria-live="assertive"
+    >
+      <span *ngIf="formControls.name.errors.required"> 
+        Name is required
+      </span>
+      <span *ngIf="formControls.name.errors.minlength">
+        Name must be at least {{ this.formConfig.name.min }} characters
+      </span>
+    </aside>
+
+    <aside
+      *ngIf="submitted && formControls.email.errors"
+      class="contactInputValidation"
+      role="alert"
+      aria-live="assertive"
+    >
+      <span *ngIf="formControls.email.errors.required"> 
+        Email is required
+      </span>
+      <span *ngIf="formControls.email.errors.email">
+        Email must be a valid email address
+      </span>
+    </aside>
   </div>
-  <input class="contactForm__horizontalInput" type="text" placeholder="topic">
-  <textarea class="contactForm__content" type="text" placeholder="message"></textarea>
-  <input class="contactForm__submit" type="submit" value="Send">
+  <input
+    class="contactForm__horizontalInput"
+    formControlName="topic"
+    type="text"
+    placeholder="topic"
+  >
+  <aside
+    *ngIf="submitted && formControls.topic.errors"
+    class="contactInputValidation"
+    role="alert"
+    aria-live="assertive"
+  >
+    <span *ngIf="formControls.topic.errors.required"> 
+      Topic is required
+    </span>
+    <span *ngIf="formControls.topic.errors.minlength">
+      Topic must be at least {{ this.formConfig.topic.min }} characters
+    </span>
+    <span *ngIf="formControls.topic.errors.maxlength">
+      Topic cannot be longer than {{ this.formConfig.topic.max }} characters
+    </span>
+  </aside>
+  <textarea
+    class="contactForm__content"
+    formControlName="content"
+    type="text"
+    placeholder="message"
+  > </textarea>
+  <aside
+    *ngIf="submitted && formControls.content.errors"
+    class="contactInputValidation"
+    role="alert"
+    aria-live="assertive"
+  >
+    <span *ngIf="formControls.content.errors.required"> 
+      Content is required
+    </span>
+    <span *ngIf="formControls.content.errors.minlength">
+      Content must be at least {{ this.formConfig.content.min }} characters
+    </span>
+    <span *ngIf="formControls.content.errors.maxlength">
+      Massage cannot be longer than {{ this.formConfig.content.max }} characters
+    </span>
+  </aside>
+
+  <button class="contactForm__submit" type="submit">
+    Send
+  </button>
+
 </form>

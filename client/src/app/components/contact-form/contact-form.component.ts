@@ -14,7 +14,7 @@ export class ContactFormComponent implements OnInit {
   ) { }
 
   public contactForm: FormGroup;
-  private formConfig = formsConfig.contact;
+  public formConfig = formsConfig.contact;
   public submitted = false;
   public signupMessage: string;
 
@@ -47,11 +47,11 @@ export class ContactFormComponent implements OnInit {
   }
 
   onSubmit() {
-    if (this.contactForm.invalid) return;
-
     this.submitted = true;
 
-    console.log('Success!', this.contactForm);
+    if (this.contactForm.invalid) return;
+
+    console.log('Success!', this.contactForm.value);
   }
 
 }
