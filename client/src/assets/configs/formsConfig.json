@@ -5,7 +5,7 @@
     },
     "topic": {
       "min": 10,
-      "max": 100
+      "max": 70
     },
     "content": {
       "min": 100,
