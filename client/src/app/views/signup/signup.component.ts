@@ -3,6 +3,7 @@ import { UiService } from '../../services/ui.service';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { MustMatch } from '../../scripts/must-match.validadator';
 import { corsHeaders } from '../../scripts/auth/connectOptions';
+import formsConfig from '../../../assets/configs/formsConfig.json';
 
 @Component({
   selector: 'app-signup',
@@ -15,6 +16,7 @@ export class SignupComponent implements OnInit {
   public registerForm: FormGroup;
   public submitted = false;
   public signupMessage: string;
+  public signupConfig = formsConfig.signup;
 
   constructor(private formBuilder: FormBuilder, private data: UiService) { }
 
@@ -23,8 +25,15 @@ export class SignupComponent implements OnInit {
 
     this.registerForm = this.formBuilder.group({
       login: ['', Validators.required],
-      email: ['', [Validators.required, Validators.email]],
-      password: ['', [Validators.required, Validators.minLength(6)]],
+      email: ['', [
+        Validators.required,
+        Validators.email
+      ]],
+      password: ['', [
+        Validators.required,
+        Validators.minLength(this.signupConfig.password.min),
+        Validators.maxLength(this.signupConfig.password.max)
+      ]],
       confirmPassword: ['', Validators.required]
     }, {
         validator: MustMatch('password', 'confirmPassword')

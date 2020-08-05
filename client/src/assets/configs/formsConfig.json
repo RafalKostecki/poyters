@@ -13,9 +13,9 @@
     }
   },
   "signup": {
-
-  },
-  "signin": {
-
+    "password": {
+      "min": 6,
+      "max": 18
+    }
   }
 }
