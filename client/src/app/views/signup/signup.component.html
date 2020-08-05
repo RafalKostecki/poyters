@@ -33,7 +33,10 @@
             Password is required
           </span>
           <span *ngIf="formControls.password.errors.minlength">
-            Password must be at least 6 characters
+            Password must be at least {{ signupConfig.password.min }} characters
+          </span>
+          <span *ngIf="formControls.password.errors.maxlength">
+            Password cannot be longer than {{ signupConfig.password.max }} characters
           </span>
         </div>
       </div>
