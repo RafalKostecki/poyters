@@ -1,14 +1,14 @@
 [
   {
 		"type": "Game",
-		"image": "./assets/img/breadhunter4.png",
+		"image": "https://marekchoinski.com/static/postuj_light-771183dd093054423e4c83089f0ec777.jpg",
 		"link": "http://poyters.pl/breadhunter4",
 		"title": "Bread Hunter 4",
 		"content": "Bread Hunter 4 it is unusual dynamic arcade game. Your task is to pick up required amount of loaf of breads in the shortest time. But! It`s not all. To finish your score are included your time, lives and buffs usage! Also, you have to be careful and it all well fight off. As in the first version of this game, Katl Cashier will try break your plans. Be careful! Always, you can throw bottle of banana juice, it ought to stop her for a while."
 	},
 	{
 		"type": "Game",
-		"image": "./assets/img/hj2000.png",
+		"image": "./assets/img/hj2k.mp4",
 		"link": "http://poyters.pl/hj2000",
 		"title": "HIPER JUMPER 2000",
 		"content": "HIPER JUMPER 2000 is arcade game in browser where you have to gain every points in the shortest time and go through all boards. You can choose game for one or two player and check who will win."
