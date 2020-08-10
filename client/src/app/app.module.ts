@@ -24,6 +24,7 @@ import { ProfilPanelComponent } from './components/profile-panel/profile-panel.c
 import { LoginPanelComponent } from './components/login-panel/login-panel.component';
 import { ProfileComponent } from './views/profile/profile.component';
 import { ContactFormComponent } from './components/contact-form/contact-form.component';
+import { HomeProjectComponent } from './components/home-project/home-project.component';
 
 @NgModule({
   declarations: [
@@ -45,7 +46,8 @@ import { ContactFormComponent } from './components/contact-form/contact-form.com
     ProfilPanelComponent,
     LoginPanelComponent,
     ProfileComponent,
-    ContactFormComponent
+    ContactFormComponent,
+    HomeProjectComponent
   ],
   imports: [
     BrowserModule,

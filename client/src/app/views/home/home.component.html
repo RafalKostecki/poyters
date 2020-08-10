@@ -1,10 +1,13 @@
-<app-project
-    [type]="project.type"
-    [image]="project.image"
-    [link]="project.link"
-    [title]="project.title"
-    [content]="project.content"
-    *ngFor="let project of projects"
->
+<main class="g-pageWrapper">
+    <app-home-project
+        [type]="project.type"
+        [image]="project.image"
+        [link]="project.link"
+        [title]="project.title"
+        [content]="project.content"
+        *ngFor="let project of projects"
+    >
 
-</app-project>
+    </app-home-project>
+</main>
+
