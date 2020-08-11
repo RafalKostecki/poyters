@@ -1,27 +1,29 @@
 [
+	{
+		"image": "./assets/img/stella.png",
+		"link": "https://hex.pm/packages/stella",
+		"title": "Stella",
+		"content": "Library providing implementations of the most famous algorithms, data structures and math functions for Elixir`s projects."
+	},
   {
-		"type": "Game",
 		"image": "./assets/img/breadHunter4.png",
 		"link": "http://poyters.pl/breadunter4",
 		"title": "Bread Hunter 4",
 		"content": "Bread Hunter 4 it`s unusual, dynamic browser arcade game. Your task is to pick up required amount of loaf of breads in the shortest time. To final score are included your time, lives and buffs usage! Also, you have to be careful. Katl Cashier will try to break your plans. But remember! Always, you can throw away bottle of banana juice, it ought to stop her for a while."
 	},
 	{
-		"type": "Game",
 		"image": "./assets/img/hj3k.mp4",
 		"link": "http://poyters.pl/hj2000",
 		"title": "HIPER JUMPER 3000",
 		"content": "HIPER JUMPER 3000 is arcade game where you have to gain every points in the shortest time and go through all boards. You can choose  levels. The game is available for one or two players. Check out who will win!"
 	},
 	{
-		"type": "Game",
 		"image": "./assets/img/spacenewcomers.png",
 		"link": "http://poyters.pl/spacenewcomers",
 		"title": "Space Newcomers",
 		"content": "Space newcomers it`s Poyters version of famous game - Space Invaders created by Taito Corporation. Your mission is destroy as much enemy invaders as you can. The aim is to carefully get a huge bonus for destroying the mother ship. The game is responsive! Right now, you can play on a small or large screen, tablet and TV!"
 	},
 	{
-		"type": "Game",
 		"image": "./assets/img/kosBirthday.png",
 		"link": "https://drive.google.com/file/d/0B8b65vR_MleyekNmN0tzalc1aFk/view",
 		"title": "Kostek 'Birthday'",

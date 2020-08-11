@@ -1,12 +1,23 @@
 [
 	{
+		"type": "Library",
+		"title": "Stella",
+		"link": "https://hex.pm/packages/stella",
+		"githubLink": "https://github.com/RafalKostecki/stella",
+		"content": "Elixir library providing implementations of the most famous algorithms, data structures and math functions.",
+		"technology": [
+			"Elixir", "Math", "Algorithms", "Data structures"
+		],
+		"released": "04.08.2020"
+	},
+	{
 		"type": "Tool",
 		"title": "Angotia Catalogs",
 		"link": "",
 		"githubLink": "",
 		"content": "Tool for game developers and users that help them find such informations as NPCs, MOBs, items, quests, maps.",
 		"technology": [
-			"TypeScript", "React", "Redux", "SCSS", "BEM", "HTML5", "Elixir", "Phoenix", "GraphQL", "Absinthe", "Apollo"
+			"TypeScript", "React", "Redux", "SCSS", "BEM", "Elixir", "Phoenix", "GraphQL", "Absinthe", "Apollo"
 		],
 		"released": "17.05.2020"
 	},
@@ -17,7 +28,7 @@
 		"githubLink": "",
 		"content": "Tool for game developers or Map Creators to creating fully functionally 2D game maps and characters.",
 		"technology": [
-			"TypeScript", "React", "Redux", "SCSS", "BEM", "HTML5", "Apollo"
+			"TypeScript", "React", "Redux", "SCSS", "BEM", "Apollo"
 		],
 		"released": "10.03.2020"
 	},
@@ -28,7 +39,7 @@
 		"githubLink": "https://github.com/RafalKostecki/bread-hunter-4",
 		"content": "Bread Hunter 4 is arcade game where u need to be as speed as u can, catch all breds and don't be catched by Katl cashier!",
 		"technology": [
-			"JavaScript", "React", "Redux", "SCSS", "BEM", "HTML5"
+			"JavaScript", "React", "Redux", "SCSS", "BEM"
 		],
 		"released": "22.04.2019"
 	},
@@ -39,18 +50,18 @@
 		"githubLink": "https://github.com/RafalKostecki/Poyters",
 		"content": "Single page application created in Angular with possibility to create Poyters Account - gives access to private Poyters products.",
 		"technology": [
-			"Angular 9", "HTML5", "BEM", "Stylus", "TypeScript", "Nest.js", "MongoDB", "JWT", "Passport.js"
+			"Angular 9", "BEM", "Stylus", "TypeScript", "Nest.js", "MongoDB", "JWT", "Passport.js"
 		],
 		"released": "23.07.2018"
 	},
 	{
 		"type": "Game",
-		"title": "HIPER JUMPER 2000",
-		"link": "http://poyters.pl/hj2000",
-		"githubLink": "https://github.com/RafalKostecki/hj2000",
-		"content": "HIPER JUMPER 2000 arcade game withhand-coded physic engine and map creator.",
+		"title": "HIPER JUMPER 3000",
+		"link": "https://github.com/RafalKostecki/hj3000",
+		"githubLink": "https://github.com/RafalKostecki/hj3000",
+		"content": "HIPER JUMPER 3000 arcade game withhand-coded physic engine and map creator.",
 		"technology": [
-			"JavaScript", "HTML5", "Pug", "Stylus", "BEM"
+			"JavaScript", "Pug", "Stylus", "LESS", "Electron"
 		],
 		"released": "21.04.2018"
 	},
@@ -61,7 +72,7 @@
 		"githubLink": "https://github.com/RafalKostecki/Spaceinvaders",
 		"content": "Space newcomers is Poyters version of famous game - Space Invaders created by Taito Corporation in 1978.",
 		"technology": [
-			"JavaScript", "HTML5", "Sass", "BEM"
+			"JavaScript", "Sass", "BEM"
 		],
 		"released": "31.08.2017"
 	},
