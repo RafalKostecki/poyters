@@ -1,30 +1,30 @@
 [
   {
 		"type": "Game",
-		"image": "https://marekchoinski.com/static/postuj_light-771183dd093054423e4c83089f0ec777.jpg",
-		"link": "http://poyters.pl/breadhunter4",
+		"image": "./assets/img/breadHunter4.png",
+		"link": "http://poyters.pl/breadunter4",
 		"title": "Bread Hunter 4",
-		"content": "Bread Hunter 4 it is unusual dynamic arcade game. Your task is to pick up required amount of loaf of breads in the shortest time. But! It`s not all. To finish your score are included your time, lives and buffs usage! Also, you have to be careful and it all well fight off. As in the first version of this game, Katl Cashier will try break your plans. Be careful! Always, you can throw bottle of banana juice, it ought to stop her for a while."
+		"content": "Bread Hunter 4 it`s unusual, dynamic browser arcade game. Your task is to pick up required amount of loaf of breads in the shortest time. To final score are included your time, lives and buffs usage! Also, you have to be careful. Katl Cashier will try to break your plans. But remember! Always, you can throw away bottle of banana juice, it ought to stop her for a while."
 	},
 	{
 		"type": "Game",
-		"image": "./assets/img/hj2k.mp4",
+		"image": "./assets/img/hj3k.mp4",
 		"link": "http://poyters.pl/hj2000",
-		"title": "HIPER JUMPER 2000",
-		"content": "HIPER JUMPER 2000 is arcade game in browser where you have to gain every points in the shortest time and go through all boards. You can choose game for one or two player and check who will win."
+		"title": "HIPER JUMPER 3000",
+		"content": "HIPER JUMPER 3000 is arcade game where you have to gain every points in the shortest time and go through all boards. You can choose  levels. The game is available for one or two players. Check out who will win!"
 	},
 	{
 		"type": "Game",
-		"image": "./assets/img/spaceinvaders.png",
+		"image": "./assets/img/spacenewcomers.png",
 		"link": "http://poyters.pl/spacenewcomers",
 		"title": "Space Newcomers",
-		"content": "Space newcomers it is Poyters version of famous game - Space Invaders created by Taito Corporation in 1978. This producition introduced a huge confused in the game world. Now is available in Poyters version! Your mission is to destroy enemy invaders. You will use earlier prepared the ship. The aim is to carefully get not small bonus for destroying the mother ship. The game is responsive! Right now, you can play on a small, large screen,tablet or enormosu TV!"
+		"content": "Space newcomers it`s Poyters version of famous game - Space Invaders created by Taito Corporation. Your mission is destroy as much enemy invaders as you can. The aim is to carefully get a huge bonus for destroying the mother ship. The game is responsive! Right now, you can play on a small or large screen, tablet and TV!"
 	},
 	{
 		"type": "Game",
 		"image": "./assets/img/kosBirthday.png",
 		"link": "https://drive.google.com/file/d/0B8b65vR_MleyekNmN0tzalc1aFk/view",
 		"title": "Kostek 'Birthday'",
-		"content": "That is how you can imagine, this game is about a birthday! But not about usually birthday, this is 18`th birthday! Wow! Do you like freak, unusual, not logic and primarily do you like another games?! We have the birthday and BUM! The huge cristal, Dudzio`s flute, The Hope, a weird rooms, hemoglobine, Przemek in the wardrobe! I don`t know but Kostek`s party became any apogee! It is possible that it is the cheap wine fault or very strong tea which was made of two bags. Nevermind. We are in the fuckin weird residence! You have to check what the fuck and find your collegues. Don`t worry, you will get all help you need always correct and nice smelling Narrator! Perhpas, he will be complain and not compliant with your purposes and maybe he will insult you! But it's just joke ^^"
+		"content": "We have the birthday and BUM! The huge cristal, a weird rooms, hemoglobine and Przemek! I don`t know how but Kostek`s party has become some kind of apogee! Possible it`s caused by the cheap wine or very strong tea. Nevermind. You have to find your collegues. Don`t worry, always correct and nice smelling Narrator will help ya."
 	}
 ]
