@@ -1,5 +1,5 @@
 <section class="homeProject">
-  <div role="img" class="homeProject__img">
+  <a target="blank" href={{link}} role="img" class="homeProject__img">
     <img src={{image}} *ngIf="!image.includes('.mp4')"/>
     <video
       *ngIf="image.includes('.mp4')"
@@ -16,7 +16,7 @@
         type="video/mp4"
       > 
     </video>
-  </div>
+  </a>
   <div class="homeProject__desc">
     <h2> {{ title }} </h2>
     <p> {{content}} </p>
