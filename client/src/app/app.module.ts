@@ -9,7 +9,6 @@ import { AppComponent } from './app.component';
 import { LogoComponent } from './components/logo/logo.component';
 import { MenuComponent } from './components/menu/menu.component';
 import { CategoryComponent } from './components/category/category.component';
-import { ProjectComponent } from './components/project/project.component';
 import { HomeComponent } from './views/home/home.component';
 import { FooterComponent } from './components/credits-footer/credits-footer.component';
 import { PortfolioComponent } from './views/portfolio/portfolio.component';
@@ -32,7 +31,6 @@ import { HomeProjectComponent } from './components/home-project/home-project.com
     LogoComponent,
     MenuComponent,
     CategoryComponent,
-    ProjectComponent,
     HomeComponent,
     FooterComponent,
     PortfolioComponent,
