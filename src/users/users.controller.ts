@@ -3,13 +3,13 @@ import { Controller, Request, Body, Post, UseGuards, Get } from '@nestjs/common'
 import { AuthGuard } from '@nestjs/passport';
 import { UsersService } from './users.service';
 
-@Controller()
+@Controller('users')
 export class UsersController {
   constructor(
     private readonly usersService: UsersService
   ) {}
 
-  @Post('users/create')
+  @Post('create')
   async addUser(
     @Body('username') username: string, 
     @Body('password') password: string, 
@@ -21,7 +21,7 @@ export class UsersController {
   }
 
   @UseGuards(AuthGuard('jwt'))
-  @Get('users/profile')
+  @Get('profile')
   async userProfile(@Request() req) {
     return req.user
   }

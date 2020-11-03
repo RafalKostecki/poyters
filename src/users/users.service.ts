@@ -3,6 +3,8 @@ import { Injectable, HttpException } from '@nestjs/common';
 import { InjectModel } from '@nestjs/mongoose';
 import { Model } from 'mongoose';
 import { IUser } from './user.model';
+import nodemailer from 'nodemailer';
+import smtpTransport from 'nodemailer-smtp-transport';
 // eslint-disable-next-line @typescript-eslint/no-var-requires
 const bcrypt = require("bcrypt");
 
@@ -34,6 +36,40 @@ export class UsersService {
           });
           
           newUser.save();
+
+          const transporter = nodemailer.createTransport(smtpTransport({
+            pool: true,
+            host: "mail49.mydevil.net",
+            port: 465,
+            secure: true, // use TLS
+            auth: {
+              user: "no-reply@poyters.pl",
+              pass: "aaa"
+            }
+          }));
+
+
+          transporter.verify(function(error, success) {
+            if (error) {
+              console.log(error);
+            } else {
+              console.log("Server is ready to take our messages");
+            }
+          });
+
+          const mailOptions = {
+            from: '"Poyters Team" <no-reply@poyters.pl>',
+            to: mail,
+            subject: 'Create a new account',
+            text: `Hey ${username}! U created ur a very new Poyters Account`
+          };
+
+          transporter.sendMail(mailOptions, (error, info) => {
+            if (error) {
+                return console.log(error);
+            }
+            console.log('Message sent: %s', info.messageId);
+          });
         }
       });
     }

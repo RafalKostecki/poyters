@@ -4,6 +4,7 @@ import { UserService } from '../../services/user.service';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { corsHeaders } from '../../scripts/auth/connectOptions';
+import apiConfig from '../../../assets/configs/apiConfig.json';
 
 
 @Component({
@@ -48,7 +49,7 @@ export class SigninComponent implements OnInit {
       password: this.signInForm.value.password
     }
 
-    fetch('http://localhost:3000/auth/login',
+    fetch(`${apiConfig.poytersApiUrl}/auth/login`,
       {
         method: 'POST',
         headers: corsHeaders,
@@ -56,7 +57,7 @@ export class SigninComponent implements OnInit {
         body: JSON.stringify(data)
       })
     .then(() => {
-      fetch(`http://localhost:3000/users/profile/`,
+      fetch(`${apiConfig.poytersApiUrl}/users/profile/`,
         {
           method: 'GET',
           headers: corsHeaders,

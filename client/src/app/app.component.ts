@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { UserService } from './services/user.service';
 import { corsHeaders } from './scripts/auth/connectOptions';
+import apiConfig from '../assets/configs/apiConfig.json';
 
 
 @Component({
@@ -27,7 +28,7 @@ export class AppComponent {
   ngOnInit() {
     this.userService.userId.subscribe(newId => this.userId = newId)
 
-    fetch(`http://localhost:3000/users/profile/`,
+    fetch(`${apiConfig.poytersApiUrl}/users/profile/`,
       {
         method: 'GET',
         headers: corsHeaders,

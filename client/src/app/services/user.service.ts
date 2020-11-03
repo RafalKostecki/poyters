@@ -3,6 +3,8 @@ import { BehaviorSubject, Observable } from 'rxjs';
 import { corsHeaders } from '../scripts/auth/connectOptions';
 import { HttpClient } from '@angular/common/http';
 import { map } from 'rxjs/operators';
+import apiConfig from '../../assets/configs/apiConfig.json';
+
 
 @Injectable({
   providedIn: 'root'
@@ -26,7 +28,7 @@ export class UserService {
   }
 
   isLoggedIn():Observable<boolean> {
-     return this.http.get<any>('http://localhost:3000/users/profile/', this.httpOptions)
+     return this.http.get<any>(`${apiConfig.poytersApiUrl}/users/profile/`, this.httpOptions)
       .pipe(map(response => {
         if (response.userId && response.userId !== '') return true;
         return false;

@@ -2,6 +2,8 @@ import { Component } from '@angular/core';
 import { UserService } from '../../services/user.service';
 import { Router } from '@angular/router';
 import { corsHeaders } from '../../scripts/auth/connectOptions';
+import apiConfig from '../../../assets/configs/apiConfig.json';
+
 
 @Component({
   selector: 'app-profile-panel',
@@ -22,7 +24,7 @@ export class ProfilPanelComponent {
   }
 
   logout() {
-    fetch(`http://localhost:3000/auth/logout`,
+    fetch(`${apiConfig.poytersApiUrl}/auth/logout`,
       {
         method: 'GET',
         headers: corsHeaders,
