@@ -18,7 +18,6 @@ export class FooterComponent implements OnInit {
   }
   
   get footerStyles () {
-    console.log(this.currentCategory)
 		return {
       position: this.currentCategory === 'Contact' ? 'fixed' : 'relative'
     }
