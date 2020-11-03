@@ -26,6 +26,8 @@
     "@angular/router": "^9.0.1",
     "axios": "^0.19.2",
     "core-js": "^2.6.11",
+    "nodemailer": "^6.4.14",
+    "nodemailer-smtp-transport": "^2.7.4",
     "rxjs": "^6.5.4",
     "tslib": "^1.10.0",
     "zone.js": "~0.10.2"
