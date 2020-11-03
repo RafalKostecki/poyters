@@ -1,6 +1,9 @@
 # Poyters
 Poyters is my own brand single page application. I hand-coded it in the newest Angular version. Provides easy inject presentation data mechanism. Poyters web app provides nice and easy space for custom users where they can find the best of my projects (mainly games). Also business newcomers find here something for them like my Portfolio.
 
+## Set up
+To set up a whole project (including API) at first, u need to `git clone` Poyters repository and than go to main dir and run `npm install` command to get all API packages. You have to do the same at /client directory to get Poyters client packages. To run both (API and client) need to run `npm start` command at specific directory - main for API and /client for client side of the project.
+
 
 ## Changelog
 
@@ -12,6 +15,9 @@ Poyters is my own brand single page application. I hand-coded it in the newest A
 - Redesign and rewrite /home page
 - Redesign and rewrite error massages for all forms
 - Redesign signup and signin forms
+- Sent emailf after registration
+- Redesign hosting architecture. Keep all project as subdomains, eg breadhunter4.poyters.pl
+- Fix credit footer overflow
 
 
 ### Version 1.2.0 (16 April 2020)

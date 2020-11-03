@@ -4,6 +4,8 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { MustMatch } from '../../scripts/must-match.validadator';
 import { corsHeaders } from '../../scripts/auth/connectOptions';
 import formsConfig from '../../../assets/configs/formsConfig.json';
+import apiConfig from '../../../assets/configs/apiConfig.json';
+
 
 @Component({
   selector: 'app-signup',
@@ -55,7 +57,7 @@ export class SignupComponent implements OnInit {
       mail: this.registerForm.value.email,
     };
 
-    fetch('http://localhost:3000/users/create',
+    fetch(`${apiConfig.poytersApiUrl}/users/create`,
       {
         method: 'POST',
         headers: corsHeaders,

@@ -1,12 +1,13 @@
 import { NestFactory } from '@nestjs/core';
-import { AppModule } from './app.module';
-import * as cookieParser from 'cookie-parser';
+import { AppModule } from './src/app.module';
+import cookieParser from 'cookie-parser';
+
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
   app.use(cookieParser());
   const options = {
-    "origin": "http://localhost:4200",
+    "origin": true,
     "methods": "GET,HEAD,PUT,PATCH,POST,DELETE",
     "preflightContinue": false,
     "optionsSuccessStatus": 204,
@@ -15,5 +16,6 @@ async function bootstrap() {
   app.enableCors(options)
   await app.listen(3000);
 }
+
 bootstrap();
 
