@@ -32,7 +32,7 @@ export class ProfilPanelComponent {
       })
     .then(res => {
       if (res.status === 200) {
-        this.userService.setUserId(null);
+        this.userService.setUserData(null);
         this.router.navigate(['']);
       }
     })

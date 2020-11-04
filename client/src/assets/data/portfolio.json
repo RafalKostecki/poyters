@@ -35,7 +35,7 @@
   {
 		"type": "Game",
 		"title": "Bread Hunter 4",
-		"link": "http://poyters.pl/breadhunter4",
+		"link": "https://breadhunter4.poyters.pl",
 		"githubLink": "https://github.com/RafalKostecki/bread-hunter-4",
 		"content": "Bread Hunter 4 is arcade game where u need to be as speed as u can, catch all breds and don't be catched by Katl cashier!",
 		"technology": [
@@ -46,7 +46,7 @@
 	{
 		"type": "SPA",
 		"title": "Poyters",
-		"link": "http://poyters.pl",
+		"link": "https://poyters.pl",
 		"githubLink": "https://github.com/RafalKostecki/Poyters",
 		"content": "Single page application created in Angular with possibility to create Poyters Account - gives access to private Poyters products.",
 		"technology": [
@@ -68,7 +68,7 @@
 	{
 		"type": "Game",
 		"title": "Space newcomers",
-		"link": "http://poyters.pl/spacenewcomers",
+		"link": "https://spacenewcomers.poyters.pl",
 		"githubLink": "https://github.com/RafalKostecki/Spaceinvaders",
 		"content": "Space newcomers is Poyters version of famous game - Space Invaders created by Taito Corporation in 1978.",
 		"technology": [

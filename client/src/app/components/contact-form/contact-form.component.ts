@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import formsConfig from '../../../assets/configs/formsConfig.json';
+import apiConfig from '../../../assets/configs/apiConfig.json';
+import { corsHeaders } from '../../scripts/auth/connectOptions';
+
 
 @Component({
   selector: 'app-contact-form',
@@ -16,7 +19,11 @@ export class ContactFormComponent implements OnInit {
   public contactForm: FormGroup;
   public formConfig = formsConfig.contact;
   public submitted = false;
-  public signupMessage: string;
+  public mailStatus: string;
+  private sentMailInfo = {
+    ok: 'Your mail has been sent!',
+    error: 'Cannot sent mail. Pleas try later'
+  }
 
 
   ngOnInit() {
@@ -51,7 +58,30 @@ export class ContactFormComponent implements OnInit {
 
     if (this.contactForm.invalid) return;
 
-    console.log('Success!', this.contactForm.value);
+    const mail = {
+      from: `"${this.contactForm.value.email}" <no-reply@poyters.pl>`,
+      to: 'business@poyters.pl',
+      subject: this.contactForm.value.topic,
+      text: `Message from: ${this.contactForm.value.name}, ${this.contactForm.value.email}; ${this.contactForm.value.content}`
+    }
+
+    fetch(`${apiConfig.poytersApiUrl}/mail/send`,
+      {
+        method: 'POST',
+        headers: corsHeaders,
+        credentials: 'include',
+        body: JSON.stringify(mail)
+      })
+      .then((res) => {
+        if (res.status === 200) {
+          this.mailStatus = this.sentMailInfo.ok;
+        } else {
+          this.mailStatus = this.sentMailInfo.error;
+        }
+      })
+      .catch(() => {
+        this.mailStatus = this.sentMailInfo.error;
+      })
   }
 
 }

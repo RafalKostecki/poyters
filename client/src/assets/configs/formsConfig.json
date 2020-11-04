@@ -4,11 +4,11 @@
       "min": 3
     },
     "topic": {
-      "min": 10,
-      "max": 70
+      "min": 6,
+      "max": 50
     },
     "content": {
-      "min": 100,
+      "min": 80,
       "max": 1000
     }
   },

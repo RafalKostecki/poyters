@@ -7,7 +7,7 @@ To set up a whole project (including API) at first, u need to `git clone` Poyter
 
 ## Changelog
 
-### Version 1.3.0 (planned October 2020)
+### Version 1.3.0 (4 November 2020)
 - Create contact form
 - Delete /diary page
 - Add Project Stella to /home and /portfolio
@@ -15,9 +15,12 @@ To set up a whole project (including API) at first, u need to `git clone` Poyter
 - Redesign and rewrite /home page
 - Redesign and rewrite error massages for all forms
 - Redesign signup and signin forms
-- Sent emailf after registration
+- Send email after correct registration
 - Redesign hosting architecture. Keep all project as subdomains, eg breadhunter4.poyters.pl
 - Fix credit footer overflow
+- Create Poyters API info endpoint
+- Create Poyters API mail sender service
+- Send emails by contact form at Poyters Client
 
 
 ### Version 1.2.0 (16 April 2020)

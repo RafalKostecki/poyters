@@ -1,4 +1,5 @@
 import { Module } from '@nestjs/common';
+import { ConfigModule } from '@nestjs/config';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { MongooseModule } from '@nestjs/mongoose';
@@ -11,6 +12,7 @@ import { MailController } from './mail/mail.controller';
 import { MailService } from './mail/mail.service';
 import { MailModule } from './mail/mail.module';
 
+
 const accessString = 'mongodb+srv://new-test-user:9OFB838GLJY0h1vx@cluster0-amydc.mongodb.net/test?retryWrites=true&w=majority';
 
 
@@ -20,7 +22,10 @@ const accessString = 'mongodb+srv://new-test-user:9OFB838GLJY0h1vx@cluster0-amyd
     AuthModule,
     UsersModule,
     InfoModule,
-    MailModule
+    MailModule,
+    ConfigModule.forRoot({
+      envFilePath: ['./config/.development.env', './config/.prod.env'],
+    })
   ],
   controllers: [AppController, InfoController, MailController],
   providers: [AppService, InfoService, MailService],
