@@ -20,7 +20,6 @@ export class MailController {
       const mailId: string = await this.mailService.send(from, to, subject, text);
       res.status(200).send(`Mail ${mailId} sent`);
     } catch (error) {
-      console.log(error)
       res.status(500).send('Internal server error');
     }  
   }

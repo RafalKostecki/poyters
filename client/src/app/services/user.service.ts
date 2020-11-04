@@ -4,6 +4,7 @@ import { corsHeaders } from '../scripts/auth/connectOptions';
 import { HttpClient } from '@angular/common/http';
 import { map } from 'rxjs/operators';
 import apiConfig from '../../assets/configs/apiConfig.json';
+import { IUserData } from '../interfaces/userData.interface';
 
 
 @Injectable({
@@ -17,9 +18,9 @@ export class UserService {
     withCredentials: true
   }
 
-  public userId = new BehaviorSubject<string>('');
-  public setUserId(newId: string):void {
-    this.userId.next(newId);
+  public userData = new BehaviorSubject<IUserData | null>(null);
+  public setUserData(data: IUserData):void {
+    this.userData.next(data);
   }
 
   public username = new BehaviorSubject<string>('');

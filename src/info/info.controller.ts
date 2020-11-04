@@ -1,4 +1,4 @@
-import { Controller, Response, Request, Body, Post, UseGuards, Get } from '@nestjs/common';
+import { Controller, Response, Get } from '@nestjs/common';
 
 @Controller('info')
 export class InfoController {

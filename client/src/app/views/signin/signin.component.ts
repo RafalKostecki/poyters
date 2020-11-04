@@ -5,6 +5,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { corsHeaders } from '../../scripts/auth/connectOptions';
 import apiConfig from '../../../assets/configs/apiConfig.json';
+import { IUserData } from '../../interfaces/userData.interface';
 
 
 @Component({
@@ -68,7 +69,13 @@ export class SigninComponent implements OnInit {
         if (resJSON.statusCode === 401) {
           this.signupMessage = "Wrong username or password";
         } else {
-          this.userService.setUserId(resJSON.userId);
+          
+          const userData: IUserData = {
+            id: resJSON.userId,
+            username: resJSON.username
+          }
+          
+          this.userService.setUserData(userData);
           this.router.navigate(['']);
         }
       })
