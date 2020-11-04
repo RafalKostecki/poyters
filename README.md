@@ -7,6 +7,11 @@ To set up a whole project (including API) at first, u need to `git clone` Poyter
 
 ## Changelog
 
+### Version 1.3.1 (6 November 2020)
+- Clear contact data after sending email
+- Fix contact for email validation overflow
+
+
 ### Version 1.3.0 (4 November 2020)
 - Create contact form
 - Delete /diary page
@@ -52,3 +57,18 @@ To set up a whole project (including API) at first, u need to `git clone` Poyter
 - Optimize web page
 - Add images lazy loading
 - Change Poyters colors to more bright
+
+
+### Version beta 1.0.0 (30 April 2019)
+- Redesign /home view
+- Rewrite app flow tos services
+- Fix menu overflow for mobile devices
+- Add Facebook and Github icons to main menu
+- Load portfolio and home projects from JSON data
+
+
+### Version alpha 1.0.0 (23 July 2018)
+- Create home web page
+- Create diary page
+- Create contact page
+- Create portfolio page
