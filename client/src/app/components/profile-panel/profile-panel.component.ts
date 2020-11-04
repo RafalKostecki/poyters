@@ -13,11 +13,20 @@ import apiConfig from '../../../assets/configs/apiConfig.json';
 export class ProfilPanelComponent {
 
   public profileListIsOpen = false;
+  public avatarAltText: string;
 
   constructor(
     private userService: UserService,
     private router: Router
   ) { }
+
+  ngOnInit() {
+    this.userService.userData.subscribe(data => {
+      if (!data?.avatar) {
+        this.avatarAltText = data?.username[0].toUpperCase();
+      }
+    })
+  }
 
   toggleProfileList() {
     this.profileListIsOpen = !this.profileListIsOpen;
