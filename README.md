@@ -11,6 +11,7 @@ To set up a whole project (including API) at first, u need to `git clone` Poyter
 - Clear contact form after sending email
 - Clear signup form after succesfully registration
 - Center horizontally and vertically apiMessage text
+- Show the first letter of the username in case of an avatar absence
 - Fix contact for email validation overflow
 
 

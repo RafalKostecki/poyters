@@ -1,46 +1,48 @@
 <form class="contactForm" [formGroup]="contactForm" (ngSubmit)="onSubmit()">
   <div class="contactForm__subInputs">
-    <input 
-      class="contactSubInput"
-      formControlName="name"
-      type="text"
-      placeholder="name"
-    >
-
-    <input
-      class="contactSubInput"
-      formControlName="email"
-      type="text"
-      placeholder="email"
-    >
-
-    <aside
-      *ngIf="submitted && formControls.name.errors"
-      class="contactInputValidation"
-      role="alert"
-      aria-live="assertive"
-    >
-      <span *ngIf="formControls.name.errors.required"> 
-        Name is required
-      </span>
-      <span *ngIf="formControls.name.errors.minlength">
-        Name must be at least {{ this.formConfig.name.min }} characters
-      </span>
-    </aside>
-
-    <aside
-      *ngIf="submitted && formControls.email.errors"
-      class="contactInputValidation"
-      role="alert"
-      aria-live="assertive"
-    >
-      <span *ngIf="formControls.email.errors.required"> 
-        Email is required
-      </span>
-      <span *ngIf="formControls.email.errors.email">
-        Email must be a valid email address
-      </span>
-    </aside>
+    <div class="inputWrapper">
+      <input 
+        class="contactSubInput"
+        formControlName="name"
+        type="text"
+        placeholder="name"
+      >
+      <aside
+        *ngIf="submitted && formControls.name.errors"
+        class="contactInputValidation"
+        role="alert"
+        aria-live="assertive"
+      >
+        <span *ngIf="formControls.name.errors.required"> 
+          Name is required
+        </span>
+        <span *ngIf="formControls.name.errors.minlength">
+          Name must be at least {{ this.formConfig.name.min }} characters
+        </span>
+      </aside>
+    </div>
+    
+    <div class="inputWrapper">
+      <input
+        class="contactSubInput"
+        formControlName="email"
+        type="text"
+        placeholder="email"
+      >
+      <aside
+        *ngIf="submitted && formControls.email.errors"
+        class="contactInputValidation"
+        role="alert"
+        aria-live="assertive"
+      >
+        <span *ngIf="formControls.email.errors.required"> 
+          Email is required
+        </span>
+        <span *ngIf="formControls.email.errors.email">
+          Email must be a valid email address
+        </span>
+      </aside>
+    </div>
   </div>
   <input
     class="contactForm__horizontalInput"
