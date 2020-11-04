@@ -3,15 +3,17 @@ import { Injectable, HttpException } from '@nestjs/common';
 import { InjectModel } from '@nestjs/mongoose';
 import { Model } from 'mongoose';
 import { IUser } from './user.model';
-import nodemailer from 'nodemailer';
-import smtpTransport from 'nodemailer-smtp-transport';
+import { MailService } from '../mail/mail.service';
 // eslint-disable-next-line @typescript-eslint/no-var-requires
 const bcrypt = require("bcrypt");
 
 
 @Injectable()
 export class UsersService {
-  constructor(@InjectModel('User') private readonly userModel: Model<IUser>) { }
+  constructor(
+    @InjectModel('User') private readonly userModel: Model<IUser>,
+    private readonly mailService: MailService
+  ) { }
 
   async insertUser(username: string, password: string, mail: string) {
     const existingUsers = await this.userModel.find({username: username}).exec();
@@ -26,7 +28,7 @@ export class UsersService {
         if (err) {
           throw new HttpException({
             status: 500,
-            error: 'Error during crypting a password',
+            error: 'Internal error during crypting a password',
           }, 500);
         } else {
           const newUser = new this.userModel({
@@ -37,39 +39,19 @@ export class UsersService {
           
           newUser.save();
 
-          const transporter = nodemailer.createTransport(smtpTransport({
-            pool: true,
-            host: "mail49.mydevil.net",
-            port: 465,
-            secure: true, // use TLS
-            auth: {
-              user: "no-reply@poyters.pl",
-              pass: "aaa"
-            }
-          }));
-
-
-          transporter.verify(function(error, success) {
-            if (error) {
-              console.log(error);
-            } else {
-              console.log("Server is ready to take our messages");
-            }
-          });
-
-          const mailOptions = {
-            from: '"Poyters Team" <no-reply@poyters.pl>',
-            to: mail,
-            subject: 'Create a new account',
-            text: `Hey ${username}! U created ur a very new Poyters Account`
-          };
-
-          transporter.sendMail(mailOptions, (error, info) => {
-            if (error) {
-                return console.log(error);
-            }
-            console.log('Message sent: %s', info.messageId);
-          });
+          try {
+            this.mailService.send(
+              '"Poyters Team" <no-reply@poyters.pl>',
+              mail,
+              'Create a new account',
+              `Hey ${username}! U created ur a very new Poyters Account`
+            )
+          } catch (error) {
+            throw new HttpException({
+              status: 500,
+              error: 'Internal error during sending a mail',
+            }, 500);
+          }
         }
       });
     }
