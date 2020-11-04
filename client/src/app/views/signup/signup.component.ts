@@ -70,6 +70,9 @@ export class SignupComponent implements OnInit {
         this.signupMessage = "User already exists!";
       } else {
         this.signupMessage = "Account sucessfully created. Now, you can sign in";
+
+        this.submitted = false;
+        this.registerForm.reset();
       }
     })
     .catch(() => {
