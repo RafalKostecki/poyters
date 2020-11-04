@@ -7,7 +7,7 @@ To set up a whole project (including API) at first, u need to `git clone` Poyter
 
 ## Changelog
 
-### Version 1.3.1 (6 November 2020)
+### Version 1.3.1 (5 November 2020)
 - Clear contact form after sending email
 - Clear signup form after succesfully registration
 - Center horizontally and vertically apiMessage text
