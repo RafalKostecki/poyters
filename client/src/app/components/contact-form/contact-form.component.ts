@@ -75,6 +75,9 @@ export class ContactFormComponent implements OnInit {
       .then((res) => {
         if (res.status === 200) {
           this.mailStatus = this.sentMailInfo.ok;
+          
+          this.submitted = false;
+          this.contactForm.reset();
         } else {
           this.mailStatus = this.sentMailInfo.error;
         }
