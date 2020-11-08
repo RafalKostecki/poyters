@@ -27,6 +27,6 @@ export class PortfolioComponent implements OnInit {
   }
 
   public getJSON(): Observable<any> {
-    return this.http.get("../assets/data/portfolio.json")
+    return this.http.get("./app/assets/data/portfolio.json")
   }
 }

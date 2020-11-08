@@ -26,7 +26,7 @@
 		"title": "Angotia Catalogs",
 		"link": "",
 		"githubLink": "",
-		"content": "Tool for game developers and users to help them find information sucha as maps, quests etc. Includes Admin Panel to manage exported data from Angotia tools.",
+		"content": "Tool for game developers and users to help them find information such as maps, quests etc. Includes Admin Panel to manage exported data from Angotia tools.",
 		"technology": [
 			"TypeScript", "React", "Redux", "SCSS", "BEM", "Apollo", "Elixir", "Phoenix", "GraphQL", "Absinthe", "Guardian"
 		],

@@ -3,8 +3,8 @@ import { UiService } from '../../services/ui.service';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { MustMatch } from '../../scripts/must-match.validadator';
 import { corsHeaders } from '../../scripts/auth/connectOptions';
-import formsConfig from '../../../assets/configs/formsConfig.json';
-import apiConfig from '../../../assets/configs/apiConfig.json';
+import formsConfig from '../../assets/configs/formsConfig.json';
+import apiConfig from '../../assets/configs/apiConfig.json';
 
 
 @Component({

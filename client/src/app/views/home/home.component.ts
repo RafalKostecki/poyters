@@ -27,6 +27,6 @@ export class HomeComponent implements OnInit {
   }
 
   public getJSON(): Observable<any> {
-    return this.http.get("../assets/data/projects.json")
+    return this.http.get("./app/assets/data/projects.json")
   }
 }

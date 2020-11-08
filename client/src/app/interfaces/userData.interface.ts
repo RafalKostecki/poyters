@@ -1,5 +1,5 @@
 export interface IUserData {
-  id: string
+  _id: string
   username: string
   avatar?: string 
 }

@@ -4,7 +4,7 @@ import { UserService } from '../../services/user.service';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { corsHeaders } from '../../scripts/auth/connectOptions';
-import apiConfig from '../../../assets/configs/apiConfig.json';
+import apiConfig from '../../assets/configs/apiConfig.json';
 import { IUserData } from '../../interfaces/userData.interface';
 
 
@@ -66,24 +66,21 @@ export class SigninComponent implements OnInit {
         })
       .then((res) => res.json())
       .then((resJSON) => {
+        console.log('resJSON signin', resJSON)  
         if (resJSON.statusCode === 401) {
           this.signupMessage = "Wrong username or password";
-        } else {
-          
-          const userData: IUserData = {
-            id: resJSON.userId,
-            username: resJSON.username
-          }
-          
-          this.userService.setUserData(userData);
+        } else if (resJSON._id) {    
+          this.userService.setUserData(resJSON);
           this.router.navigate(['']);
         }
       })
-      .catch(() => {
+      .catch((error) => {
+        console.log(error);
         this.signupMessage = "Something went wrong :c";
       });
     })
-    .catch(() => {
+    .catch((error) => {
+      console.log(error);
       this.signupMessage = "Something went wrong :c";
     })
   }
