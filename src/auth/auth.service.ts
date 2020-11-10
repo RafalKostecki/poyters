@@ -14,7 +14,7 @@ export class AuthService {
   ) {}
 
   async validateUser(username: string, pass: string): Promise<any> {
-    const users = await this.usersService.findOne(username);
+    const users = await this.usersService.findMany(username);
 
     if (users.length < 1) throw new UnauthorizedException();
     

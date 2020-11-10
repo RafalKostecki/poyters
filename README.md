@@ -13,6 +13,7 @@ To set up a whole project (including API) at first, u need to `git clone` Poyter
 - Center horizontally and vertically apiMessage text
 - Show the first letter of the username in case of an avatar absence
 - Fix contact for email validation overflow
+- Create profile view
 
 
 ### Version 1.3.0 (4 November 2020)
