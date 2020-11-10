@@ -1,9 +1,7 @@
-<p>
-   Username: {{ userData.username }}
-</p>
-<p>
-  Mail: {{ userData.mail }}
-</p>
-<p>
-  Created: {{ userData.created }}
-</p>
+<main class="g-pageWrapper">
+  <app-user-profile
+    [username]="userData.username"
+    [mail]="userData.mail"
+    [created]="userData.created"
+  > </app-user-profile>
+</main>

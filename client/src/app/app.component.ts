@@ -39,10 +39,7 @@ export class AppComponent {
       })
     .then(res => res.json())
     .then(resJSON => {
-      console.log('resJSON', resJSON)
-      if (resJSON._id) {
-        this.userService.setUserData(resJSON);
-      }
+      if (resJSON._id) this.userService.setUserData(resJSON);
     });
   }
 

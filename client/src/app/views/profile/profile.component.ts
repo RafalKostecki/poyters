@@ -24,7 +24,6 @@ export class ProfileComponent implements OnInit {
     this.data.changeCategory(this.categoryName);
 
     this.userService.userData.subscribe(data => {
-      console.log(data)
       this.userData = data;
     })
   }

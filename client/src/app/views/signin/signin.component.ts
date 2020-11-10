@@ -66,7 +66,6 @@ export class SigninComponent implements OnInit {
         })
       .then((res) => res.json())
       .then((resJSON) => {
-        console.log('resJSON signin', resJSON)  
         if (resJSON.statusCode === 401) {
           this.signupMessage = "Wrong username or password";
         } else if (resJSON._id) {    
@@ -74,13 +73,11 @@ export class SigninComponent implements OnInit {
           this.router.navigate(['']);
         }
       })
-      .catch((error) => {
-        console.log(error);
+      .catch(() => {
         this.signupMessage = "Something went wrong :c";
       });
     })
-    .catch((error) => {
-      console.log(error);
+    .catch(() => {
       this.signupMessage = "Something went wrong :c";
     })
   }

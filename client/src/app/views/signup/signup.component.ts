@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { UiService } from '../../services/ui.service';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { MustMatch } from '../../scripts/must-match.validadator';
+import { mustMatch } from '../../scripts/mustMatch.validadator';
 import { corsHeaders } from '../../scripts/auth/connectOptions';
 import formsConfig from '../../assets/configs/formsConfig.json';
 import apiConfig from '../../assets/configs/apiConfig.json';
@@ -38,7 +38,7 @@ export class SignupComponent implements OnInit {
       ]],
       confirmPassword: ['', Validators.required]
     }, {
-        validator: MustMatch('password', 'confirmPassword')
+        validator: mustMatch('password', 'confirmPassword')
     });
   }
 
