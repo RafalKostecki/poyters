@@ -17,9 +17,4 @@ export class FooterComponent implements OnInit {
     this.uiService.category.subscribe(cat => this.currentCategory = cat)
   }
   
-  get footerStyles () {
-		return {
-      position: this.currentCategory === 'Contact' ? 'fixed' : 'relative'
-    }
-  };
 }
