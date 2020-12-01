@@ -27,6 +27,7 @@ import { HomeProjectComponent } from './components/home-project/home-project.com
 import { UserProfileComponent } from './components/user-profile/user-profile.component';
 import { KostekUrodzinyComponent } from './views/kostek-urodziny/kostek-urodziny.component';
 import { ProductIntroductionComponent } from './components/product/product-introduction/product-introduction.component';
+import { ProductSystemRequirementsComponent } from './components/product/product-system-requirements/product-system-requirements.component';
 
 @NgModule({
   declarations: [
@@ -51,7 +52,8 @@ import { ProductIntroductionComponent } from './components/product/product-intro
     HomeProjectComponent,
     UserProfileComponent,
     KostekUrodzinyComponent,
-    ProductIntroductionComponent
+    ProductIntroductionComponent,
+    ProductSystemRequirementsComponent
   ],
   imports: [
     BrowserModule,
