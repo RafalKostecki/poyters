@@ -8,7 +8,10 @@ To set up a whole project (including API) at first, u need to `git clone` Poyter
 ## Changelog
 
 ### Version 1.4.0 (planned January 2021)
-- Create profile view conmnected to DB
+- Create profile view connected to DB
+- Add to User model created date
+- Fix floating credits footer at /contact page
+- Add base informations to contact form
 
 
 ### Version 1.3.1 (4 November 2020)
