@@ -12,6 +12,7 @@ To set up a whole project (including API) at first, u need to `git clone` Poyter
 - Add to User model created date
 - Fix floating credits footer at /contact page
 - Add base informations to contact form
+- Create /kostek-urodziny separate view for Kostek "Urodziny" RPG game
 
 
 ### Version 1.3.1 (4 November 2020)

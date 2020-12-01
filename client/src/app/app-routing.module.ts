@@ -7,6 +7,7 @@ import { SignupComponent } from './views/signup/signup.component';
 import { SigninComponent } from './views/signin/signin.component';
 import { ProfileComponent } from './views/profile/profile.component';
 import { NotFoundComponent} from './views/not-found/not-found.component';
+import { KostekUrodzinyComponent} from './views/kostek-urodziny/kostek-urodziny.component';
 import { AuthGuard } from './guards/auth.guard';
 import { NegativeAuthGuard } from './guards/negative-auth.guard';
 
@@ -41,6 +42,10 @@ const routes: Routes = [
     component: ProfileComponent,
     canActivate: [AuthGuard],
     data: {authRedirect: '/signin'}
+  },
+  {
+    path: 'kostek-urodziny',
+    component: KostekUrodzinyComponent
   },
   { 
     path: '**',  

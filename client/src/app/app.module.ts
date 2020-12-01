@@ -25,6 +25,7 @@ import { ProfileComponent } from './views/profile/profile.component';
 import { ContactFormComponent } from './components/contact-form/contact-form.component';
 import { HomeProjectComponent } from './components/home-project/home-project.component';
 import { UserProfileComponent } from './components/user-profile/user-profile.component';
+import { KostekUrodzinyComponent } from './views/kostek-urodziny/kostek-urodziny.component';
 
 @NgModule({
   declarations: [
@@ -47,7 +48,8 @@ import { UserProfileComponent } from './components/user-profile/user-profile.com
     ProfileComponent,
     ContactFormComponent,
     HomeProjectComponent,
-    UserProfileComponent
+    UserProfileComponent,
+    KostekUrodzinyComponent
   ],
   imports: [
     BrowserModule,
