@@ -6,14 +6,13 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./home-project.component.styl']
 })
 export class HomeProjectComponent implements OnInit {
+  constructor() { }
 
   @Input() type: string;
   @Input() image: string;
   @Input() link: string;
   @Input() title: string;
   @Input() content: string;
-
-  constructor() { }
 
   ngOnInit(): void {
   }

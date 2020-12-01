@@ -26,6 +26,7 @@ import { ContactFormComponent } from './components/contact-form/contact-form.com
 import { HomeProjectComponent } from './components/home-project/home-project.component';
 import { UserProfileComponent } from './components/user-profile/user-profile.component';
 import { KostekUrodzinyComponent } from './views/kostek-urodziny/kostek-urodziny.component';
+import { ProductIntroductionComponent } from './components/product/product-introduction/product-introduction.component';
 
 @NgModule({
   declarations: [
@@ -49,7 +50,8 @@ import { KostekUrodzinyComponent } from './views/kostek-urodziny/kostek-urodziny
     ContactFormComponent,
     HomeProjectComponent,
     UserProfileComponent,
-    KostekUrodzinyComponent
+    KostekUrodzinyComponent,
+    ProductIntroductionComponent
   ],
   imports: [
     BrowserModule,
