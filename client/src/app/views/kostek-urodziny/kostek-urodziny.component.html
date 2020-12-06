@@ -1,13 +1,17 @@
 <main class="g-pageWrapper">
   <app-product-introduction
-    name='Kostek "Urodziny"'
-    type="rpg game"
-    introDescription="We have the birthday and BUM! The huge cristal, a weird rooms, hemoglobine and Przemek! I don`t know how but Kostek`s party has become some kind of apogee! Possible it`s caused by the cheap wine or very strong tea. Nevermind. You have to find your collegues. Don`t worry, always correct and nice smelling Narrator will help ya."
-    icon="./app/assets/media/kosBirthday.png"
+    [name]="intro.name"
+    [type]="intro.type"
+    [introDescription]="intro.desc"
+    [icon]="intro.iconPath"
   > </app-product-introduction>
   <div class="kosUroBoxes">
     <app-product-system-requirements
     
     > </app-product-system-requirements>
+
+    <app-product-info
+      [info]="info"
+    > </app-product-info>
   </div>
 </main>

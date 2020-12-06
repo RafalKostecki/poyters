@@ -1,0 +1,13 @@
+<article class="g-productTile">
+  <header class="g-productTile__title">
+    Product details
+  </header>
+
+  <section class="g-productTile__list">
+    <ul>
+      <li *ngFor="let tag of info">
+        <span class="g-listTagTitle">{{tag.title}}:</span> {{tag.content}}
+      </li>
+    </ul>
+  </section>
+</article>

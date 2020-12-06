@@ -28,6 +28,7 @@ import { UserProfileComponent } from './components/user-profile/user-profile.com
 import { KostekUrodzinyComponent } from './views/kostek-urodziny/kostek-urodziny.component';
 import { ProductIntroductionComponent } from './components/product/product-introduction/product-introduction.component';
 import { ProductSystemRequirementsComponent } from './components/product/product-system-requirements/product-system-requirements.component';
+import { ProductInfoComponent } from './components/product/product-info/product-info.component';
 
 @NgModule({
   declarations: [
@@ -53,7 +54,8 @@ import { ProductSystemRequirementsComponent } from './components/product/product
     UserProfileComponent,
     KostekUrodzinyComponent,
     ProductIntroductionComponent,
-    ProductSystemRequirementsComponent
+    ProductSystemRequirementsComponent,
+    ProductInfoComponent
   ],
   imports: [
     BrowserModule,
