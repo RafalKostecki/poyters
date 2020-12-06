@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { IProductInfoData } from '../../../interfaces/productInfoData.interface';
+import { IProductTagData } from '../../../interfaces/productTagData.interface';
 
 @Component({
   selector: 'app-product-info',
@@ -10,7 +10,7 @@ export class ProductInfoComponent implements OnInit {
 
   constructor() { }
 
-  @Input() info: IProductInfoData[];
+  @Input() info: IProductTagData[];
 
   ngOnInit(): void {
   }

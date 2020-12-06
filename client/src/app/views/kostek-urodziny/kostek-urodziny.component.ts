@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { UiService } from '../../services/ui.service';
-import { IProductInfoData } from '../../interfaces/productInfoData.interface';
+import { IProductTagData } from '../../interfaces/productTagData.interface';
 
 
 @Component({
@@ -20,7 +20,53 @@ export class KostekUrodzinyComponent implements OnInit {
     iconPath: './app/assets/media/kosBirthday.png'
   }
 
-  public info: IProductInfoData[] = [
+  public requirementsMin: IProductTagData[] = [
+    {
+      title: 'OS',
+      content: 'Windows XP'
+    },
+    {
+      title: 'Processor',
+      content: '1.2Ghz'
+    },
+    {
+      title: 'Memory',
+      content: '1024 MB RAM'
+    },
+    {
+      title: 'Graphics',
+      content: '512 MB'
+    },
+    {
+      title: 'Storage',
+      content: '550 MB available space'
+    }
+  ];
+
+  public requirementsRec: IProductTagData[] = [
+    {
+      title: 'OS',
+      content: 'Windows 7'
+    },
+    {
+      title: 'Processor',
+      content: '2.4Ghz'
+    },
+    {
+      title: 'Memory',
+      content: '2048 MB RAM'
+    },
+    {
+      title: 'Graphics',
+      content: '1024 MB'
+    },
+    {
+      title: 'Storage',
+      content: '700 MB available space'
+    }
+  ];
+
+  public info: IProductTagData[] = [
     {
       title: 'Type',
       content: 'RPG game'

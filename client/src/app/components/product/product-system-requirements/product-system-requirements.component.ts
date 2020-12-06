@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { IProductTagData } from '../../../interfaces/productTagData.interface';
+
 
 @Component({
   selector: 'app-product-system-requirements',
@@ -8,6 +10,9 @@ import { Component, OnInit } from '@angular/core';
 export class ProductSystemRequirementsComponent implements OnInit {
 
   constructor() { }
+
+  @Input() min: IProductTagData[];
+  @Input() rec: IProductTagData[];
 
   ngOnInit(): void {
   }

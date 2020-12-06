@@ -8,20 +8,8 @@
       MINIMUM
     </header>
     <ul>
-      <li>
-        <span class="g-listTagTitle">OS:</span> Windows XP
-      </li>
-      <li>
-        <span class="g-listTagTitle">Processor:</span> 1.2Ghz
-      </li>
-      <li>
-        <span class="g-listTagTitle">Memory:</span> 1024 MB RAM
-      </li>
-      <li>
-        <span class="g-listTagTitle">Graphics:</span> 512 MB
-      </li>
-      <li>
-        <span class="g-listTagTitle">Storage:</span> 500 MB available space
+      <li *ngFor="let tag of min">
+        <span class="g-listTagTitle">{{tag.title}}:</span> {{tag.content}}
       </li>
     </ul>
   </section>
@@ -31,20 +19,8 @@
       Recommended
     </header>
     <ul>
-      <li>
-        <span class="g-listTagTitle">OS:</span> Windows XP
-      </li>
-      <li>
-        <span class="g-listTagTitle">Processor:</span> 1.2Ghz
-      </li>
-      <li>
-        <span class="g-listTagTitle">Memory:</span> 1024 MB RAM
-      </li>
-      <li>
-        <span class="g-listTagTitle">Graphics:</span> 512 MB
-      </li>
-      <li>
-        <span class="g-listTagTitle">Storage:</span> 500 MB available space
+      <li *ngFor="let tag of rec">
+        <span class="g-listTagTitle">{{tag.title}}:</span> {{tag.content}}
       </li>
     </ul>
   </section>
