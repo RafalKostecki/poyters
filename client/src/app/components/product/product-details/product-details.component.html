@@ -5,9 +5,15 @@
 
   <section class="g-productTile__list">
     <ul>
-      <li *ngFor="let tag of info">
+      <li *ngFor="let tag of details">
         <span class="g-listTagTitle">{{tag.title}}:</span> {{tag.content}}
       </li>
+
+      <ng-container *ngIf="package">
+        <li *ngFor="let tag of packageData | keyvalue : originalOrder">
+          <span class="g-listTagTitle">{{tag.value.title}}:</span> {{tag.value.data}}
+        </li>
+      </ng-container>
     </ul>
   </section>
 </article>

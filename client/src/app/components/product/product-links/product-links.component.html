@@ -7,7 +7,7 @@
     <ul>
       <li *ngFor="let tag of links">
         <span class="g-listTagTitle">{{tag.title}}:</span> 
-        <a [href]="tag.content" target="blank"> {{tag.content}} </a>
+        <a target="blank" [href]="tag.content"> {{tag.content}} </a>
       </li>
     </ul>
   </section>

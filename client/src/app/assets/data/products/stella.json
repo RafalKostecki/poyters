@@ -19,10 +19,14 @@
       "content": "Yes; versioned with automatically tested code samples"
     }
   ],
+  "package": {
+    "type": "HEX",
+    "name": "stella"
+  },
   "links": [
     {
       "title": "Github",
-      "content": "https://hex.pm/packages/stella"
+      "content": "https://github.com/RafalKostecki/stella"
     },
     {
       "title": "Documentation",

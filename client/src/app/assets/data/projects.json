@@ -1,7 +1,7 @@
 [
 	{
 		"image": "./app/assets/media/stella.png",
-		"link": "https://hex.pm/packages/stella",
+		"link": "/stella",
 		"title": "Stella",
 		"content": "Library providing implementations of the most famous algorithms, data structures and math functions for Elixir`s projects."
 	},
