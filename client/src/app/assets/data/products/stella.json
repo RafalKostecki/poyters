@@ -1,0 +1,36 @@
+{
+  "intro": {
+    "name": "Stella",
+    "type": "library",
+    "desc": "Enormous rapid, fully tested and with versioned and automatically tested code samples documenatation Elixir library. The main focus of this library is add to Elixir implementations of the most usefull and the most used algorithms (like graph and sort alogs) and data structures (trees, queues etc) with a pinch of the missing math modules.",
+    "iconPath": "./app/assets/media/stella.png"
+  },
+  "details": [
+    {
+      "title": "Type",
+      "content": "Library"
+    },
+    {
+      "title": "Tests coverage",
+      "content": "Near to 100%"
+    },
+    {
+      "title": "Documentation",
+      "content": "Yes; versioned with automatically tested code samples"
+    }
+  ],
+  "links": [
+    {
+      "title": "Github",
+      "content": "https://hex.pm/packages/stella"
+    },
+    {
+      "title": "Documentation",
+      "content": "https://hexdocs.pm/stella/Stella.html"
+    },
+    {
+      "title": "Hex package",
+      "content": "https://hex.pm/packages/stella"
+    }
+  ]
+}

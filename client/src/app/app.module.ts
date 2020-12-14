@@ -25,12 +25,12 @@ import { ProfileComponent } from './views/profile/profile.component';
 import { ContactFormComponent } from './components/contact-form/contact-form.component';
 import { HomeProjectComponent } from './components/home-project/home-project.component';
 import { UserProfileComponent } from './components/user-profile/user-profile.component';
-import { KostekUrodzinyComponent } from './views/kostek-urodziny/kostek-urodziny.component';
 import { ProductIntroductionComponent } from './components/product/product-introduction/product-introduction.component';
 import { ProductSystemRequirementsComponent } from './components/product/product-system-requirements/product-system-requirements.component';
 import { ProductDetailsComponent } from './components/product/product-details/product-details.component';
 import { ProductComponent } from './components/product/product.component';
 import { ProductViewComponent } from './views/product-view/product-view.component';
+import { ProductLinksComponent } from './components/product/product-links/product-links.component';
 
 @NgModule({
   declarations: [
@@ -54,12 +54,12 @@ import { ProductViewComponent } from './views/product-view/product-view.componen
     ContactFormComponent,
     HomeProjectComponent,
     UserProfileComponent,
-    KostekUrodzinyComponent,
     ProductIntroductionComponent,
     ProductSystemRequirementsComponent,
     ProductDetailsComponent,
     ProductComponent,
-    ProductViewComponent
+    ProductViewComponent,
+    ProductLinksComponent
   ],
   imports: [
     BrowserModule,

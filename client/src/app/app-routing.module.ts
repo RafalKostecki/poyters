@@ -7,7 +7,7 @@ import { SignupComponent } from './views/signup/signup.component';
 import { SigninComponent } from './views/signin/signin.component';
 import { ProfileComponent } from './views/profile/profile.component';
 import { NotFoundComponent} from './views/not-found/not-found.component';
-import { KostekUrodzinyComponent} from './views/kostek-urodziny/kostek-urodziny.component';
+import { ProductViewComponent} from './views/product-view/product-view.component';
 import { AuthGuard } from './guards/auth.guard';
 import { NegativeAuthGuard } from './guards/negative-auth.guard';
 
@@ -45,7 +45,17 @@ const routes: Routes = [
   },
   {
     path: 'kostek-urodziny',
-    component: KostekUrodzinyComponent
+    component: ProductViewComponent,
+    data: {
+      productKey : 'kosUrodziny'
+    }
+  },
+  {
+    path: 'stella',
+    component: ProductViewComponent,
+    data: {
+      productKey : 'stella'
+    }
   },
   { 
     path: '**',  

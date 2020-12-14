@@ -1,5 +1,4 @@
-import { Component, OnInit } from '@angular/core';
-import productData from '../../assets/data/products/kostekUrodziny.json';
+import { Component, OnInit, Input } from '@angular/core';
 
 
 @Component({
@@ -11,7 +10,7 @@ export class ProductComponent implements OnInit {
 
   constructor() { }
 
-  public product = productData;
+  @Input() product;
 
   ngOnInit(): void {
   }

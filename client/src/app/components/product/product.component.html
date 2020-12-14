@@ -6,6 +6,7 @@
 > </product-introduction>
 <div class="boxesWrapper">
   <product-system-requirements
+    *ngIf="product.requirements"
     [min]="product.requirements.min"
     [rec]="product.requirements.recommended"
   > </product-system-requirements>
@@ -13,4 +14,9 @@
   <product-details
     [info]="product.details"
   > </product-details>
+
+  <product-links
+    *ngIf="product.links"
+    [links]="product.links"
+  > </product-links>
 </div>
