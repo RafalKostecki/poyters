@@ -2,7 +2,6 @@ import { Component } from '@angular/core';
 import { UserService } from './services/user.service';
 import { corsHeaders } from './scripts/auth/connectOptions';
 import apiConfig from './assets/configs/apiConfig.json';
-import { IUserData } from './interfaces/userData.interface';
 
 
 @Component({

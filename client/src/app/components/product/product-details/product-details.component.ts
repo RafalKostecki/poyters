@@ -2,11 +2,11 @@ import { Component, OnInit, Input } from '@angular/core';
 import { IProductTagData } from '../../../interfaces/productTagData.interface';
 
 @Component({
-  selector: 'app-product-info',
-  templateUrl: './product-info.component.html',
-  styleUrls: ['./product-info.component.styl']
+  selector: 'product-details',
+  templateUrl: './product-details.component.html',
+  styleUrls: ['./product-details.component.styl']
 })
-export class ProductInfoComponent implements OnInit {
+export class ProductDetailsComponent implements OnInit {
 
   constructor() { }
 

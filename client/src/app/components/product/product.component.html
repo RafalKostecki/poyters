@@ -1,0 +1,16 @@
+<product-introduction
+  [name]="product.intro.name"
+  [type]="product.intro.type"
+  [introDescription]="product.intro.desc"
+  [icon]="product.intro.iconPath"
+> </product-introduction>
+<div class="boxesWrapper">
+  <product-system-requirements
+    [min]="product.requirements.min"
+    [rec]="product.requirements.recommended"
+  > </product-system-requirements>
+
+  <product-details
+    [info]="product.details"
+  > </product-details>
+</div>

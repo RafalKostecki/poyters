@@ -3,7 +3,7 @@ import { IProductTagData } from '../../../interfaces/productTagData.interface';
 
 
 @Component({
-  selector: 'app-product-system-requirements',
+  selector: 'product-system-requirements',
   templateUrl: './product-system-requirements.component.html',
   styleUrls: ['./product-system-requirements.component.styl']
 })
