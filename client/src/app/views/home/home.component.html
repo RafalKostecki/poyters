@@ -1,7 +1,8 @@
 <main class="g-pageWrapper">
     <app-home-project
         [image]="project.image"
-        [link]="project.link"
+        [internalLink]="project.internalLink"
+        [externalLink]="project.externalLink"
         [title]="project.title"
         [content]="project.content"
         *ngFor="let project of projects"

@@ -10,7 +10,8 @@ export class HomeProjectComponent implements OnInit {
 
   @Input() type: string;
   @Input() image: string;
-  @Input() link: string;
+  @Input() internalLink: string;
+  @Input() externalLink: string;
   @Input() title: string;
   @Input() content: string;
 

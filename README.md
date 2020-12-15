@@ -7,7 +7,7 @@ To set up a whole project (including API) at first, u need to `git clone` Poyter
 
 ## Changelog
 
-### Version 1.4.0 (planned January 2021)
+### Version 1.4.0 (planned 17 January 2021)
 - Create profile view connected to DB
 - Add to User model created date
 - Fix floating credits footer at /contact page
@@ -15,6 +15,8 @@ To set up a whole project (including API) at first, u need to `git clone` Poyter
 - Create base product template view
 - Create /kostek-urodziny separate view for Kostek "Urodziny" RPG game
 - Redesign user profile menu
+- Create Stella product separate view
+- Fix views changing flashes
 
 
 ### Version 1.3.1 (4 November 2020)
