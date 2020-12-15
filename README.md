@@ -17,6 +17,7 @@ To set up a whole project (including API) at first, u need to `git clone` Poyter
 - Redesign user profile menu
 - Create Stella product separate view
 - Fix views changing flashes
+- Replace Google Disc by Poyters FTP server at downloading Kostek "Urodziny" game
 
 
 ### Version 1.3.1 (4 November 2020)

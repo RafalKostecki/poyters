@@ -72,10 +72,10 @@ a:link, a:visited {
 }
 
 .g-exitBtn {
-	display: flex;
-	position: relative;
-	width: 14px;
-	height: 14px;
+	display: flex
+	position: relative
+	width: 14px
+	height: 14px
 
   &--menu {
     margin-top: -1px
@@ -84,28 +84,28 @@ a:link, a:visited {
 
 	&:hover {
 		&:before, &:after {
-			background-color: colorOfDecorations1;
+			background-color: colorOfDecorations1
 		}
 	}
 
 	&:before, &:after {
-		position: absolute;
-		content: '';
-		top: 50%;
-		left: 0;
-		width: calc(100% + 2px);
-		height: 2px;
+		position: absolute
+		content: ''
+		top: 50%
+		left: 0
+		width: calc(100% + 2px)
+		height: 2px
 
-		transition: 200ms ease-in-out;
-		background-color: colorOfDecorations;
+		transition: 200ms ease-in-out
+		background-color: colorOfDecorations
 	}
 
 	&:before {
-		transform: rotate(-45deg);
+		transform: rotate(-45deg)
 	}
 
 	&:after {
-		transform: rotate(45deg);
+		transform: rotate(45deg)
 	}
 }
 

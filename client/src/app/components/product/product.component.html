@@ -4,6 +4,14 @@
   [introDescription]="product.intro.desc"
   [icon]="product.intro.iconPath"
 > </product-introduction>
+<product-get
+  *ngIf="product.get"
+  [title]="product.get.title"
+  [buttonText]="product.get.buttonText"
+  [description]="product.get.description"
+  [type]="product.get.type"
+  [address]="product.get.address"
+> </product-get>
 <div class="boxesWrapper">
   <product-system-requirements
     *ngIf="product.requirements"
