@@ -32,6 +32,7 @@ import { ProductComponent } from './components/product/product.component';
 import { ProductViewComponent } from './views/product-view/product-view.component';
 import { ProductLinksComponent } from './components/product/product-links/product-links.component';
 import { ProductGetComponent } from './components/product/product-get/product-get.component';
+import { InfoPopupComponent } from './components/info-popup/info-popup.component';
 
 @NgModule({
   declarations: [
@@ -61,7 +62,8 @@ import { ProductGetComponent } from './components/product/product-get/product-ge
     ProductComponent,
     ProductViewComponent,
     ProductLinksComponent,
-    ProductGetComponent
+    ProductGetComponent,
+    InfoPopupComponent
   ],
   imports: [
     BrowserModule,

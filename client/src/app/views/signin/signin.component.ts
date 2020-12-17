@@ -5,7 +5,8 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { corsHeaders } from '../../scripts/auth/connectOptions';
 import apiConfig from '../../assets/configs/apiConfig.json';
-import { IUserData } from '../../interfaces/userData.interface';
+import { InfoPopupService } from '../../services/info-popup.service';
+import infoConfig from '../../assets/configs/infoConfig.json';
 
 
 @Component({
@@ -24,7 +25,8 @@ export class SigninComponent implements OnInit {
     private formBuilder: FormBuilder, 
     private uiService: UiService,
     private userService: UserService,
-    private router: Router
+    private router: Router,
+    private infoPopupService: InfoPopupService
   ) { }
 
   ngOnInit() {
@@ -70,6 +72,8 @@ export class SigninComponent implements OnInit {
           this.signupMessage = "Wrong username or password";
         } else if (resJSON._id) {    
           this.userService.setUserData(resJSON);
+          this.infoPopupService.setIsActive(true);
+          this.infoPopupService.setInfoContent(infoConfig.messages.signin);
           this.router.navigate(['']);
         }
       })
