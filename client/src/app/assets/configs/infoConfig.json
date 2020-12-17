@@ -1,7 +1,7 @@
 {
   "delay": 3000,
   "messages": {
-    "signin": "Succesfully logged in to Poyters Account",
+    "signin": "Successfully logged intoPoyters Account",
     "signup": "Succesfully created a Poyters Account. Now you can log in",
     "logout": "Succesfully logged out"
   }
