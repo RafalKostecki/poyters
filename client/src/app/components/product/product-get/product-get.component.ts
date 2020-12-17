@@ -18,4 +18,9 @@ export class ProductGetComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  public getProduct () {
+    const xd: any = '../../../assets/uploads/kostek.exe'
+    window.location = xd;
+  }
+
 }
