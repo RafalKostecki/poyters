@@ -11,11 +11,8 @@ export class UserProfileComponent implements OnInit {
   @Input() username: string;
   @Input() mail: string;
   @Input() created: number;
+  @Input() role: number;
 
-  public createdDate;
-
-  ngOnInit(): void {
-    this.createdDate = new Date(this.created).toUTCString();
-  }
+  ngOnInit(): void { }
 
 }

@@ -21,11 +21,7 @@ export class UserService {
   public userData = new BehaviorSubject<IUserData | null>(null);
   public setUserData(data: IUserData):void {
     this.userData.next(data);
-  }
-
-  public username = new BehaviorSubject<string>('');
-  public setUsername(newUsername: string):void {
-    this.username.next(newUsername);
+    console.log('this.userData', this.userData)
   }
 
   isLoggedIn():Observable<boolean> {

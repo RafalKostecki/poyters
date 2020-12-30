@@ -4,6 +4,7 @@ import { InjectModel } from '@nestjs/mongoose';
 import { Model } from 'mongoose';
 import { IUser } from './user.model';
 import { MailService } from '../mail/mail.service';
+import { Role } from '../../models/role.model';
 // eslint-disable-next-line @typescript-eslint/no-var-requires
 const bcrypt = require("bcrypt");
 
@@ -35,7 +36,8 @@ export class UsersService {
             username,
             password: hash,
             mail,
-            created: Date.now()
+            created: Date.now(),
+            role: Role.user
           });
           
           newUser.save();
