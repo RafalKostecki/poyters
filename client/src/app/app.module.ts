@@ -33,6 +33,8 @@ import { ProductViewComponent } from './views/product-view/product-view.componen
 import { ProductLinksComponent } from './components/product/product-links/product-links.component';
 import { ProductGetComponent } from './components/product/product-get/product-get.component';
 import { InfoPopupComponent } from './components/info-popup/info-popup.component';
+import { SliderComponent } from './components/slider/slider.component';
+import { SlideComponent } from './components/slider/slide/slide.component';
 
 @NgModule({
   declarations: [
@@ -63,7 +65,9 @@ import { InfoPopupComponent } from './components/info-popup/info-popup.component
     ProductViewComponent,
     ProductLinksComponent,
     ProductGetComponent,
-    InfoPopupComponent
+    InfoPopupComponent,
+    SliderComponent,
+    SlideComponent
   ],
   imports: [
     BrowserModule,
