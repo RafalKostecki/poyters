@@ -11,7 +11,11 @@
   > </aside>
   <section class="slider__slides">
     <div class="sliderTape" [style]="tapeStyles" id="sliderTape">
-      <div class="slide" *ngFor="let slide of slides"> </div>
+      <div 
+        class="slide"
+        *ngFor="let slide of slides"
+        [style.background-image]="'url(' + slide.mediaPath + ')'"
+      > </div>
     </div>
   </section>
   <nav class="slider__pagination">

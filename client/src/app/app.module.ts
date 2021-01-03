@@ -34,7 +34,6 @@ import { ProductLinksComponent } from './components/product/product-links/produc
 import { ProductGetComponent } from './components/product/product-get/product-get.component';
 import { InfoPopupComponent } from './components/info-popup/info-popup.component';
 import { SliderComponent } from './components/slider/slider.component';
-import { SlideComponent } from './components/slider/slide/slide.component';
 
 @NgModule({
   declarations: [
@@ -66,8 +65,7 @@ import { SlideComponent } from './components/slider/slide/slide.component';
     ProductLinksComponent,
     ProductGetComponent,
     InfoPopupComponent,
-    SliderComponent,
-    SlideComponent
+    SliderComponent
   ],
   imports: [
     BrowserModule,
