@@ -8,16 +8,45 @@
   width: 100%
   max-width: 100%
   position: relative
+  margin-top: 30px
+  overflow: hidden
 
-  border: 2px solid red
+  &__prev, &__next {
+    position: absolute
+    width: 30px
+    height: 30px
+    top: calc(50% - 18px)
+    z-index: 99
+
+    border-style: solid
+    border-width: 6px 6px 0 0
+    border-color: colorOfDecorations
+    cursor: pointer
+    transition: 200ms ease-in-out
+
+    &:hover, &.disabledNavBtn {
+      border-color: colorOfDecorations1
+    }
+  }
+
+  &__prev {
+    left: 7px
+    transform: rotate(-145deg)
+  }
+
+  &__next {
+    right: 7px
+    transform: rotate(45deg)
+  }
 
   &__slides {
     display: flex
-
+    height: 400px
   }
 
   &__pagination {
-    display: flex  
+    display: flex 
+    margin-top: 5px 
 
     & ul {
       display: flex
@@ -46,7 +75,7 @@
         background-color: colorOfDecorations1
         txt(12px, 0, 700, uppercase, colorOfDecorations)
 
-        &:hover {
+        &:hover, &.activeTab {
           background-color: transparent
           border: 2px solid colorOfDecorations
         }
@@ -72,6 +101,21 @@
   display: flex
   min-width: 100%
   box-sizing: border-box
+  height: 400px 
 
-  border: 2px solid green
+  background: url('https://www.wykop.pl/cdn/c3201142/comment_1608277727me3r599LODkzUdghahpkay,w400.jpg');
+  background-repeat: no-repeat
+  background-size: cover
+  background-position: center
+}
+
+.sliderTape {
+  display: flex 
+  flex-direction: row
+  flex-wrap: nowrap
+  position: absolute
+  width: 100%
+  height: 100%
+
+  transition: 300ms ease-in-out
 }

@@ -1,12 +1,25 @@
 <article class="slider">
+  <aside 
+    class="slider__prev"
+    (click)="prev()"
+    [class.disabledNavBtn]="currentSlide === 0"
+  > </aside>
+  <aside 
+    class="slider__next"
+    (click)="next()"
+    [class.disabledNavBtn]="currentSlide === slides.length-1"
+  > </aside>
   <section class="slider__slides">
-    <div class="slide" *ngFor="let slide of slides">
-      {{ slide.alt }}
+    <div class="sliderTape" [style]="tapeStyles" id="sliderTape">
+      <div class="slide" *ngFor="let slide of slides"> </div>
     </div>
   </section>
   <nav class="slider__pagination">
     <ul>
-      <li *ngFor="let slide of slides; let i = index">
+      <li 
+        *ngFor="let slide of slides; let i = index"
+        [class.activeTab]="i === currentSlide"
+      >
         {{ i + 1}}
       </li>
     </ul>
