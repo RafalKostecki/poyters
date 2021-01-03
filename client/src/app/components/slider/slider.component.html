@@ -1,19 +1,14 @@
 <article class="slider">
   <section class="slider__slides">
-    <div class="slide">
-      slider 1
-    </div>
-    <div class="slide">
-      slider 2
-    </div>
-    <div class="slide">
-      slider 3
-    </div>
-    <div class="slide">
-      slider 4
+    <div class="slide" *ngFor="let slide of slides">
+      {{ slide.alt }}
     </div>
   </section>
-  <section class="slider__pagination">
-    pagination
-  </section>
+  <nav class="slider__pagination">
+    <ul>
+      <li *ngFor="let slide of slides; let i = index">
+        {{ i + 1}}
+      </li>
+    </ul>
+  </nav>
 </article>

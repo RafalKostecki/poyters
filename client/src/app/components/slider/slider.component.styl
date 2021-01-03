@@ -19,11 +19,59 @@
   &__pagination {
     display: flex  
 
-    background: blue
+    & ul {
+      display: flex
+      width: 100%
+      flex-direction: row
+      flex-wrap: nowrap
+      margin: 0
+      padding: 0 
+      justify-content: center
+
+      list-style-type: none
+
+      & li {
+        display: flex
+        flex: 1
+        margin: 5px 10px
+        height: 10px
+        max-width: 80px
+        justify-content: center
+        align-items: center
+
+        cursor: pointer
+        transition: 200ms ease-in-out
+        border: 2px solid transparent
+        border-radius: 2px
+        background-color: colorOfDecorations1
+        txt(12px, 0, 700, uppercase, colorOfDecorations)
+
+        &:hover {
+          background-color: transparent
+          border: 2px solid colorOfDecorations
+        }
+
+        &:first-child {
+          margin-left: 0;
+        }
+
+        &:last-child {
+          margin-right: 0;
+        }
+
+        @media (max-width: 610px) {
+          margin: 5px
+        }
+      }  
+    }
   }
 }
 
 
 .slide {
-  
+  display: flex
+  min-width: 100%
+  box-sizing: border-box
+
+  border: 2px solid green
 }
