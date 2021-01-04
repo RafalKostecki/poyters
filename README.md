@@ -7,6 +7,9 @@ To set up a whole project (including API) at first, u need to `git clone` Poyter
 
 ## Changelog
 
+### Version 1.5.0 (planned 2021)
+- Create offer view
+
 ### Version 1.4.0 (04 January 2021)
 - Create profile view connected to DB
 - Add to User model created date
