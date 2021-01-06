@@ -1,5 +1,5 @@
 import { KeyValue } from '@angular/common';
 
-export const originalOrder = (a: KeyValue<number,string>, b: KeyValue<number,string>): number => {
+export const originalOrder = (a: KeyValue<any, any>, b: KeyValue<any,any>): number => {
   return 0;
 }

@@ -3,4 +3,6 @@ export interface IUserData {
   username: string
   avatar?: string
   role: string
+  mail: string
+  created: string
 }
