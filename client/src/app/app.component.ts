@@ -2,6 +2,8 @@ import { Component } from '@angular/core';
 import { UserService } from './services/user.service';
 import { corsHeaders } from './scripts/auth/connectOptions';
 import apiConfig from './assets/configs/apiConfig.json';
+import { KeycloakService } from 'keycloak-angular';
+import { KeycloakProfile } from 'keycloak-js';
 
 
 @Component({
@@ -20,26 +22,25 @@ export class AppComponent {
   public warningMess1 = "Now are maintain works. Can occur unexpected errors.";
   public noticeMess1 = 'I wanna invite u to see my <a href="https://www.facebook.com/poyterskostecki">Facebook</a> page!';
   public userId: string;
+  public isLoggedIn = false;
+  public userProfile: KeycloakProfile | null = null;
 
-  constructor(
-    private userService: UserService
-  ) { }
+  constructor(private readonly keycloak: KeycloakService) { }
 
-  ngOnInit() {
-    this.userService.userData.subscribe(data => {
-      this.userId = data?._id
-    })
+  public async ngOnInit() {
+    this.isLoggedIn = await this.keycloak.isLoggedIn();
 
-    fetch(`${apiConfig.poytersApiUrl}/users/profile/`,
-      {
-        method: 'GET',
-        headers: corsHeaders,
-        credentials: 'include'
-      })
-    .then(res => res.json())
-    .then(resJSON => {
-      if (resJSON._id) this.userService.setUserData(resJSON);
-    });
+    if (this.isLoggedIn) {
+      this.userProfile = await this.keycloak.loadUserProfile();
+    }
+  }
+
+  public login() {
+    this.keycloak.login();
+  }
+
+  public logout() {
+    this.keycloak.logout();
   }
 
 }

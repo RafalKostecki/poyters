@@ -8,7 +8,7 @@ import { SigninComponent } from './views/signin/signin.component';
 import { ProfileComponent } from './views/profile/profile.component';
 import { NotFoundComponent} from './views/not-found/not-found.component';
 import { ProductViewComponent} from './views/product-view/product-view.component';
-import { AuthGuard } from './guards/auth.guard';
+import { AuthGuard } from './guards/authkeycloak.guard';
 import { NegativeAuthGuard } from './guards/negative-auth.guard';
 
 
