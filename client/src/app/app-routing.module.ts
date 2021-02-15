@@ -8,6 +8,7 @@ import { NotFoundComponent} from './views/not-found/not-found.component';
 import { ProductViewComponent} from './views/product-view/product-view.component';
 import { AuthGuard } from './guards/authkeycloak.guard';
 import { NegativeAuthGuard } from './guards/negative-auth.guard';
+import { SigninComponent } from './views/signin/signin.component';
 
 
 const routes: Routes = [
@@ -28,6 +29,10 @@ const routes: Routes = [
     component: ProfileComponent,
     canActivate: [AuthGuard],
     data: {authRedirect: '/signin'}
+  },
+  {
+    path: 'register',
+    component: SigninComponent
   },
   {
     path: 'kostek-urodziny',

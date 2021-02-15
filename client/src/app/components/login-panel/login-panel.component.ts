@@ -14,4 +14,8 @@ export class LoginPanelComponent {
     this.keycloak.login();
   }
 
+  public register() {
+    this.keycloak.register();
+  }
+
 }
