@@ -3,8 +3,6 @@ import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './views/home/home.component';
 import { PortfolioComponent } from './views/portfolio/portfolio.component';
 import { ContactComponent } from './views/contact/contact.component';
-import { SignupComponent } from './views/signup/signup.component';
-import { SigninComponent } from './views/signin/signin.component';
 import { ProfileComponent } from './views/profile/profile.component';
 import { NotFoundComponent} from './views/not-found/not-found.component';
 import { ProductViewComponent} from './views/product-view/product-view.component';
@@ -24,18 +22,6 @@ const routes: Routes = [
   {
     path: 'contact',
     component: ContactComponent
-  },
-  {
-    path: 'signup',
-    component: SignupComponent,
-    canActivate: [NegativeAuthGuard],
-    data: {authRedirect: ''}
-  },
-  {
-    path: 'signin',
-    component: SigninComponent,
-    canActivate: [NegativeAuthGuard],
-    data: {authRedirect: ''}
   },
   {
     path: 'profile',

@@ -5,6 +5,7 @@ import { corsHeaders } from '../../scripts/auth/connectOptions';
 import apiConfig from '../../assets/configs/apiConfig.json';
 import { InfoPopupService } from '../../services/info-popup.service';
 import infoConfig from '../../assets/configs/infoConfig.json';
+import { KeycloakService } from 'keycloak-angular';
 
 
 @Component({
@@ -19,8 +20,8 @@ export class ProfilPanelComponent {
 
   constructor(
     private userService: UserService,
-    private router: Router,
-    private infoPopupService: InfoPopupService
+    private infoPopupService: InfoPopupService,
+    private readonly keycloak: KeycloakService
   ) { }
 
   ngOnInit() {
@@ -31,26 +32,16 @@ export class ProfilPanelComponent {
     })
   }
 
-  toggleProfileList() {
+  public toggleProfileList() {
     this.profileListIsOpen = !this.profileListIsOpen;
   }
 
-  logout() {
-    fetch(`${apiConfig.poytersApiUrl}/auth/logout`,
-      {
-        method: 'GET',
-        headers: corsHeaders,
-        credentials: 'include'
-      })
-    .then(res => {
-      if (res.status === 200) {
-        this.userService.setUserData(null);
-        this.infoPopupService.setIsActive(true);
-        this.infoPopupService.setInfoContent(infoConfig.messages.logout);
-        this.router.navigate(['']);
-      }
-    })
-    
+  public logout() {
+    this.keycloak.logout();
+    this.infoPopupService.setIsActive(true);
+    this.infoPopupService.setInfoContent(infoConfig.messages.logout);
   }
 
 }
+
+
