@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { UiService } from '../../services/ui.service';
 import { IUserData } from '../../interfaces/userData.interface';
 import { UserService } from '../../services/user.service';
+import { KeycloakService } from 'keycloak-angular';
+import { KeycloakProfile } from 'keycloak-js';
 
 
 @Component({
@@ -13,19 +15,23 @@ export class ProfileComponent implements OnInit {
 
   public portfolioProjects: Object;
   private categoryName: string = "Profile";
-  public userData: IUserData;
+  public isLoggedIn = false;
+  public userProfile: KeycloakProfile | null = null;
 
   constructor(
     private data: UiService,
-    private userService: UserService
+    private readonly keycloak: KeycloakService
   ) {}
 
-  ngOnInit() {
+  
+  public async ngOnInit() {
     this.data.changeCategory(this.categoryName);
+    this.isLoggedIn = await this.keycloak.isLoggedIn();
 
-    this.userService.userData.subscribe(data => {
-      this.userData = data;
-    })
+    if (this.isLoggedIn) {
+      this.userProfile = await this.keycloak.loadUserProfile();
+      console.log('userProfile', this.userProfile)
+    }
   }
 
 }
