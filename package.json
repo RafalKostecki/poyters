@@ -1,6 +1,6 @@
 {
   "name": "poyters_api",
-  "version": "1.4.0",
+  "version": "1.5.0",
   "description": "",
   "author": "",
   "license": "MIT",
@@ -35,6 +35,7 @@
     "helmet": "^3.21.2",
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^5.9.1",
+    "nest-keycloak-connect": "^1.4.2",
     "nodemailer": "^6.4.14",
     "nodemailer-smtp-transport": "^2.7.4",
     "passport": "^0.4.1",

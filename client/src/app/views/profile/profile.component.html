@@ -1,8 +1,9 @@
 <main class="g-pageWrapper">
+  {{token}}
   <app-user-profile
     [username]="userProfile?.username"
     [mail]="userProfile?.email"
-    created="userData.created"
+    [created]="userProfile?.createdTimestamp"
     role="userData.role"
   > </app-user-profile>
 </main>

@@ -17,6 +17,7 @@ export class ProfileComponent implements OnInit {
   private categoryName: string = "Profile";
   public isLoggedIn = false;
   public userProfile: KeycloakProfile | null = null;
+  public token: string;
 
   constructor(
     private data: UiService,
@@ -30,6 +31,9 @@ export class ProfileComponent implements OnInit {
 
     if (this.isLoggedIn) {
       this.userProfile = await this.keycloak.loadUserProfile();
+      this.token = await this.keycloak.getToken();
+      const usr = await this.keycloak.getUserRoles();
+      console.log(usr)
       console.log('userProfile', this.userProfile)
     }
   }
