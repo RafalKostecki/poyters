@@ -6,9 +6,8 @@ import { ContactComponent } from './views/contact/contact.component';
 import { ProfileComponent } from './views/profile/profile.component';
 import { NotFoundComponent} from './views/not-found/not-found.component';
 import { ProductViewComponent} from './views/product-view/product-view.component';
-import { AuthGuard } from './guards/authkeycloak.guard';
-import { NegativeAuthGuard } from './guards/negative-auth.guard';
-import { SigninComponent } from './views/signin/signin.component';
+import { AuthGuard } from './guards/auth.guard';
+import { AdminComponent} from './views/admin/admin.component';
 
 
 const routes: Routes = [
@@ -31,8 +30,12 @@ const routes: Routes = [
     data: {authRedirect: '/signin'}
   },
   {
-    path: 'register',
-    component: SigninComponent
+    path: 'admin',
+    component: AdminComponent,
+    canActivate: [AuthGuard],
+    data: {
+      roles : ['admin']
+    }
   },
   {
     path: 'kostek-urodziny',
@@ -57,6 +60,6 @@ const routes: Routes = [
 @NgModule({
   imports:[RouterModule.forRoot(routes)],
   exports: [RouterModule],
-  providers: [AuthGuard, NegativeAuthGuard]
+  providers: [AuthGuard]
 })
 export class AppRoutingModule { }

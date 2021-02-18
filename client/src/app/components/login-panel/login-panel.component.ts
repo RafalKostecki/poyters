@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { KeycloakService } from 'keycloak-angular';
+import { InfoPopupService } from '../../services/info-popup.service';
+import infoConfig from '../../assets/configs/infoConfig.json';
 
 @Component({
   selector: 'app-login-panel',
@@ -8,10 +10,17 @@ import { KeycloakService } from 'keycloak-angular';
 })
 export class LoginPanelComponent {
 
-  constructor(private readonly keycloak: KeycloakService) { }
+  constructor(
+    private readonly keycloak: KeycloakService,
+    private infoPopupService: InfoPopupService
+  ) { }
 
-  public login() {
-    this.keycloak.login();
+  public async login() {
+    console.log('hererere')
+    await this.keycloak.login();
+    console.log('here')
+    this.infoPopupService.setIsActive(true);
+    this.infoPopupService.setInfoContent(infoConfig.messages.logout);
   }
 
   public register() {

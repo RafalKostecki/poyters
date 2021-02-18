@@ -1,33 +1,48 @@
-import { UserService } from '../services/user.service';
 import { Injectable } from '@angular/core';
-import { Observable, of } from 'rxjs';
-import { CanActivate, Router, ActivatedRouteSnapshot } from '@angular/router';
-import { map, catchError} from 'rxjs/operators';
+import {
+  ActivatedRouteSnapshot,
+  Router,
+  RouterStateSnapshot,
+} from '@angular/router';
+import { KeycloakAuthGuard, KeycloakService } from 'keycloak-angular';
 
+@Injectable({
+  providedIn: 'root',
+})
 
-@Injectable()
-export class AuthGuard implements CanActivate {
+export class AuthGuard extends KeycloakAuthGuard {
   constructor(
-    private userService: UserService, 
-    private router: Router
-  ) { }
+    protected readonly router: Router,
+    protected readonly keycloak: KeycloakService
+  ) {
+    super(router, keycloak);
+  }
 
-  canActivate(route: ActivatedRouteSnapshot): Observable<boolean>  {
-    const authRedirect: string = route.data.authRedirect;
+  public async isAccessAllowed(
+    route: ActivatedRouteSnapshot,
+    state: RouterStateSnapshot
+  ) {
+    // Force the user to log in if currently unauthenticated.
+    if (!this.authenticated) {
+      await this.keycloak.login({
+        redirectUri: window.location.origin + state.url,
+      });
+    }
 
-    return this.userService.isLoggedIn().pipe(
-      map(res => {
-        if (res) {
-          return true;
-        } else {
-          this.router.navigate([authRedirect]);
-          return false;
-        }
-      }),
-      catchError(() => {
-        this.router.navigate([authRedirect]);
-        return of(false);
-      })
-    );
+    // Get the roles required from the route.
+    const requiredRoles = route.data.roles;
+
+    // Allow the user to to proceed if no additional roles are required to access the route.
+    if (!(requiredRoles instanceof Array) || requiredRoles.length === 0) {
+      return true;
+    }
+
+    // Allow the user to proceed if all the required roles are present.
+    if (requiredRoles.every((role) => this.roles.includes(role))) {
+      return true;
+    }
+
+    this.router.navigateByUrl('/');
+    return false;
   }
 }
