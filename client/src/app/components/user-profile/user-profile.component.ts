@@ -12,6 +12,7 @@ export class UserProfileComponent implements OnInit {
   @Input() mail: string;
   @Input() created: number;
   @Input() role: number;
+  @Input() emailVerified: boolean;
 
   ngOnInit(): void { }
 
