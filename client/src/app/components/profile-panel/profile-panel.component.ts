@@ -21,7 +21,8 @@ export class ProfilPanelComponent {
   constructor(
     private userService: UserService,
     private infoPopupService: InfoPopupService,
-    private readonly keycloak: KeycloakService
+    private readonly keycloak: KeycloakService,
+    private router: Router,
   ) { }
 
   ngOnInit() {
@@ -40,6 +41,10 @@ export class ProfilPanelComponent {
     this.keycloak.logout();
     this.infoPopupService.setIsActive(true);
     this.infoPopupService.setInfoContent(infoConfig.messages.logout);
+  }
+
+  public settings() {
+    window.open('http://localhost:8080/auth/realms/poyters-account/account/', '_blank');
   }
 
 }
